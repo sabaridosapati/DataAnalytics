@@ -1,6 +1,7 @@
 """Global test setup. Executed before any `app` module is imported."""
 import os
 import socket
+import tempfile
 from pathlib import Path
 
 import pytest
@@ -12,6 +13,7 @@ os.environ["GEMINI_API_KEY"] = ""
 os.environ["RATE_LIMIT_ENABLED"] = "false"
 os.environ["JWT_SECRET"] = "test-secret"
 os.environ["UPLOAD_DIR"] = "/tmp/test_uploads"
+os.environ["DUCKDB_DIR"] = os.path.join(tempfile.gettempdir(), "test_duckdb")
 if os.environ.get("TEST_DATABASE_URL"):
     os.environ["DATABASE_URL"] = os.environ["TEST_DATABASE_URL"]
 if os.environ.get("TEST_QUERY_RO_URL"):

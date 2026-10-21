@@ -23,6 +23,7 @@ class DatasetInfo:
     columns: list[ColumnInfo] = field(default_factory=list)
     row_count: int = 0
     chunk_count: int = 0
+    upload_id: int = 0
 
 
 @dataclass
@@ -73,7 +74,7 @@ async def load_catalog(state) -> Catalog:
     catalog = Catalog(
         version=version,
         datasets=[
-            DatasetInfo(d.id, d.slug, d.name, d.kind, by_dataset.get(d.id, []), d.row_count, d.chunk_count)
+            DatasetInfo(d.id, d.slug, d.name, d.kind, by_dataset.get(d.id, []), d.row_count, d.chunk_count, d.parent_upload_id or d.id)
             for d in datasets
         ],
     )

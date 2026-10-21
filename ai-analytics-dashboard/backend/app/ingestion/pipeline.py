@@ -5,14 +5,15 @@ from pathlib import Path
 from uuid import uuid4
 
 import pandas as pd
-from sqlalchemy import select, text, update
+from sqlalchemy import func, select, text, update
 
 from app.db.models import Dataset, DatasetColumn
 from app.db.versions import bump_catalog_version
+from app.duckdb_store import remove_upload_file, upload_db_path, write_upload_file
 from app.ingestion.chunker import chunk_text
 from app.ingestion.detect import UnsupportedFileError, detect_kind
 from app.ingestion.parsers import ParsedTable, ParseError, ParseResult, TextSegment, parse_file
-from app.ingestion.tabular import clean_column_names, create_and_load_table, infer_types, to_identifier
+from app.ingestion.tabular import clean_column_names, infer_types, to_identifier
 from app.util import to_jsonable, vector_literal
 
 log = logging.getLogger(__name__)
@@ -48,12 +49,10 @@ async def _set_status(state, dataset_id: int, status: str, error: str | None = N
             await s.commit()
 
 
-async def unique_slug(session, base: str) -> str:
+async def unique_slug(session, base: str, extra_taken: set[str] | None = None) -> str:
     base = to_identifier(base, "dataset")[:50]
     taken = set((await session.scalars(select(Dataset.slug).where(Dataset.slug.like(f"{base}%")))).all())
-    taken |= set(
-        (await session.execute(text("SELECT tablename FROM pg_tables WHERE schemaname = 'data'"))).scalars().all()
-    )
+    taken |= extra_taken or set()
     slug, k = base, 2
     while slug in taken:
         slug = f"{base}_{k}"
@@ -107,20 +106,49 @@ def _prepare_table(df: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, str]]:
     return infer_types(df)
 
 
-async def _store_table(state, reuse_id: int | None, parent_id: int, original_name: str, table: ParsedTable) -> None:
-    # CPU-heavy pandas work runs in a thread so large uploads don't freeze the API
-    df, types = await asyncio.to_thread(_prepare_table, table.df)
-    descriptions = await _describe_columns(state, table.name_hint, df, types)
+async def _store_tables(state, reuse_id: int | None, parent_id: int, original_name: str, tables: list[ParsedTable]) -> None:
+    """Write every table of this upload into ONE .duckdb file, then register each as a dataset."""
+    prepared = []
+    taken: set[str] = set()
+    for table in tables:
+        # CPU-heavy pandas work runs in a thread so large uploads don't freeze the API
+        df, types = await asyncio.to_thread(_prepare_table, table.df)
+        descriptions = await _describe_columns(state, table.name_hint, df, types)
+        async with state.sessionmaker() as s:
+            slug = await unique_slug(s, table.name_hint, taken)
+        taken.add(slug)
+        prepared.append((table, slug, df, types, descriptions))
+    path = upload_db_path(state.settings.duckdb_path, parent_id)
+    counts = await asyncio.to_thread(write_upload_file, path, [(slug, df, types) for _, slug, df, types, _ in prepared])
+    try:
+        for i, (table, slug, df, types, descriptions) in enumerate(prepared):
+            await _register_table(
+                state, reuse_id if i == 0 else None, parent_id, original_name, table, slug, df, types, descriptions, counts[slug]
+            )
+    except Exception:
+        async with state.sessionmaker() as s:
+            ready = await s.scalar(
+                select(func.count()).select_from(Dataset).where(
+                    Dataset.kind == "table", Dataset.status == "ready", (Dataset.id == parent_id) | (Dataset.parent_upload_id == parent_id)
+                )
+            )
+        if not ready:
+            remove_upload_file(path)
+        raise
+
+
+async def _register_table(
+    state, reuse_id: int | None, parent_id: int, original_name: str, table: ParsedTable, slug: str,
+    df: pd.DataFrame, types: dict[str, str], descriptions: dict[str, str], row_count: int,
+) -> None:
     async with state.sessionmaker() as s:
-        slug = await unique_slug(s, table.name_hint)
         ds = await _target(s, reuse_id, parent_id)
         is_main = table.name_hint == Path(original_name).stem
         ds.name = original_name if is_main else f"{original_name} ({table.name_hint})"
         ds.slug = slug
         ds.kind = "table"
+        ds.row_count = row_count
         await s.flush()
-        conn = await s.connection()
-        ds.row_count = await create_and_load_table(conn, slug, df, types)
         for col in df.columns:
             s.add(
                 DatasetColumn(
@@ -132,7 +160,7 @@ async def _store_table(state, reuse_id: int | None, parent_id: int, original_nam
                 )
             )
         ds.status, ds.error = "ready", None
-        await bump_catalog_version(s)  # each committed part becomes visible immediately
+        await bump_catalog_version(s)  # each registered part becomes visible immediately
         await s.commit()
 
 
@@ -174,8 +202,8 @@ async def _store_document(
 
 async def _store(state, dataset_id: int, original_name: str, result: ParseResult) -> None:
     reuse: int | None = dataset_id
-    for table in result.tables:
-        await _store_table(state, reuse, dataset_id, original_name, table)
+    if result.tables:
+        await _store_tables(state, reuse, dataset_id, original_name, result.tables)
         reuse = None
     if result.segments:
         await _store_document(state, reuse, dataset_id, original_name, result.segments)
