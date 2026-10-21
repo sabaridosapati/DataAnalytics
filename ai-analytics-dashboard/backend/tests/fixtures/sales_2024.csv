@@ -1,0 +1,2001 @@
+order_id,order_date,region,product,category,quantity,unit_price,revenue
+85,2024-01-01,East,Desk,Furniture,3,382.63,1147.89
+239,2024-01-01,North,Pen Pack,Office Supplies,10,10.0,100.0
+271,2024-01-01,West,Laptop,Electronics,3,1246.44,3739.32
+422,2024-01-01,South,Chair,Furniture,9,170.21,1531.89
+535,2024-01-01,North,Chair,Furniture,10,195.68,1956.8
+1669,2024-01-01,South,Stapler,Office Supplies,8,15.93,127.44
+561,2024-01-02,North,Notebook,Office Supplies,1,4.43,4.43
+775,2024-01-02,North,Lamp,Furniture,7,42.31,296.17
+1364,2024-01-02,North,Notebook,Office Supplies,7,4.15,29.05
+568,2024-01-03,East,Headphones,Electronics,5,155.53,777.65
+759,2024-01-03,North,Phone,Electronics,9,784.76,7062.84
+1323,2024-01-03,South,Notebook,Office Supplies,2,4.61,9.22
+1444,2024-01-03,South,Headphones,Electronics,5,163.73,818.65
+1732,2024-01-03,West,Chair,Furniture,4,196.42,785.68
+726,2024-01-04,East,Lamp,Furniture,4,49.37,197.48
+812,2024-01-04,East,Desk,Furniture,8,354.72,2837.76
+826,2024-01-04,East,Lamp,Furniture,4,42.64,170.56
+429,2024-01-05,East,Phone,Electronics,9,820.56,7385.04
+620,2024-01-05,East,Desk,Furniture,7,320.7,2244.9
+1726,2024-01-05,North,Laptop,Electronics,4,1313.53,5254.12
+18,2024-01-06,South,Laptop,Electronics,1,1282.24,1282.24
+281,2024-01-06,South,Pen Pack,Office Supplies,4,9.87,39.48
+1620,2024-01-06,North,Headphones,Electronics,6,138.37,830.22
+136,2024-01-07,East,Headphones,Electronics,6,143.92,863.52
+259,2024-01-07,South,Notebook,Office Supplies,7,4.63,32.41
+287,2024-01-07,South,Notebook,Office Supplies,1,4.42,4.42
+590,2024-01-07,East,Desk,Furniture,3,359.15,1077.45
+1386,2024-01-07,South,Laptop,Electronics,6,1090.35,6542.1
+643,2024-01-08,West,Chair,Furniture,8,167.0,1336.0
+768,2024-01-08,West,Notebook,Office Supplies,2,4.37,8.74
+794,2024-01-08,East,Laptop,Electronics,10,1156.83,11568.3
+1318,2024-01-08,South,Chair,Furniture,6,163.64,981.84
+1376,2024-01-08,North,Headphones,Electronics,6,135.16,810.96
+1729,2024-01-08,South,Laptop,Electronics,1,1142.54,1142.54
+1929,2024-01-08,West,Desk,Furniture,9,363.52,3271.68
+69,2024-01-09,East,Headphones,Electronics,2,156.54,313.08
+519,2024-01-09,West,Headphones,Electronics,1,149.95,149.95
+595,2024-01-09,North,Stapler,Office Supplies,5,15.07,75.35
+1442,2024-01-09,East,Laptop,Electronics,7,1124.23,7869.61
+795,2024-01-10,South,Headphones,Electronics,3,160.26,480.78
+1156,2024-01-10,West,Pen Pack,Office Supplies,2,9.27,18.54
+1244,2024-01-10,South,Headphones,Electronics,2,161.59,323.18
+1309,2024-01-10,North,Lamp,Furniture,5,47.87,239.35
+1433,2024-01-10,East,Pen Pack,Office Supplies,10,9.55,95.5
+1568,2024-01-10,West,Lamp,Furniture,5,41.6,208.0
+424,2024-01-11,West,Phone,Electronics,10,815.16,8151.6
+998,2024-01-11,East,Pen Pack,Office Supplies,3,9.7,29.1
+1001,2024-01-11,East,Phone,Electronics,6,842.7,5056.2
+1940,2024-01-11,West,Lamp,Furniture,4,44.6,178.4
+1069,2024-01-12,North,Phone,Electronics,7,728.33,5098.31
+1116,2024-01-12,East,Laptop,Electronics,7,1259.7,8817.9
+1261,2024-01-12,West,Stapler,Office Supplies,9,14.89,134.01
+647,2024-01-13,North,Chair,Furniture,8,164.63,1317.04
+744,2024-01-13,West,Headphones,Electronics,8,135.98,1087.84
+766,2024-01-13,South,Desk,Furniture,3,356.25,1068.75
+917,2024-01-13,North,Pen Pack,Office Supplies,10,9.38,93.8
+1899,2024-01-13,East,Headphones,Electronics,3,144.53,433.59
+1994,2024-01-13,South,Desk,Furniture,7,377.73,2644.11
+176,2024-01-14,West,Phone,Electronics,10,864.4,8644.0
+292,2024-01-14,North,Headphones,Electronics,10,141.5,1415.0
+435,2024-01-14,West,Headphones,Electronics,9,156.56,1409.04
+1826,2024-01-14,South,Chair,Furniture,1,171.89,171.89
+150,2024-01-15,East,Desk,Furniture,9,355.96,3203.64
+555,2024-01-15,East,Stapler,Office Supplies,3,14.22,42.66
+664,2024-01-15,West,Stapler,Office Supplies,9,14.77,132.93
+741,2024-01-15,North,Phone,Electronics,4,773.51,3094.04
+1382,2024-01-15,East,Lamp,Furniture,3,46.35,139.05
+423,2024-01-16,West,Phone,Electronics,10,872.25,8722.5
+511,2024-01-16,North,Laptop,Electronics,10,1193.63,11936.3
+1402,2024-01-16,North,Phone,Electronics,3,828.38,2485.14
+1567,2024-01-16,East,Notebook,Office Supplies,6,4.26,25.56
+205,2024-01-17,West,Chair,Furniture,4,171.76,687.04
+273,2024-01-17,East,Headphones,Electronics,8,148.04,1184.32
+339,2024-01-17,East,Headphones,Electronics,9,163.44,1470.96
+628,2024-01-17,East,Stapler,Office Supplies,5,14.89,74.45
+1019,2024-01-17,South,Pen Pack,Office Supplies,6,10.09,60.54
+1894,2024-01-17,West,Stapler,Office Supplies,4,15.51,62.04
+28,2024-01-18,East,Phone,Electronics,8,749.01,5992.08
+270,2024-01-18,North,Notebook,Office Supplies,8,4.2,33.6
+1908,2024-01-18,North,Pen Pack,Office Supplies,3,9.79,29.37
+513,2024-01-19,East,Headphones,Electronics,8,139.63,1117.04
+732,2024-01-19,South,Pen Pack,Office Supplies,10,10.03,100.3
+1617,2024-01-19,West,Phone,Electronics,4,879.3,3517.2
+485,2024-01-20,North,Laptop,Electronics,1,1317.81,1317.81
+1230,2024-01-20,West,Phone,Electronics,10,862.73,8627.3
+1766,2024-01-20,East,Stapler,Office Supplies,7,13.74,96.18
+683,2024-01-21,South,Headphones,Electronics,4,146.0,584.0
+1045,2024-01-21,South,Phone,Electronics,4,859.92,3439.68
+1158,2024-01-21,West,Laptop,Electronics,7,1129.86,7909.02
+1900,2024-01-21,North,Pen Pack,Office Supplies,3,10.15,30.45
+1949,2024-01-21,South,Laptop,Electronics,1,1201.72,1201.72
+125,2024-01-22,South,Headphones,Electronics,8,145.95,1167.6
+227,2024-01-22,South,Notebook,Office Supplies,1,4.77,4.77
+449,2024-01-22,East,Chair,Furniture,5,190.64,953.2
+988,2024-01-22,South,Phone,Electronics,1,758.99,758.99
+1139,2024-01-22,South,Notebook,Office Supplies,3,4.08,12.24
+1428,2024-01-22,South,Headphones,Electronics,8,137.6,1100.8
+1807,2024-01-22,North,Chair,Furniture,3,165.8,497.4
+52,2024-01-23,East,Pen Pack,Office Supplies,9,10.7,96.3
+75,2024-01-23,North,Desk,Furniture,4,377.89,1511.56
+415,2024-01-23,South,Stapler,Office Supplies,8,13.84,110.72
+548,2024-01-23,West,Laptop,Electronics,2,1122.35,2244.7
+723,2024-01-23,South,Laptop,Electronics,10,1208.76,12087.6
+821,2024-01-23,South,Desk,Furniture,7,337.9,2365.3
+841,2024-01-23,South,Laptop,Electronics,6,1265.61,7593.66
+872,2024-01-23,South,Chair,Furniture,9,172.32,1550.88
+1101,2024-01-23,East,Chair,Furniture,1,188.13,188.13
+1221,2024-01-23,North,Desk,Furniture,6,351.99,2111.94
+1390,2024-01-23,South,Chair,Furniture,10,187.15,1871.5
+1743,2024-01-23,South,Laptop,Electronics,3,1126.05,3378.15
+123,2024-01-24,South,Headphones,Electronics,9,146.0,1314.0
+633,2024-01-24,South,Headphones,Electronics,1,139.0,139.0
+635,2024-01-24,East,Notebook,Office Supplies,3,4.39,13.17
+650,2024-01-24,West,Laptop,Electronics,9,1150.88,10357.92
+728,2024-01-24,East,Phone,Electronics,9,797.49,7177.41
+1161,2024-01-24,North,Laptop,Electronics,1,1164.09,1164.09
+1768,2024-01-24,West,Lamp,Furniture,2,44.79,89.58
+1837,2024-01-24,East,Lamp,Furniture,1,45.93,45.93
+1205,2024-01-25,East,Headphones,Electronics,10,153.81,1538.1
+1220,2024-01-25,North,Pen Pack,Office Supplies,2,10.48,20.96
+1315,2024-01-25,West,Phone,Electronics,4,725.96,2903.84
+1482,2024-01-25,North,Pen Pack,Office Supplies,9,9.3,83.7
+1491,2024-01-25,East,Desk,Furniture,1,384.42,384.42
+1911,2024-01-25,South,Lamp,Furniture,9,43.51,391.59
+1966,2024-01-25,East,Lamp,Furniture,5,41.17,205.85
+395,2024-01-26,North,Chair,Furniture,9,164.08,1476.72
+797,2024-01-26,East,Notebook,Office Supplies,2,4.23,8.46
+903,2024-01-26,South,Laptop,Electronics,6,1120.17,6721.02
+1790,2024-01-26,West,Pen Pack,Office Supplies,5,10.84,54.2
+735,2024-01-27,East,Laptop,Electronics,1,1259.08,1259.08
+451,2024-01-28,North,Laptop,Electronics,6,1089.29,6535.74
+681,2024-01-28,West,Desk,Furniture,6,324.47,1946.82
+1206,2024-01-28,South,Headphones,Electronics,2,160.07,320.14
+1660,2024-01-28,West,Phone,Electronics,8,832.83,6662.64
+1841,2024-01-28,South,Laptop,Electronics,6,1190.91,7145.46
+1926,2024-01-28,North,Desk,Furniture,5,376.15,1880.75
+164,2024-01-29,West,Lamp,Furniture,10,44.12,441.2
+763,2024-01-29,North,Stapler,Office Supplies,10,16.48,164.8
+972,2024-01-29,South,Stapler,Office Supplies,9,15.94,143.46
+1157,2024-01-29,North,Chair,Furniture,7,184.77,1293.39
+1592,2024-01-29,East,Stapler,Office Supplies,1,14.66,14.66
+1902,2024-01-29,South,Lamp,Furniture,1,45.09,45.09
+1952,2024-01-29,South,Chair,Furniture,1,190.51,190.51
+811,2024-01-30,West,Headphones,Electronics,9,159.94,1439.46
+1314,2024-01-30,East,Pen Pack,Office Supplies,3,10.18,30.54
+1356,2024-01-30,South,Pen Pack,Office Supplies,4,9.44,37.76
+140,2024-01-31,North,Chair,Furniture,2,195.53,391.06
+1394,2024-01-31,North,Desk,Furniture,1,351.95,351.95
+1486,2024-01-31,South,Notebook,Office Supplies,8,4.7,37.6
+1535,2024-01-31,North,Headphones,Electronics,4,156.96,627.84
+1721,2024-01-31,South,Lamp,Furniture,4,45.64,182.56
+1958,2024-01-31,South,Laptop,Electronics,10,1100.04,11000.4
+153,2024-02-01,North,Lamp,Furniture,8,42.96,343.68
+217,2024-02-01,West,Lamp,Furniture,2,49.44,98.88
+268,2024-02-01,North,Chair,Furniture,7,183.45,1284.15
+1803,2024-02-01,East,Stapler,Office Supplies,8,15.27,122.16
+204,2024-02-02,West,Desk,Furniture,4,372.35,1489.4
+469,2024-02-02,West,Pen Pack,Office Supplies,9,10.02,90.18
+474,2024-02-02,West,Pen Pack,Office Supplies,3,9.67,29.01
+1107,2024-02-02,South,Desk,Furniture,8,321.05,2568.4
+1151,2024-02-02,East,Laptop,Electronics,1,1259.4,1259.4
+1183,2024-02-02,East,Stapler,Office Supplies,8,15.51,124.08
+1517,2024-02-02,South,Notebook,Office Supplies,10,4.83,48.3
+1674,2024-02-02,West,Chair,Furniture,6,197.27,1183.62
+128,2024-02-03,North,Headphones,Electronics,5,135.26,676.3
+389,2024-02-03,East,Lamp,Furniture,1,41.37,41.37
+1054,2024-02-03,West,Headphones,Electronics,10,163.19,1631.9
+1236,2024-02-03,West,Desk,Furniture,9,373.75,3363.75
+1396,2024-02-03,East,Notebook,Office Supplies,1,4.29,4.29
+1473,2024-02-03,North,Chair,Furniture,4,193.61,774.44
+129,2024-02-04,West,Laptop,Electronics,3,1316.92,3950.76
+1117,2024-02-04,North,Lamp,Furniture,8,48.72,389.76
+1154,2024-02-04,East,Laptop,Electronics,7,1106.57,7745.99
+1765,2024-02-04,North,Pen Pack,Office Supplies,8,10.28,82.24
+98,2024-02-05,East,Notebook,Office Supplies,6,4.33,25.98
+231,2024-02-05,South,Stapler,Office Supplies,4,16.13,64.52
+442,2024-02-05,East,Pen Pack,Office Supplies,6,10.68,64.08
+815,2024-02-05,West,Pen Pack,Office Supplies,7,9.21,64.47
+849,2024-02-05,South,Desk,Furniture,6,383.6,2301.6
+1887,2024-02-05,East,Phone,Electronics,5,787.63,3938.15
+218,2024-02-06,West,Desk,Furniture,3,367.12,1101.36
+409,2024-02-06,West,Phone,Electronics,8,828.35,6626.8
+583,2024-02-06,West,Headphones,Electronics,9,144.29,1298.61
+908,2024-02-06,South,Chair,Furniture,8,184.05,1472.4
+938,2024-02-06,East,Notebook,Office Supplies,9,4.9,44.1
+1153,2024-02-06,East,Phone,Electronics,1,750.71,750.71
+1427,2024-02-06,North,Notebook,Office Supplies,5,4.74,23.7
+525,2024-02-07,South,Headphones,Electronics,9,144.67,1302.03
+1240,2024-02-07,North,Stapler,Office Supplies,2,13.8,27.6
+1251,2024-02-07,South,Laptop,Electronics,8,1262.32,10098.56
+1253,2024-02-07,South,Phone,Electronics,8,758.35,6066.8
+193,2024-02-08,West,Notebook,Office Supplies,9,4.16,37.44
+455,2024-02-08,East,Lamp,Furniture,9,43.33,389.97
+918,2024-02-08,South,Chair,Furniture,1,179.37,179.37
+1654,2024-02-08,South,Stapler,Office Supplies,3,14.03,42.09
+86,2024-02-09,West,Chair,Furniture,2,190.57,381.14
+109,2024-02-09,West,Headphones,Electronics,4,141.27,565.08
+258,2024-02-09,West,Pen Pack,Office Supplies,3,9.09,27.27
+362,2024-02-09,West,Pen Pack,Office Supplies,9,9.62,86.58
+671,2024-02-09,North,Headphones,Electronics,10,162.89,1628.9
+725,2024-02-09,South,Stapler,Office Supplies,3,15.87,47.61
+1133,2024-02-09,South,Headphones,Electronics,3,155.64,466.92
+1511,2024-02-09,West,Headphones,Electronics,5,156.14,780.7
+1532,2024-02-09,West,Pen Pack,Office Supplies,10,9.69,96.9
+9,2024-02-10,South,Chair,Furniture,4,191.17,764.68
+155,2024-02-10,East,Laptop,Electronics,4,1133.22,4532.88
+337,2024-02-10,West,Laptop,Electronics,8,1150.3,9202.4
+350,2024-02-10,West,Lamp,Furniture,7,42.74,299.18
+921,2024-02-10,East,Chair,Furniture,9,195.19,1756.71
+1252,2024-02-10,North,Notebook,Office Supplies,2,4.6,9.2
+1255,2024-02-10,West,Notebook,Office Supplies,4,4.47,17.88
+1529,2024-02-10,South,Chair,Furniture,8,162.13,1297.04
+1769,2024-02-10,South,Chair,Furniture,9,164.61,1481.49
+1784,2024-02-10,North,Phone,Electronics,1,745.22,745.22
+1904,2024-02-10,South,Lamp,Furniture,1,47.51,47.51
+195,2024-02-11,North,Laptop,Electronics,8,1080.93,8647.44
+869,2024-02-11,South,Notebook,Office Supplies,8,4.82,38.56
+973,2024-02-11,East,Notebook,Office Supplies,2,4.88,9.76
+1757,2024-02-11,South,Stapler,Office Supplies,7,16.08,112.56
+161,2024-02-12,North,Chair,Furniture,10,165.81,1658.1
+310,2024-02-12,South,Lamp,Furniture,5,46.78,233.9
+341,2024-02-12,East,Desk,Furniture,4,348.2,1392.8
+1330,2024-02-12,West,Desk,Furniture,6,348.83,2092.98
+1575,2024-02-12,North,Desk,Furniture,1,344.68,344.68
+1991,2024-02-12,North,Lamp,Furniture,3,45.22,135.66
+89,2024-02-13,North,Lamp,Furniture,1,47.26,47.26
+302,2024-02-13,South,Stapler,Office Supplies,5,15.45,77.25
+473,2024-02-13,West,Lamp,Furniture,1,41.02,41.02
+608,2024-02-13,East,Lamp,Furniture,2,40.78,81.56
+619,2024-02-13,North,Lamp,Furniture,3,47.74,143.22
+1182,2024-02-13,East,Lamp,Furniture,1,43.11,43.11
+1415,2024-02-13,West,Laptop,Electronics,2,1120.09,2240.18
+1434,2024-02-13,North,Stapler,Office Supplies,9,15.0,135.0
+5,2024-02-14,South,Phone,Electronics,3,786.3,2358.9
+261,2024-02-14,North,Phone,Electronics,8,822.05,6576.4
+264,2024-02-14,West,Desk,Furniture,6,320.26,1921.56
+335,2024-02-14,East,Headphones,Electronics,3,137.53,412.59
+413,2024-02-14,South,Stapler,Office Supplies,3,14.57,43.71
+437,2024-02-14,North,Lamp,Furniture,4,48.9,195.6
+1170,2024-02-14,West,Desk,Furniture,9,356.4,3207.6
+1275,2024-02-14,North,Notebook,Office Supplies,2,4.38,8.76
+1341,2024-02-14,West,Stapler,Office Supplies,6,13.9,83.4
+1642,2024-02-14,South,Chair,Furniture,6,168.09,1008.54
+1964,2024-02-14,East,Lamp,Furniture,1,48.7,48.7
+29,2024-02-15,South,Notebook,Office Supplies,4,4.37,17.48
+37,2024-02-15,North,Desk,Furniture,6,351.34,2108.04
+60,2024-02-15,South,Pen Pack,Office Supplies,10,10.93,109.3
+545,2024-02-15,South,Lamp,Furniture,8,45.8,366.4
+636,2024-02-15,West,Notebook,Office Supplies,1,4.84,4.84
+718,2024-02-15,South,Chair,Furniture,4,179.06,716.24
+742,2024-02-15,North,Phone,Electronics,9,859.64,7736.76
+240,2024-02-16,North,Stapler,Office Supplies,5,15.17,75.85
+294,2024-02-16,North,Laptop,Electronics,2,1102.46,2204.92
+552,2024-02-16,South,Phone,Electronics,8,733.27,5866.16
+1393,2024-02-16,South,Notebook,Office Supplies,6,4.38,26.28
+1685,2024-02-16,South,Desk,Furniture,10,323.75,3237.5
+1810,2024-02-16,East,Phone,Electronics,4,868.63,3474.52
+207,2024-02-17,West,Pen Pack,Office Supplies,10,10.74,107.4
+392,2024-02-17,East,Stapler,Office Supplies,5,13.62,68.1
+954,2024-02-17,East,Headphones,Electronics,9,161.59,1454.31
+1111,2024-02-17,East,Notebook,Office Supplies,3,4.27,12.81
+1350,2024-02-17,South,Laptop,Electronics,4,1200.51,4802.04
+1843,2024-02-17,West,Pen Pack,Office Supplies,7,9.76,68.32
+1990,2024-02-17,North,Pen Pack,Office Supplies,9,9.08,81.72
+91,2024-02-18,East,Lamp,Furniture,10,47.29,472.9
+99,2024-02-18,North,Headphones,Electronics,7,156.85,1097.95
+188,2024-02-18,East,Notebook,Office Supplies,2,4.51,9.02
+269,2024-02-18,North,Phone,Electronics,3,772.6,2317.8
+417,2024-02-18,South,Pen Pack,Office Supplies,4,10.93,43.72
+845,2024-02-18,South,Lamp,Furniture,9,45.03,405.27
+985,2024-02-18,West,Headphones,Electronics,9,141.83,1276.47
+1371,2024-02-18,South,Laptop,Electronics,6,1142.68,6856.08
+1915,2024-02-18,West,Pen Pack,Office Supplies,7,10.56,73.92
+290,2024-02-19,West,Lamp,Furniture,3,40.83,122.49
+964,2024-02-19,North,Stapler,Office Supplies,4,14.34,57.36
+1003,2024-02-19,East,Notebook,Office Supplies,7,4.68,32.76
+1052,2024-02-19,North,Phone,Electronics,2,720.6,1441.2
+1836,2024-02-19,West,Notebook,Office Supplies,4,4.81,19.24
+376,2024-02-20,East,Phone,Electronics,3,740.62,2221.86
+462,2024-02-20,North,Lamp,Furniture,6,46.67,280.02
+1624,2024-02-20,East,Lamp,Furniture,6,45.61,273.66
+805,2024-02-21,North,Notebook,Office Supplies,3,4.28,12.84
+940,2024-02-21,East,Chair,Furniture,10,181.89,1818.9
+1041,2024-02-21,South,Lamp,Furniture,6,44.38,266.28
+230,2024-02-22,South,Notebook,Office Supplies,2,4.51,9.02
+769,2024-02-22,North,Laptop,Electronics,3,1212.84,3638.52
+927,2024-02-22,East,Headphones,Electronics,8,144.26,1154.08
+1297,2024-02-22,North,Pen Pack,Office Supplies,10,10.92,109.2
+1368,2024-02-22,West,Phone,Electronics,6,853.63,5121.78
+1551,2024-02-22,West,Lamp,Furniture,6,46.53,279.18
+1936,2024-02-22,West,Notebook,Office Supplies,6,4.36,26.16
+59,2024-02-23,East,Desk,Furniture,7,343.94,2407.58
+523,2024-02-23,South,Pen Pack,Office Supplies,1,10.66,10.66
+762,2024-02-23,West,Phone,Electronics,1,745.0,745.0
+894,2024-02-23,West,Pen Pack,Office Supplies,8,9.08,72.64
+364,2024-02-24,West,Stapler,Office Supplies,4,16.25,65.0
+375,2024-02-24,South,Headphones,Electronics,8,140.71,1125.68
+679,2024-02-24,South,Phone,Electronics,1,770.13,770.13
+888,2024-02-24,South,Stapler,Office Supplies,5,13.75,68.75
+1004,2024-02-24,North,Desk,Furniture,3,352.22,1056.66
+1040,2024-02-24,North,Notebook,Office Supplies,10,4.51,45.1
+1122,2024-02-24,West,Stapler,Office Supplies,5,16.36,81.8
+1519,2024-02-24,South,Phone,Electronics,2,856.65,1713.3
+963,2024-02-25,East,Laptop,Electronics,2,1174.52,2349.04
+1443,2024-02-25,East,Pen Pack,Office Supplies,8,9.8,78.4
+1602,2024-02-25,West,Desk,Furniture,1,369.1,369.1
+1165,2024-02-26,South,Headphones,Electronics,9,160.81,1447.29
+1278,2024-02-26,South,Headphones,Electronics,9,154.6,1391.4
+1707,2024-02-26,East,Headphones,Electronics,3,146.97,440.91
+1764,2024-02-26,South,Phone,Electronics,2,762.73,1525.46
+50,2024-02-27,West,Stapler,Office Supplies,5,13.78,68.9
+209,2024-02-27,South,Lamp,Furniture,2,45.54,91.08
+363,2024-02-27,South,Phone,Electronics,5,807.49,4037.45
+733,2024-02-27,West,Phone,Electronics,1,748.0,748.0
+764,2024-02-27,North,Lamp,Furniture,2,41.09,82.18
+1189,2024-02-27,North,Stapler,Office Supplies,8,15.49,123.92
+1408,2024-02-27,East,Phone,Electronics,3,743.35,2230.05
+1456,2024-02-27,South,Desk,Furniture,7,329.4,2305.8
+510,2024-02-28,West,Phone,Electronics,4,797.5,3190.0
+703,2024-02-28,East,Notebook,Office Supplies,1,4.87,4.87
+806,2024-02-28,East,Notebook,Office Supplies,10,4.06,40.6
+404,2024-02-29,South,Laptop,Electronics,7,1248.3,8738.1
+865,2024-02-29,North,Notebook,Office Supplies,1,4.24,4.24
+1105,2024-02-29,East,Desk,Furniture,3,339.15,1017.45
+352,2024-03-01,East,Pen Pack,Office Supplies,7,9.98,69.86
+587,2024-03-01,North,Stapler,Office Supplies,3,16.46,49.38
+771,2024-03-01,West,Chair,Furniture,9,171.31,1541.79
+855,2024-03-01,West,Headphones,Electronics,9,139.81,1258.29
+1124,2024-03-01,North,Headphones,Electronics,6,164.91,989.46
+1248,2024-03-01,West,Lamp,Furniture,9,48.57,437.13
+1367,2024-03-01,North,Lamp,Furniture,4,45.48,181.92
+1542,2024-03-01,North,Desk,Furniture,7,378.69,2650.83
+1576,2024-03-01,North,Desk,Furniture,4,334.26,1337.04
+654,2024-03-02,South,Desk,Furniture,4,324.08,1296.32
+791,2024-03-02,North,Headphones,Electronics,9,150.36,1353.24
+893,2024-03-02,North,Phone,Electronics,5,732.41,3662.05
+1591,2024-03-02,East,Desk,Furniture,1,347.53,347.53
+1644,2024-03-02,North,Stapler,Office Supplies,8,15.67,125.36
+1793,2024-03-02,West,Laptop,Electronics,10,1182.19,11821.9
+266,2024-03-03,East,Lamp,Furniture,6,43.68,262.08
+644,2024-03-03,East,Stapler,Office Supplies,7,15.26,106.82
+1437,2024-03-03,East,Desk,Furniture,1,325.97,325.97
+1605,2024-03-03,North,Desk,Furniture,2,350.13,700.26
+1639,2024-03-03,West,Notebook,Office Supplies,9,4.36,39.24
+1668,2024-03-03,East,Stapler,Office Supplies,6,15.09,90.54
+1686,2024-03-03,West,Desk,Furniture,4,324.83,1299.32
+1976,2024-03-03,North,Phone,Electronics,3,790.46,2371.38
+798,2024-03-04,East,Notebook,Office Supplies,3,4.64,13.92
+1222,2024-03-04,North,Phone,Electronics,1,831.37,831.37
+1470,2024-03-04,East,Phone,Electronics,5,753.89,3769.45
+1509,2024-03-04,West,Desk,Furniture,2,336.19,672.38
+1697,2024-03-04,South,Phone,Electronics,10,796.78,7967.8
+1781,2024-03-04,South,Chair,Furniture,5,193.61,968.05
+1868,2024-03-04,East,Stapler,Office Supplies,1,15.22,15.22
+36,2024-03-05,East,Notebook,Office Supplies,5,4.94,24.7
+206,2024-03-05,North,Chair,Furniture,3,192.99,578.97
+427,2024-03-05,North,Headphones,Electronics,10,154.94,1549.4
+1016,2024-03-05,North,Stapler,Office Supplies,6,15.99,95.94
+1184,2024-03-05,South,Chair,Furniture,9,164.32,1478.88
+1857,2024-03-05,West,Stapler,Office Supplies,5,15.45,77.25
+454,2024-03-06,South,Notebook,Office Supplies,9,4.36,39.24
+1233,2024-03-06,West,Phone,Electronics,6,856.65,5139.9
+1888,2024-03-06,East,Stapler,Office Supplies,10,16.31,163.1
+851,2024-03-07,East,Laptop,Electronics,5,1080.39,5401.95
+1180,2024-03-07,South,Lamp,Furniture,5,40.51,202.55
+1301,2024-03-07,North,Pen Pack,Office Supplies,6,9.27,55.62
+1845,2024-03-07,North,Desk,Furniture,7,338.35,2368.45
+84,2024-03-08,East,Desk,Furniture,7,369.03,2583.21
+213,2024-03-08,North,Chair,Furniture,7,191.63,1341.41
+556,2024-03-08,North,Desk,Furniture,4,324.0,1296.0
+1110,2024-03-08,South,Stapler,Office Supplies,8,14.53,116.24
+1231,2024-03-08,North,Chair,Furniture,1,181.24,181.24
+1526,2024-03-08,South,Lamp,Furniture,2,47.32,94.64
+1741,2024-03-08,North,Phone,Electronics,5,803.81,4019.05
+51,2024-03-09,North,Lamp,Furniture,2,47.43,94.86
+1081,2024-03-09,South,Phone,Electronics,10,768.95,7689.5
+1445,2024-03-09,South,Chair,Furniture,5,188.87,944.35
+112,2024-03-10,South,Phone,Electronics,8,830.36,6642.88
+994,2024-03-10,West,Stapler,Office Supplies,2,14.17,28.34
+1468,2024-03-10,North,Phone,Electronics,2,803.94,1607.88
+1851,2024-03-10,East,Pen Pack,Office Supplies,6,9.59,57.54
+26,2024-03-11,West,Chair,Furniture,10,168.71,1687.1
+39,2024-03-11,West,Laptop,Electronics,1,1143.5,1143.5
+74,2024-03-11,South,Headphones,Electronics,4,148.57,594.28
+436,2024-03-11,North,Laptop,Electronics,10,1086.12,10861.2
+1185,2024-03-11,North,Desk,Furniture,7,361.35,2529.45
+1277,2024-03-11,West,Chair,Furniture,6,186.15,1116.9
+1405,2024-03-11,East,Desk,Furniture,7,332.34,2326.38
+1547,2024-03-11,South,Pen Pack,Office Supplies,1,9.04,9.04
+1555,2024-03-11,West,Phone,Electronics,9,760.81,6847.29
+1621,2024-03-11,West,Phone,Electronics,9,733.64,6602.76
+1763,2024-03-11,North,Pen Pack,Office Supplies,10,10.14,101.4
+1947,2024-03-11,South,Notebook,Office Supplies,4,4.84,19.36
+1337,2024-03-12,West,Pen Pack,Office Supplies,1,10.51,10.51
+1457,2024-03-12,East,Chair,Furniture,2,193.72,387.44
+1484,2024-03-12,South,Notebook,Office Supplies,2,4.31,8.62
+1544,2024-03-12,East,Notebook,Office Supplies,7,4.1,28.7
+1590,2024-03-12,West,Chair,Furniture,5,176.11,880.55
+1752,2024-03-12,East,Lamp,Furniture,7,40.94,286.58
+272,2024-03-13,North,Laptop,Electronics,5,1214.08,6070.4
+538,2024-03-13,East,Headphones,Electronics,6,161.71,970.26
+1179,2024-03-13,West,Pen Pack,Office Supplies,4,9.59,38.36
+663,2024-03-14,South,Phone,Electronics,2,878.47,1756.94
+693,2024-03-14,East,Lamp,Furniture,5,41.91,209.55
+701,2024-03-14,East,Headphones,Electronics,6,151.79,910.74
+716,2024-03-14,North,Headphones,Electronics,1,155.71,155.71
+889,2024-03-14,South,Lamp,Furniture,2,47.8,95.6
+899,2024-03-14,East,Desk,Furniture,4,343.01,1372.04
+1196,2024-03-14,East,Stapler,Office Supplies,3,14.38,43.14
+1450,2024-03-14,South,Notebook,Office Supplies,6,4.67,28.02
+1722,2024-03-14,West,Pen Pack,Office Supplies,1,9.82,9.82
+1814,2024-03-14,West,Stapler,Office Supplies,4,15.96,63.84
+1984,2024-03-14,East,Stapler,Office Supplies,10,15.34,153.4
+192,2024-03-15,East,Pen Pack,Office Supplies,4,10.23,40.92
+488,2024-03-15,North,Pen Pack,Office Supplies,4,9.57,38.28
+852,2024-03-15,South,Notebook,Office Supplies,4,4.72,18.88
+885,2024-03-15,North,Phone,Electronics,7,786.68,5506.76
+1091,2024-03-15,West,Stapler,Office Supplies,7,15.98,111.86
+1834,2024-03-15,East,Laptop,Electronics,1,1255.77,1255.77
+553,2024-03-16,South,Phone,Electronics,9,860.71,7746.39
+970,2024-03-16,East,Phone,Electronics,3,754.67,2264.01
+1472,2024-03-16,East,Stapler,Office Supplies,6,13.97,83.82
+115,2024-03-17,South,Notebook,Office Supplies,10,4.7,47.0
+737,2024-03-17,North,Chair,Furniture,8,187.17,1497.36
+953,2024-03-17,East,Chair,Furniture,7,162.84,1139.88
+1267,2024-03-17,South,Lamp,Furniture,6,44.23,265.38
+1463,2024-03-17,North,Headphones,Electronics,2,164.29,328.58
+1657,2024-03-17,East,Lamp,Furniture,9,47.46,427.14
+1891,2024-03-17,North,Stapler,Office Supplies,3,16.31,48.93
+444,2024-03-18,West,Headphones,Electronics,1,143.25,143.25
+1197,2024-03-18,East,Chair,Furniture,10,177.36,1773.6
+1664,2024-03-18,North,Laptop,Electronics,10,1141.84,11418.4
+1785,2024-03-18,East,Stapler,Office Supplies,7,14.97,104.79
+1835,2024-03-18,South,Phone,Electronics,4,805.2,3220.8
+1944,2024-03-18,West,Phone,Electronics,2,829.76,1659.52
+196,2024-03-19,South,Chair,Furniture,9,167.98,1511.82
+255,2024-03-20,South,Laptop,Electronics,6,1097.39,6584.34
+808,2024-03-20,East,Phone,Electronics,6,756.55,4539.3
+968,2024-03-20,North,Headphones,Electronics,9,161.35,1452.15
+1100,2024-03-20,South,Headphones,Electronics,4,137.78,551.12
+1164,2024-03-20,South,Notebook,Office Supplies,6,4.65,27.9
+1239,2024-03-20,North,Laptop,Electronics,5,1278.3,6391.5
+1661,2024-03-20,West,Stapler,Office Supplies,1,14.32,14.32
+1912,2024-03-20,West,Headphones,Electronics,1,146.9,146.9
+419,2024-03-21,West,Laptop,Electronics,3,1104.34,3313.02
+516,2024-03-21,South,Chair,Furniture,5,197.92,989.6
+682,2024-03-21,South,Stapler,Office Supplies,8,14.28,114.24
+778,2024-03-21,North,Stapler,Office Supplies,4,14.92,59.68
+925,2024-03-21,South,Laptop,Electronics,1,1081.45,1081.45
+946,2024-03-21,North,Pen Pack,Office Supplies,9,9.01,81.09
+1360,2024-03-21,North,Desk,Furniture,9,374.93,3374.37
+456,2024-03-22,East,Headphones,Electronics,6,154.42,926.52
+756,2024-03-22,South,Chair,Furniture,4,191.36,765.44
+1225,2024-03-22,East,Desk,Furniture,7,351.11,2457.77
+1520,2024-03-22,West,Phone,Electronics,6,756.76,4540.56
+1896,2024-03-22,South,Pen Pack,Office Supplies,8,10.34,82.72
+1916,2024-03-22,East,Lamp,Furniture,1,46.3,46.3
+1941,2024-03-22,East,Lamp,Furniture,7,43.36,303.52
+16,2024-03-23,South,Laptop,Electronics,4,1211.28,4845.12
+71,2024-03-23,South,Stapler,Office Supplies,8,16.12,128.96
+313,2024-03-23,North,Headphones,Electronics,8,142.34,1138.72
+562,2024-03-23,North,Chair,Furniture,1,165.4,165.4
+898,2024-03-23,East,Headphones,Electronics,5,160.64,803.2
+1369,2024-03-23,West,Desk,Furniture,9,383.58,3452.22
+1597,2024-03-23,West,Notebook,Office Supplies,3,4.39,13.17
+1629,2024-03-23,West,Stapler,Office Supplies,8,14.78,118.24
+282,2024-03-24,North,Headphones,Electronics,8,152.63,1221.04
+536,2024-03-24,North,Laptop,Electronics,6,1139.15,6834.9
+1512,2024-03-24,South,Laptop,Electronics,6,1121.19,6727.14
+1762,2024-03-24,West,Phone,Electronics,2,866.17,1732.34
+1980,2024-03-24,North,Headphones,Electronics,1,153.69,153.69
+589,2024-03-25,West,Laptop,Electronics,5,1203.01,6015.05
+1050,2024-03-25,West,Chair,Furniture,6,171.96,1031.76
+1237,2024-03-25,East,Laptop,Electronics,7,1265.34,8857.38
+1598,2024-03-25,East,Headphones,Electronics,1,152.45,152.45
+1616,2024-03-25,North,Laptop,Electronics,7,1180.21,8261.47
+1742,2024-03-25,East,Phone,Electronics,6,736.81,4420.86
+1925,2024-03-25,West,Laptop,Electronics,7,1244.17,8709.19
+163,2024-03-26,West,Notebook,Office Supplies,9,4.15,37.35
+175,2024-03-26,East,Desk,Furniture,8,378.85,3030.8
+199,2024-03-26,West,Headphones,Electronics,8,137.66,1101.28
+943,2024-03-26,South,Phone,Electronics,10,845.89,8458.9
+1058,2024-03-26,West,Lamp,Furniture,8,40.92,327.36
+1235,2024-03-26,West,Laptop,Electronics,10,1208.71,12087.1
+1693,2024-03-26,West,Headphones,Electronics,5,138.47,692.35
+1939,2024-03-26,South,Chair,Furniture,6,181.95,1091.7
+131,2024-03-27,West,Lamp,Furniture,4,43.73,174.92
+243,2024-03-27,North,Pen Pack,Office Supplies,4,9.78,39.12
+753,2024-03-27,South,Laptop,Electronics,6,1309.48,7856.88
+1047,2024-03-27,West,Headphones,Electronics,4,153.64,614.56
+1097,2024-03-27,East,Headphones,Electronics,6,144.96,869.76
+1298,2024-03-27,East,Lamp,Furniture,4,48.13,192.52
+1435,2024-03-27,North,Chair,Furniture,7,188.01,1316.07
+1975,2024-03-27,East,Pen Pack,Office Supplies,10,10.68,106.8
+283,2024-03-28,North,Headphones,Electronics,6,158.03,948.18
+416,2024-03-28,South,Lamp,Furniture,3,47.72,143.16
+482,2024-03-28,West,Desk,Furniture,2,338.57,677.14
+828,2024-03-28,West,Lamp,Furniture,9,42.67,384.03
+870,2024-03-28,North,Phone,Electronics,8,875.72,7005.76
+980,2024-03-28,East,Notebook,Office Supplies,10,4.22,42.2
+1628,2024-03-28,South,Lamp,Furniture,5,47.72,238.6
+332,2024-03-29,East,Chair,Furniture,9,179.02,1611.18
+539,2024-03-29,East,Lamp,Furniture,6,43.79,262.74
+727,2024-03-29,West,Lamp,Furniture,7,47.03,329.21
+1811,2024-03-29,East,Pen Pack,Office Supplies,6,10.42,62.52
+936,2024-03-30,South,Notebook,Office Supplies,1,4.59,4.59
+1645,2024-03-30,East,Lamp,Furniture,3,46.3,138.9
+767,2024-03-31,East,Chair,Furniture,3,178.98,536.94
+1441,2024-03-31,South,Headphones,Electronics,3,160.96,482.88
+1738,2024-03-31,East,Pen Pack,Office Supplies,10,10.19,101.9
+1388,2024-04-01,South,Lamp,Furniture,10,45.63,456.3
+1530,2024-04-01,West,Stapler,Office Supplies,9,15.04,135.36
+1783,2024-04-01,South,Desk,Furniture,8,333.5,2668.0
+1787,2024-04-01,East,Headphones,Electronics,4,149.37,597.48
+1859,2024-04-01,West,Laptop,Electronics,10,1296.65,12966.5
+507,2024-04-03,West,Chair,Furniture,9,180.75,1626.75
+1516,2024-04-03,North,Pen Pack,Office Supplies,10,10.11,101.1
+1792,2024-04-03,East,Pen Pack,Office Supplies,3,9.28,27.84
+1898,2024-04-03,South,Desk,Furniture,6,330.74,1984.44
+530,2024-04-04,West,Chair,Furniture,8,172.53,1380.24
+1354,2024-04-04,East,Pen Pack,Office Supplies,8,9.8,78.4
+1521,2024-04-04,South,Chair,Furniture,5,166.25,831.25
+1553,2024-04-04,West,Lamp,Furniture,8,47.59,380.72
+1584,2024-04-04,North,Notebook,Office Supplies,2,4.29,8.58
+1847,2024-04-04,South,Phone,Electronics,3,871.45,2614.35
+1858,2024-04-04,North,Stapler,Office Supplies,7,14.58,102.06
+464,2024-04-05,North,Headphones,Electronics,9,155.96,1403.64
+517,2024-04-05,West,Phone,Electronics,3,858.19,2574.57
+700,2024-04-05,East,Lamp,Furniture,4,48.65,194.6
+878,2024-04-05,South,Chair,Furniture,7,171.77,1202.39
+1404,2024-04-05,North,Pen Pack,Office Supplies,6,10.49,62.94
+1761,2024-04-05,North,Notebook,Office Supplies,1,4.19,4.19
+48,2024-04-06,West,Desk,Furniture,2,371.45,742.9
+146,2024-04-06,East,Stapler,Office Supplies,1,15.49,15.49
+830,2024-04-06,South,Phone,Electronics,8,805.38,6443.04
+113,2024-04-07,South,Pen Pack,Office Supplies,9,10.13,91.17
+514,2024-04-07,West,Headphones,Electronics,4,151.32,605.28
+1796,2024-04-07,East,Pen Pack,Office Supplies,5,9.25,46.25
+1798,2024-04-07,North,Laptop,Electronics,2,1257.2,2514.4
+1886,2024-04-07,West,Notebook,Office Supplies,3,4.75,14.25
+263,2024-04-08,East,Notebook,Office Supplies,8,4.89,39.12
+348,2024-04-08,West,Stapler,Office Supplies,7,14.84,103.88
+731,2024-04-08,East,Laptop,Electronics,5,1212.57,6062.85
+738,2024-04-08,South,Desk,Furniture,1,322.94,322.94
+910,2024-04-08,East,Headphones,Electronics,1,147.3,147.3
+1146,2024-04-08,West,Laptop,Electronics,6,1129.01,6774.06
+1653,2024-04-08,East,Headphones,Electronics,10,145.94,1459.4
+1715,2024-04-08,North,Notebook,Office Supplies,5,4.82,24.1
+225,2024-04-09,South,Desk,Furniture,5,355.74,1778.7
+475,2024-04-09,South,Lamp,Furniture,2,41.89,83.78
+494,2024-04-09,South,Lamp,Furniture,3,46.85,140.55
+751,2024-04-09,North,Desk,Furniture,3,328.07,984.21
+1406,2024-04-09,East,Phone,Electronics,7,831.3,5819.1
+1550,2024-04-09,West,Laptop,Electronics,10,1154.73,11547.3
+221,2024-04-10,South,Pen Pack,Office Supplies,7,9.78,68.46
+669,2024-04-10,North,Chair,Furniture,6,179.83,1078.98
+952,2024-04-10,North,Phone,Electronics,9,871.93,7847.37
+1063,2024-04-10,East,Laptop,Electronics,8,1294.78,10358.24
+173,2024-04-11,North,Phone,Electronics,1,807.78,807.78
+323,2024-04-11,South,Headphones,Electronics,9,152.22,1369.98
+476,2024-04-11,North,Chair,Furniture,7,193.62,1355.34
+941,2024-04-11,South,Notebook,Office Supplies,5,4.65,23.25
+68,2024-04-12,West,Stapler,Office Supplies,3,14.06,42.18
+200,2024-04-12,West,Desk,Furniture,10,381.55,3815.5
+661,2024-04-12,South,Laptop,Electronics,6,1219.5,7317.0
+1008,2024-04-12,West,Pen Pack,Office Supplies,6,10.25,61.5
+1136,2024-04-12,South,Notebook,Office Supplies,6,4.2,25.2
+1464,2024-04-12,North,Phone,Electronics,5,820.16,4100.8
+1606,2024-04-12,East,Phone,Electronics,8,750.41,6003.28
+147,2024-04-13,West,Desk,Furniture,7,384.84,2693.88
+793,2024-04-13,North,Notebook,Office Supplies,8,4.86,38.88
+897,2024-04-13,East,Pen Pack,Office Supplies,8,9.93,79.44
+1053,2024-04-13,East,Headphones,Electronics,6,148.66,891.96
+1871,2024-04-13,East,Notebook,Office Supplies,1,4.65,4.65
+1987,2024-04-13,West,Laptop,Electronics,4,1114.06,4456.24
+747,2024-04-14,East,Chair,Furniture,7,190.19,1331.33
+752,2024-04-14,West,Chair,Furniture,1,164.54,164.54
+931,2024-04-14,North,Chair,Furniture,9,171.87,1546.83
+593,2024-04-15,North,Notebook,Office Supplies,7,4.73,33.11
+702,2024-04-15,West,Headphones,Electronics,4,137.86,551.44
+1246,2024-04-15,East,Stapler,Office Supplies,10,15.5,155.0
+1276,2024-04-15,East,Phone,Electronics,5,759.71,3798.55
+1684,2024-04-15,West,Headphones,Electronics,10,141.64,1416.4
+615,2024-04-16,East,Lamp,Furniture,1,49.13,49.13
+1055,2024-04-16,South,Phone,Electronics,9,823.82,7414.38
+267,2024-04-17,West,Notebook,Office Supplies,8,4.95,39.6
+401,2024-04-17,West,Notebook,Office Supplies,4,4.88,19.52
+757,2024-04-17,West,Pen Pack,Office Supplies,1,10.99,10.99
+1671,2024-04-17,West,Laptop,Electronics,10,1081.32,10813.2
+1895,2024-04-17,West,Chair,Furniture,6,162.86,977.16
+77,2024-04-18,East,Laptop,Electronics,2,1161.36,2322.72
+127,2024-04-18,East,Phone,Electronics,5,855.63,4278.15
+254,2024-04-18,East,Chair,Furniture,5,195.09,975.45
+372,2024-04-18,South,Lamp,Furniture,1,46.19,46.19
+658,2024-04-18,East,Phone,Electronics,10,751.52,7515.2
+802,2024-04-18,South,Headphones,Electronics,8,152.87,1222.96
+823,2024-04-18,East,Phone,Electronics,4,878.7,3514.8
+1094,2024-04-18,West,Notebook,Office Supplies,8,4.32,34.56
+1288,2024-04-18,East,Laptop,Electronics,3,1256.26,3768.78
+1878,2024-04-18,West,Notebook,Office Supplies,10,4.57,45.7
+44,2024-04-19,North,Laptop,Electronics,3,1261.6,3784.8
+309,2024-04-19,East,Laptop,Electronics,2,1244.16,2488.32
+398,2024-04-19,East,Laptop,Electronics,3,1247.98,3743.94
+1026,2024-04-19,South,Headphones,Electronics,4,139.49,557.96
+1173,2024-04-19,North,Phone,Electronics,5,743.29,3716.45
+1215,2024-04-19,South,Pen Pack,Office Supplies,1,10.24,10.24
+1329,2024-04-19,South,Notebook,Office Supplies,7,4.09,28.63
+1589,2024-04-20,East,Headphones,Electronics,9,159.96,1439.64
+1647,2024-04-20,South,Laptop,Electronics,9,1249.97,11249.73
+1860,2024-04-20,North,Laptop,Electronics,8,1168.07,9344.56
+445,2024-04-21,North,Laptop,Electronics,1,1168.01,1168.01
+596,2024-04-21,West,Stapler,Office Supplies,2,13.88,27.76
+820,2024-04-21,North,Lamp,Furniture,4,47.92,191.68
+1242,2024-04-21,West,Pen Pack,Office Supplies,10,10.75,107.5
+1531,2024-04-21,East,Headphones,Electronics,8,148.04,1184.32
+1922,2024-04-21,East,Headphones,Electronics,5,135.12,675.6
+169,2024-04-22,North,Headphones,Electronics,9,163.21,1468.89
+190,2024-04-22,East,Laptop,Electronics,5,1318.93,6594.65
+284,2024-04-22,South,Desk,Furniture,7,345.19,2416.33
+975,2024-04-22,West,Headphones,Electronics,6,149.23,895.38
+33,2024-04-23,South,Laptop,Electronics,6,1109.75,6658.5
+316,2024-04-23,South,Desk,Furniture,2,370.88,741.76
+788,2024-04-23,East,Chair,Furniture,10,197.24,1972.4
+1065,2024-04-23,East,Phone,Electronics,2,860.86,1721.72
+1325,2024-04-23,West,Chair,Furniture,5,196.88,984.4
+1549,2024-04-23,North,Lamp,Furniture,1,41.15,41.15
+1582,2024-04-23,North,Laptop,Electronics,10,1103.62,11036.2
+1611,2024-04-23,East,Chair,Furniture,6,171.27,1027.62
+103,2024-04-24,South,Chair,Furniture,6,183.53,1101.18
+319,2024-04-24,South,Chair,Furniture,2,167.65,335.3
+691,2024-04-24,East,Desk,Furniture,5,344.38,1721.9
+909,2024-04-24,South,Laptop,Electronics,8,1273.03,10184.24
+926,2024-04-24,South,Laptop,Electronics,5,1099.66,5498.3
+971,2024-04-24,South,Phone,Electronics,3,781.98,2345.94
+1076,2024-04-24,North,Desk,Furniture,10,315.31,3153.1
+1119,2024-04-24,West,Stapler,Office Supplies,3,15.29,45.87
+1304,2024-04-24,West,Phone,Electronics,8,736.77,5894.16
+1734,2024-04-24,South,Notebook,Office Supplies,1,4.36,4.36
+277,2024-04-25,East,Pen Pack,Office Supplies,6,9.43,56.58
+407,2024-04-25,South,Headphones,Electronics,1,143.23,143.23
+919,2024-04-25,East,Stapler,Office Supplies,3,14.75,44.25
+1263,2024-04-25,West,Pen Pack,Office Supplies,10,10.61,106.1
+1710,2024-04-25,West,Chair,Furniture,9,172.97,1556.73
+76,2024-04-26,East,Headphones,Electronics,5,137.01,685.05
+1997,2024-04-26,West,Lamp,Furniture,5,45.55,227.75
+95,2024-04-27,East,Desk,Furniture,8,329.31,2634.48
+171,2024-04-27,South,Chair,Furniture,7,166.3,1164.1
+705,2024-04-27,East,Notebook,Office Supplies,7,4.74,33.18
+781,2024-04-27,North,Phone,Electronics,1,810.97,810.97
+902,2024-04-27,North,Desk,Furniture,3,335.79,1007.37
+1652,2024-04-27,East,Lamp,Furniture,5,44.79,223.95
+694,2024-04-28,South,Chair,Furniture,2,171.87,343.74
+1093,2024-04-28,East,Lamp,Furniture,10,42.1,421.0
+1199,2024-04-28,East,Lamp,Furniture,3,48.74,146.22
+1209,2024-04-28,East,Laptop,Electronics,9,1256.36,11307.24
+108,2024-04-29,South,Laptop,Electronics,1,1099.27,1099.27
+157,2024-04-29,South,Lamp,Furniture,3,44.52,133.56
+184,2024-04-29,East,Headphones,Electronics,6,149.98,899.88
+330,2024-04-29,North,Chair,Furniture,10,183.97,1839.7
+484,2024-04-29,East,Pen Pack,Office Supplies,1,10.11,10.11
+1000,2024-04-29,South,Chair,Furniture,10,184.15,1841.5
+1353,2024-04-29,East,Phone,Electronics,7,849.31,5945.17
+1877,2024-04-29,West,Laptop,Electronics,4,1202.13,4808.52
+1971,2024-04-29,North,Stapler,Office Supplies,2,14.73,29.46
+374,2024-04-30,North,Headphones,Electronics,7,144.97,1014.79
+557,2024-04-30,East,Desk,Furniture,2,340.2,680.4
+1046,2024-04-30,North,Chair,Furniture,6,163.44,980.64
+1217,2024-04-30,North,Desk,Furniture,3,376.84,1130.52
+1294,2024-04-30,South,Headphones,Electronics,3,141.7,425.1
+1600,2024-04-30,East,Phone,Electronics,2,745.3,1490.6
+1608,2024-04-30,South,Stapler,Office Supplies,4,13.6,54.4
+1651,2024-04-30,West,Lamp,Furniture,8,41.57,332.56
+317,2024-05-01,West,Stapler,Office Supplies,7,13.96,97.72
+1370,2024-05-01,South,Phone,Electronics,1,816.05,816.05
+22,2024-05-02,South,Laptop,Electronics,6,1303.23,7819.38
+1006,2024-05-02,East,Headphones,Electronics,9,149.6,1346.4
+47,2024-05-03,West,Notebook,Office Supplies,8,4.86,38.88
+97,2024-05-03,South,Phone,Electronics,3,875.53,2626.59
+792,2024-05-03,East,Phone,Electronics,10,747.15,7471.5
+987,2024-05-03,East,Desk,Furniture,7,326.11,2282.77
+651,2024-05-04,West,Desk,Furniture,4,381.11,1524.44
+687,2024-05-04,West,Desk,Furniture,5,382.68,1913.4
+950,2024-05-04,North,Lamp,Furniture,5,47.48,237.4
+1138,2024-05-04,South,Notebook,Office Supplies,7,4.22,29.54
+1311,2024-05-04,North,Stapler,Office Supplies,7,14.43,101.01
+11,2024-05-05,East,Laptop,Electronics,7,1162.76,8139.32
+315,2024-05-05,North,Pen Pack,Office Supplies,10,9.56,95.6
+373,2024-05-05,East,Phone,Electronics,8,763.3,6106.4
+1245,2024-05-05,West,Notebook,Office Supplies,8,4.19,33.52
+1262,2024-05-05,North,Pen Pack,Office Supplies,6,10.46,62.76
+1300,2024-05-05,East,Pen Pack,Office Supplies,5,9.11,45.55
+1571,2024-05-05,West,Phone,Electronics,7,769.82,5388.74
+1809,2024-05-05,North,Notebook,Office Supplies,5,4.94,24.7
+1015,2024-05-06,South,Headphones,Electronics,6,142.37,854.22
+1214,2024-05-06,South,Lamp,Furniture,2,47.67,95.34
+1424,2024-05-06,South,Laptop,Electronics,9,1133.11,10197.99
+989,2024-05-07,North,Headphones,Electronics,4,146.11,584.44
+1982,2024-05-07,East,Chair,Furniture,6,171.03,1026.18
+72,2024-05-08,West,Chair,Furniture,8,165.16,1321.28
+187,2024-05-08,North,Chair,Furniture,9,184.24,1658.16
+232,2024-05-08,West,Stapler,Office Supplies,5,14.0,70.0
+676,2024-05-08,East,Stapler,Office Supplies,5,15.49,77.45
+786,2024-05-08,West,Notebook,Office Supplies,9,4.33,38.97
+1273,2024-05-08,North,Headphones,Electronics,5,145.52,727.6
+1554,2024-05-08,South,Desk,Furniture,5,376.85,1884.25
+286,2024-05-09,East,Stapler,Office Supplies,5,14.8,74.0
+379,2024-05-09,West,Notebook,Office Supplies,6,4.81,28.86
+547,2024-05-09,East,Pen Pack,Office Supplies,6,9.54,57.24
+1281,2024-05-09,South,Desk,Furniture,10,333.95,3339.5
+1587,2024-05-09,North,Desk,Furniture,9,318.08,2862.72
+248,2024-05-10,North,Pen Pack,Office Supplies,6,10.52,63.12
+369,2024-05-10,East,Lamp,Furniture,1,43.48,43.48
+385,2024-05-10,North,Desk,Furniture,9,328.03,2952.27
+481,2024-05-10,North,Headphones,Electronics,8,136.21,1089.68
+686,2024-05-10,South,Pen Pack,Office Supplies,2,10.9,21.8
+1625,2024-05-10,South,Desk,Furniture,2,330.85,661.7
+1659,2024-05-10,North,Lamp,Furniture,9,47.89,431.01
+1974,2024-05-10,East,Desk,Furniture,6,342.6,2055.6
+124,2024-05-11,South,Chair,Furniture,3,173.77,521.31
+656,2024-05-11,South,Laptop,Electronics,5,1117.96,5589.8
+740,2024-05-11,West,Laptop,Electronics,2,1244.29,2488.58
+1070,2024-05-11,North,Stapler,Office Supplies,2,13.72,27.44
+1187,2024-05-11,North,Notebook,Office Supplies,3,4.89,14.67
+1192,2024-05-11,South,Pen Pack,Office Supplies,9,9.25,83.25
+1499,2024-05-11,North,Pen Pack,Office Supplies,1,9.87,9.87
+1717,2024-05-11,East,Notebook,Office Supplies,4,4.55,18.2
+499,2024-05-12,West,Phone,Electronics,6,834.73,5008.38
+1296,2024-05-12,South,Laptop,Electronics,4,1117.93,4471.72
+1583,2024-05-12,East,Lamp,Furniture,1,44.6,44.6
+134,2024-05-13,East,Chair,Furniture,7,190.52,1333.64
+220,2024-05-13,North,Lamp,Furniture,6,42.53,255.18
+1028,2024-05-13,South,Lamp,Furniture,5,40.96,204.8
+1080,2024-05-13,South,Laptop,Electronics,8,1215.56,9724.48
+1426,2024-05-13,North,Notebook,Office Supplies,7,4.64,32.48
+1527,2024-05-13,West,Stapler,Office Supplies,1,15.96,15.96
+480,2024-05-14,North,Headphones,Electronics,5,152.89,764.45
+859,2024-05-14,North,Pen Pack,Office Supplies,9,10.63,95.67
+1038,2024-05-14,West,Lamp,Furniture,8,48.92,391.36
+1112,2024-05-14,South,Phone,Electronics,5,844.1,4220.5
+1287,2024-05-14,South,Chair,Furniture,10,183.66,1836.6
+1340,2024-05-14,East,Pen Pack,Office Supplies,6,10.89,65.34
+1546,2024-05-14,North,Headphones,Electronics,5,156.07,780.35
+1885,2024-05-14,North,Chair,Furniture,10,169.71,1697.1
+580,2024-05-15,West,Notebook,Office Supplies,10,4.45,44.5
+588,2024-05-15,North,Headphones,Electronics,5,142.46,712.3
+877,2024-05-15,South,Phone,Electronics,2,763.67,1527.34
+1171,2024-05-15,East,Laptop,Electronics,7,1192.34,8346.38
+1178,2024-05-15,East,Pen Pack,Office Supplies,9,9.68,87.12
+1373,2024-05-15,North,Desk,Furniture,7,375.42,2627.94
+1849,2024-05-15,South,Chair,Furniture,10,181.15,1811.5
+1883,2024-05-15,South,Laptop,Electronics,4,1156.11,4624.44
+618,2024-05-16,South,Headphones,Electronics,10,146.73,1467.3
+796,2024-05-16,South,Stapler,Office Supplies,6,13.96,83.76
+1272,2024-05-16,East,Notebook,Office Supplies,5,4.76,23.8
+1295,2024-05-16,West,Pen Pack,Office Supplies,8,9.98,79.84
+1594,2024-05-16,South,Notebook,Office Supplies,3,4.4,13.2
+82,2024-05-17,South,Headphones,Electronics,7,140.91,986.37
+515,2024-05-17,North,Pen Pack,Office Supplies,5,9.65,48.25
+569,2024-05-17,North,Laptop,Electronics,1,1159.51,1159.51
+634,2024-05-17,North,Phone,Electronics,5,849.65,4248.25
+881,2024-05-17,North,Phone,Electronics,2,795.8,1591.6
+1102,2024-05-17,North,Desk,Furniture,2,359.26,718.52
+1690,2024-05-17,South,Stapler,Office Supplies,4,15.62,62.48
+533,2024-05-18,West,Pen Pack,Office Supplies,8,10.89,87.12
+584,2024-05-18,North,Phone,Electronics,9,801.84,7216.56
+739,2024-05-18,North,Lamp,Furniture,1,46.61,46.61
+1037,2024-05-18,West,Chair,Furniture,7,168.18,1177.26
+1779,2024-05-18,West,Desk,Furniture,10,359.97,3599.7
+526,2024-05-19,West,Desk,Furniture,2,332.97,665.94
+839,2024-05-19,South,Phone,Electronics,3,788.99,2366.97
+1400,2024-05-19,South,Phone,Electronics,10,878.36,8783.6
+486,2024-05-20,West,Pen Pack,Office Supplies,3,10.79,32.37
+626,2024-05-20,North,Desk,Furniture,3,381.71,1145.13
+874,2024-05-20,North,Chair,Furniture,3,195.79,587.37
+1210,2024-05-20,North,Notebook,Office Supplies,1,4.32,4.32
+1282,2024-05-20,South,Lamp,Furniture,2,48.5,97.0
+1425,2024-05-20,North,Lamp,Furniture,9,40.82,367.38
+1708,2024-05-20,West,Laptop,Electronics,3,1288.43,3865.29
+1730,2024-05-20,North,Headphones,Electronics,4,154.77,619.08
+166,2024-05-21,East,Chair,Furniture,10,169.62,1696.2
+314,2024-05-21,West,Laptop,Electronics,2,1133.4,2266.8
+660,2024-05-21,South,Phone,Electronics,7,824.29,5770.03
+1035,2024-05-21,East,Laptop,Electronics,9,1278.11,11502.99
+1362,2024-05-21,North,Laptop,Electronics,10,1272.09,12720.9
+1460,2024-05-21,South,Pen Pack,Office Supplies,3,9.92,29.76
+1636,2024-05-21,East,Pen Pack,Office Supplies,3,10.61,31.83
+1927,2024-05-21,East,Phone,Electronics,6,842.13,5052.78
+288,2024-05-22,South,Chair,Furniture,3,165.75,497.25
+477,2024-05-22,West,Stapler,Office Supplies,5,15.19,75.95
+847,2024-05-22,South,Phone,Electronics,2,727.79,1455.58
+891,2024-05-22,South,Phone,Electronics,5,725.59,3627.95
+1630,2024-05-22,East,Headphones,Electronics,8,153.85,1230.8
+312,2024-05-23,East,Pen Pack,Office Supplies,10,9.93,99.3
+571,2024-05-23,West,Pen Pack,Office Supplies,2,10.97,21.94
+665,2024-05-23,South,Laptop,Electronics,9,1137.05,10233.45
+1347,2024-05-23,South,Phone,Electronics,9,792.53,7132.77
+1627,2024-05-23,North,Notebook,Office Supplies,10,4.11,41.1
+1962,2024-05-23,North,Notebook,Office Supplies,1,4.37,4.37
+94,2024-05-24,South,Lamp,Furniture,5,42.19,210.95
+1067,2024-05-24,East,Notebook,Office Supplies,3,4.28,12.84
+1243,2024-05-24,South,Lamp,Furniture,10,48.66,486.6
+1481,2024-05-24,West,Chair,Furniture,7,192.17,1345.19
+250,2024-05-25,South,Phone,Electronics,8,725.27,5802.16
+471,2024-05-25,North,Lamp,Furniture,10,45.1,451.0
+670,2024-05-25,North,Phone,Electronics,5,817.96,4089.8
+886,2024-05-25,West,Pen Pack,Office Supplies,5,9.21,46.05
+944,2024-05-25,East,Stapler,Office Supplies,2,14.4,28.8
+1096,2024-05-25,West,Phone,Electronics,2,808.77,1617.54
+1108,2024-05-25,West,Lamp,Furniture,9,40.87,367.83
+1348,2024-05-25,West,Laptop,Electronics,8,1319.2,10553.6
+1349,2024-05-25,South,Chair,Furniture,5,176.14,880.7
+680,2024-05-26,South,Pen Pack,Office Supplies,6,10.63,63.78
+1125,2024-05-26,East,Laptop,Electronics,6,1236.05,7416.3
+1145,2024-05-26,South,Lamp,Furniture,4,47.09,188.36
+1327,2024-05-26,East,Phone,Electronics,1,800.14,800.14
+1637,2024-05-26,South,Stapler,Office Supplies,7,15.74,110.18
+1993,2024-05-26,West,Pen Pack,Office Supplies,6,10.8,64.8
+1998,2024-05-26,North,Stapler,Office Supplies,3,16.09,48.27
+249,2024-05-27,West,Desk,Furniture,5,329.44,1647.2
+978,2024-05-27,West,Lamp,Furniture,7,42.76,299.32
+307,2024-05-28,East,Laptop,Electronics,3,1319.85,3959.55
+366,2024-05-28,North,Laptop,Electronics,3,1173.67,3521.01
+522,2024-05-28,West,Phone,Electronics,3,849.95,2549.85
+734,2024-05-28,North,Laptop,Electronics,7,1273.5,8914.5
+1238,2024-05-28,West,Chair,Furniture,4,186.7,746.8
+1503,2024-05-28,North,Stapler,Office Supplies,3,15.27,45.81
+1504,2024-05-28,West,Lamp,Furniture,8,41.84,334.72
+1614,2024-05-28,East,Stapler,Office Supplies,8,16.47,131.76
+276,2024-05-29,South,Notebook,Office Supplies,1,4.25,4.25
+932,2024-05-29,South,Stapler,Office Supplies,6,14.04,84.24
+1455,2024-05-29,North,Chair,Furniture,5,193.29,966.45
+1656,2024-05-29,East,Lamp,Furniture,3,42.06,126.18
+1755,2024-05-29,North,Chair,Furniture,3,182.25,546.75
+1943,2024-05-29,North,Pen Pack,Office Supplies,5,10.6,53.0
+34,2024-05-30,East,Headphones,Electronics,7,138.92,972.44
+1703,2024-05-30,East,Lamp,Furniture,10,43.54,435.4
+1924,2024-05-30,North,Notebook,Office Supplies,5,4.13,20.65
+833,2024-05-31,South,Chair,Furniture,1,192.82,192.82
+844,2024-05-31,West,Chair,Furniture,7,173.42,1213.94
+887,2024-05-31,North,Lamp,Furniture,5,46.68,233.4
+933,2024-05-31,South,Phone,Electronics,5,854.82,4274.1
+1030,2024-05-31,West,Desk,Furniture,8,335.33,2682.64
+1141,2024-05-31,South,Desk,Furniture,10,369.98,3699.8
+1495,2024-05-31,East,Pen Pack,Office Supplies,8,10.94,87.52
+1543,2024-05-31,East,Lamp,Furniture,6,42.31,253.86
+1712,2024-05-31,South,Desk,Furniture,1,362.37,362.37
+1727,2024-05-31,South,Stapler,Office Supplies,6,14.28,85.68
+10,2024-06-01,East,Desk,Furniture,9,356.55,3208.95
+90,2024-06-01,East,Chair,Furniture,1,193.3,193.3
+487,2024-06-01,West,Laptop,Electronics,1,1188.27,1188.27
+622,2024-06-01,West,Desk,Furniture,3,337.69,1013.07
+1033,2024-06-01,East,Notebook,Office Supplies,10,4.8,48.0
+1078,2024-06-01,South,Stapler,Office Supplies,3,14.72,44.16
+1132,2024-06-01,South,Chair,Furniture,2,176.82,353.64
+1357,2024-06-01,North,Headphones,Electronics,6,162.56,975.36
+1467,2024-06-01,West,Lamp,Furniture,6,41.95,251.7
+1506,2024-06-01,East,Chair,Furniture,7,185.44,1298.08
+1566,2024-06-01,South,Headphones,Electronics,8,138.69,1109.52
+1749,2024-06-01,West,Chair,Furniture,8,193.65,1549.2
+1750,2024-06-01,West,Phone,Electronics,9,816.15,7345.35
+1853,2024-06-01,South,Headphones,Electronics,6,160.63,963.78
+126,2024-06-02,West,Phone,Electronics,9,816.34,7347.06
+183,2024-06-02,North,Stapler,Office Supplies,5,14.46,72.3
+843,2024-06-02,East,Notebook,Office Supplies,10,4.26,42.6
+907,2024-06-02,North,Chair,Furniture,4,178.08,712.32
+945,2024-06-02,East,Notebook,Office Supplies,7,4.35,30.45
+1191,2024-06-02,North,Phone,Electronics,9,800.2,7201.8
+1365,2024-06-02,East,Lamp,Furniture,2,49.25,98.5
+1401,2024-06-02,South,Chair,Furniture,5,182.12,910.6
+1646,2024-06-02,West,Notebook,Office Supplies,1,4.56,4.56
+93,2024-06-03,North,Lamp,Furniture,8,48.24,385.92
+356,2024-06-03,South,Chair,Furniture,10,168.55,1685.5
+359,2024-06-03,West,Pen Pack,Office Supplies,1,9.67,9.67
+684,2024-06-03,West,Notebook,Office Supplies,5,4.65,23.25
+904,2024-06-03,West,Desk,Furniture,5,332.21,1661.05
+1039,2024-06-03,West,Phone,Electronics,1,816.23,816.23
+1358,2024-06-03,North,Laptop,Electronics,5,1123.92,5619.6
+1536,2024-06-03,West,Laptop,Electronics,7,1133.07,7931.49
+1622,2024-06-03,East,Headphones,Electronics,5,145.64,728.2
+1778,2024-06-03,South,Pen Pack,Office Supplies,5,10.31,51.55
+1881,2024-06-03,West,Laptop,Electronics,8,1158.52,9268.16
+505,2024-06-04,West,Stapler,Office Supplies,3,16.26,48.78
+601,2024-06-04,North,Laptop,Electronics,3,1154.97,3464.91
+610,2024-06-04,West,Headphones,Electronics,9,153.73,1383.57
+1177,2024-06-04,West,Stapler,Office Supplies,9,14.53,130.77
+1477,2024-06-04,North,Chair,Furniture,10,176.8,1768.0
+62,2024-06-05,East,Phone,Electronics,10,747.2,7472.0
+355,2024-06-05,West,Headphones,Electronics,2,146.22,292.44
+1127,2024-06-05,West,Phone,Electronics,6,755.06,4530.36
+1322,2024-06-05,East,Headphones,Electronics,10,142.22,1422.2
+1488,2024-06-05,East,Notebook,Office Supplies,4,4.29,17.16
+1725,2024-06-05,East,Notebook,Office Supplies,2,4.37,8.74
+678,2024-06-06,East,Desk,Furniture,8,353.23,2825.84
+900,2024-06-06,East,Chair,Furniture,3,189.93,569.79
+996,2024-06-06,East,Headphones,Electronics,7,140.69,984.83
+1423,2024-06-06,West,Laptop,Electronics,2,1088.96,2177.92
+1540,2024-06-06,North,Pen Pack,Office Supplies,10,9.52,95.2
+1831,2024-06-06,West,Stapler,Office Supplies,5,15.79,78.95
+399,2024-06-07,South,Lamp,Furniture,8,45.5,364.0
+966,2024-06-07,North,Chair,Furniture,1,180.23,180.23
+1175,2024-06-07,East,Desk,Furniture,5,334.72,1673.6
+1430,2024-06-07,South,Stapler,Office Supplies,3,16.17,48.51
+1977,2024-06-07,East,Laptop,Electronics,3,1151.05,3453.15
+2,2024-06-08,North,Lamp,Furniture,2,48.47,96.94
+172,2024-06-08,North,Laptop,Electronics,8,1280.79,10246.32
+378,2024-06-08,North,Stapler,Office Supplies,6,13.63,81.78
+550,2024-06-08,North,Desk,Furniture,3,375.14,1125.42
+1073,2024-06-08,North,Desk,Furniture,7,335.5,2348.5
+1508,2024-06-08,North,Chair,Furniture,4,169.91,679.64
+1558,2024-06-08,East,Headphones,Electronics,7,148.05,1036.35
+1828,2024-06-08,East,Stapler,Office Supplies,1,15.81,15.81
+35,2024-06-09,West,Pen Pack,Office Supplies,10,10.2,102.0
+384,2024-06-09,North,Phone,Electronics,4,815.76,3263.04
+1149,2024-06-09,South,Stapler,Office Supplies,5,15.98,79.9
+1208,2024-06-09,East,Headphones,Electronics,6,153.44,920.64
+1227,2024-06-09,South,Notebook,Office Supplies,4,4.83,19.32
+1458,2024-06-09,West,Laptop,Electronics,4,1248.92,4995.68
+1631,2024-06-09,South,Lamp,Furniture,5,41.07,205.35
+1937,2024-06-09,North,Stapler,Office Supplies,10,13.9,139.0
+306,2024-06-10,North,Phone,Electronics,9,856.7,7710.3
+546,2024-06-10,West,Laptop,Electronics,6,1131.99,6791.94
+722,2024-06-10,East,Desk,Furniture,2,332.42,664.84
+977,2024-06-10,South,Notebook,Office Supplies,4,4.73,18.92
+1438,2024-06-10,West,Pen Pack,Office Supplies,1,9.3,9.3
+41,2024-06-11,North,Headphones,Electronics,9,143.38,1290.42
+149,2024-06-11,East,Chair,Furniture,9,163.77,1473.93
+210,2024-06-11,South,Desk,Furniture,1,331.89,331.89
+237,2024-06-11,East,Phone,Electronics,6,875.52,5253.12
+809,2024-06-11,South,Lamp,Furniture,3,42.18,126.54
+962,2024-06-11,West,Desk,Furniture,8,374.18,2993.44
+1569,2024-06-11,South,Chair,Furniture,9,168.0,1512.0
+1643,2024-06-11,West,Headphones,Electronics,6,144.27,865.62
+1827,2024-06-11,West,Desk,Furniture,4,350.2,1400.8
+304,2024-06-12,East,Lamp,Furniture,7,41.84,292.88
+470,2024-06-12,East,Headphones,Electronics,9,138.02,1242.18
+573,2024-06-12,West,Notebook,Office Supplies,5,4.89,24.45
+1013,2024-06-12,North,Stapler,Office Supplies,8,16.15,129.2
+1872,2024-06-12,South,Desk,Furniture,3,371.63,1114.89
+289,2024-06-13,North,Desk,Furniture,9,343.73,3093.57
+709,2024-06-13,North,Stapler,Office Supplies,7,15.06,105.42
+1010,2024-06-13,East,Headphones,Electronics,8,135.77,1086.16
+1942,2024-06-13,West,Headphones,Electronics,6,141.21,847.26
+203,2024-06-14,North,Lamp,Furniture,9,46.49,418.41
+504,2024-06-14,West,Headphones,Electronics,6,156.22,937.32
+1332,2024-06-14,East,Stapler,Office Supplies,10,14.63,146.3
+1422,2024-06-14,South,Notebook,Office Supplies,8,4.8,38.4
+1570,2024-06-14,East,Chair,Furniture,6,167.66,1005.96
+1995,2024-06-14,West,Stapler,Office Supplies,4,15.8,63.2
+70,2024-06-15,North,Desk,Furniture,5,322.29,1611.45
+148,2024-06-15,North,Phone,Electronics,1,806.31,806.31
+729,2024-06-15,West,Stapler,Office Supplies,10,13.81,138.1
+745,2024-06-15,West,Notebook,Office Supplies,4,4.11,16.44
+901,2024-06-15,South,Stapler,Office Supplies,10,14.53,145.3
+1890,2024-06-15,East,Desk,Furniture,5,350.82,1754.1
+2000,2024-06-15,North,Chair,Furniture,2,196.27,392.54
+15,2024-06-16,West,Lamp,Furniture,3,49.33,147.99
+311,2024-06-16,North,Lamp,Furniture,6,45.57,273.42
+458,2024-06-16,West,Laptop,Electronics,9,1119.16,10072.44
+958,2024-06-16,East,Headphones,Electronics,6,152.53,915.18
+1228,2024-06-16,North,Desk,Furniture,9,355.88,3202.92
+1479,2024-06-16,South,Lamp,Furniture,7,45.06,315.42
+1552,2024-06-16,East,Chair,Furniture,3,175.57,526.71
+1808,2024-06-16,South,Phone,Electronics,2,799.42,1598.84
+1969,2024-06-16,North,Stapler,Office Supplies,4,15.36,61.44
+88,2024-06-17,South,Stapler,Office Supplies,9,13.78,124.02
+222,2024-06-17,South,Headphones,Electronics,2,159.17,318.34
+472,2024-06-17,South,Laptop,Electronics,5,1135.7,5678.5
+746,2024-06-17,South,Phone,Electronics,5,858.9,4294.5
+856,2024-06-17,West,Lamp,Furniture,10,40.83,408.3
+1776,2024-06-17,West,Desk,Furniture,2,345.01,690.02
+400,2024-06-18,North,Laptop,Electronics,6,1303.63,7821.78
+1822,2024-06-18,West,Stapler,Office Supplies,6,13.51,81.06
+1269,2024-06-19,East,Chair,Furniture,4,187.39,749.56
+1291,2024-06-19,South,Lamp,Furniture,6,41.57,249.42
+1474,2024-06-19,South,Notebook,Office Supplies,2,4.53,9.06
+1545,2024-06-19,East,Pen Pack,Office Supplies,7,10.57,73.99
+1678,2024-06-19,North,Headphones,Electronics,3,138.72,416.16
+581,2024-06-20,North,Phone,Electronics,5,857.04,4285.2
+592,2024-06-20,West,Pen Pack,Office Supplies,5,9.97,49.85
+721,2024-06-20,South,Chair,Furniture,7,192.96,1350.72
+984,2024-06-20,North,Notebook,Office Supplies,6,4.72,28.32
+1002,2024-06-20,North,Phone,Electronics,10,790.33,7903.3
+1380,2024-06-20,North,Phone,Electronics,9,791.21,7120.89
+1610,2024-06-20,East,Pen Pack,Office Supplies,8,10.48,83.84
+1812,2024-06-20,North,Phone,Electronics,9,789.46,7105.14
+1818,2024-06-20,South,Headphones,Electronics,3,153.1,459.3
+624,2024-06-21,South,Chair,Furniture,2,169.33,338.66
+1381,2024-06-21,North,Phone,Electronics,8,735.34,5882.72
+1475,2024-06-21,West,Notebook,Office Supplies,5,4.12,20.6
+27,2024-06-22,North,Headphones,Electronics,2,146.76,293.52
+959,2024-06-22,East,Chair,Furniture,3,169.99,509.97
+1020,2024-06-22,East,Chair,Furniture,10,164.0,1640.0
+1283,2024-06-22,North,Stapler,Office Supplies,9,13.8,124.2
+1366,2024-06-22,North,Desk,Furniture,5,352.63,1763.15
+1696,2024-06-22,East,Notebook,Office Supplies,2,4.29,8.58
+1705,2024-06-22,East,Notebook,Office Supplies,1,4.78,4.78
+1838,2024-06-22,North,Chair,Furniture,4,187.14,748.56
+57,2024-06-23,East,Headphones,Electronics,8,147.53,1180.24
+141,2024-06-23,North,Phone,Electronics,1,842.45,842.45
+322,2024-06-23,South,Lamp,Furniture,2,45.39,90.78
+500,2024-06-23,South,Notebook,Office Supplies,4,4.82,19.28
+551,2024-06-23,North,Headphones,Electronics,10,144.28,1442.8
+1137,2024-06-23,West,Headphones,Electronics,6,143.03,858.18
+1819,2024-06-23,East,Stapler,Office Supplies,3,15.69,47.07
+1906,2024-06-23,East,Laptop,Electronics,1,1279.41,1279.41
+1907,2024-06-23,South,Notebook,Office Supplies,5,4.23,21.15
+119,2024-06-24,West,Desk,Furniture,3,349.22,1047.66
+497,2024-06-24,South,Phone,Electronics,7,814.12,5698.84
+509,2024-06-24,South,Chair,Furniture,10,165.91,1659.1
+576,2024-06-24,West,Pen Pack,Office Supplies,9,9.49,85.41
+1270,2024-06-24,North,Pen Pack,Office Supplies,4,10.5,42.0
+1343,2024-06-24,North,Phone,Electronics,8,867.81,6942.48
+1609,2024-06-24,East,Lamp,Furniture,4,40.63,162.52
+38,2024-06-25,North,Chair,Furniture,8,184.07,1472.56
+107,2024-06-25,West,Chair,Furniture,7,163.17,1142.19
+111,2024-06-25,South,Lamp,Furniture,2,47.94,95.88
+438,2024-06-25,East,Stapler,Office Supplies,6,15.35,92.1
+710,2024-06-25,West,Chair,Furniture,6,194.71,1168.26
+1216,2024-06-25,East,Headphones,Electronics,8,137.44,1099.52
+142,2024-06-26,West,Laptop,Electronics,2,1254.17,2508.34
+278,2024-06-26,South,Chair,Furniture,6,191.75,1150.5
+558,2024-06-26,South,Lamp,Furniture,8,43.61,348.88
+840,2024-06-26,West,Headphones,Electronics,7,142.36,996.52
+884,2024-06-26,West,Chair,Furniture,3,190.9,572.7
+1089,2024-06-26,North,Desk,Furniture,3,337.95,1013.85
+1321,2024-06-26,North,Laptop,Electronics,1,1199.41,1199.41
+1490,2024-06-26,West,Notebook,Office Supplies,7,4.83,33.81
+1830,2024-06-26,North,Laptop,Electronics,5,1085.2,5426.0
+1921,2024-06-26,West,Desk,Furniture,8,332.83,2662.64
+1923,2024-06-26,South,Notebook,Office Supplies,2,4.93,9.86
+145,2024-06-27,South,Lamp,Furniture,5,46.78,233.9
+1090,2024-06-27,West,Pen Pack,Office Supplies,2,9.97,19.94
+1480,2024-06-27,West,Headphones,Electronics,9,152.25,1370.25
+1688,2024-06-27,South,Laptop,Electronics,1,1094.84,1094.84
+138,2024-06-28,South,Stapler,Office Supplies,5,15.11,75.55
+253,2024-06-28,East,Pen Pack,Office Supplies,6,10.34,62.04
+560,2024-06-28,South,Lamp,Furniture,3,40.98,122.94
+648,2024-06-28,North,Phone,Electronics,9,817.33,7355.97
+730,2024-06-28,North,Phone,Electronics,2,798.92,1597.84
+754,2024-06-28,West,Headphones,Electronics,6,161.63,969.78
+860,2024-06-28,South,Laptop,Electronics,9,1098.08,9882.72
+1159,2024-06-28,North,Notebook,Office Supplies,1,4.24,4.24
+1476,2024-06-28,North,Laptop,Electronics,3,1174.8,3524.4
+1833,2024-06-28,East,Headphones,Electronics,8,154.85,1238.8
+1930,2024-06-28,East,Pen Pack,Office Supplies,7,9.47,66.29
+177,2024-06-29,East,Pen Pack,Office Supplies,3,10.23,30.69
+760,2024-06-29,South,Pen Pack,Office Supplies,9,10.39,93.51
+1528,2024-06-29,East,Lamp,Furniture,7,42.1,294.7
+1687,2024-06-29,South,Lamp,Furniture,4,42.03,168.12
+1970,2024-06-29,East,Pen Pack,Office Supplies,1,9.71,9.71
+396,2024-06-30,East,Laptop,Electronics,10,1287.38,12873.8
+748,2024-06-30,South,Pen Pack,Office Supplies,2,10.01,20.02
+783,2024-06-30,West,Notebook,Office Supplies,5,4.52,22.6
+1289,2024-06-30,South,Notebook,Office Supplies,6,4.79,28.74
+1780,2024-06-30,North,Chair,Furniture,1,194.47,194.47
+381,2024-07-01,North,Headphones,Electronics,6,164.88,989.28
+1313,2024-07-01,South,Headphones,Electronics,6,154.67,928.02
+461,2024-07-02,West,Headphones,Electronics,2,162.67,325.34
+951,2024-07-02,East,Phone,Electronics,4,848.89,3395.56
+1155,2024-07-02,East,Laptop,Electronics,8,1093.25,8746.0
+1914,2024-07-02,East,Desk,Furniture,6,347.05,2082.3
+1572,2024-07-03,East,Lamp,Furniture,1,48.05,48.05
+1748,2024-07-04,East,Headphones,Electronics,5,159.6,798.0
+542,2024-07-05,East,Pen Pack,Office Supplies,5,10.11,50.55
+969,2024-07-05,East,Notebook,Office Supplies,10,4.84,48.4
+1218,2024-07-05,East,Chair,Furniture,8,174.97,1399.76
+1328,2024-07-05,West,Chair,Furniture,3,174.12,522.36
+1756,2024-07-05,South,Laptop,Electronics,10,1230.94,12309.4
+66,2024-07-06,North,Pen Pack,Office Supplies,1,10.01,10.01
+165,2024-07-06,West,Laptop,Electronics,10,1292.08,12920.8
+864,2024-07-06,North,Pen Pack,Office Supplies,9,9.98,89.82
+1418,2024-07-06,South,Phone,Electronics,5,777.12,3885.6
+496,2024-07-07,East,Notebook,Office Supplies,3,4.72,14.16
+1344,2024-07-07,South,Phone,Electronics,5,792.96,3964.8
+63,2024-07-08,East,Pen Pack,Office Supplies,4,9.52,38.08
+465,2024-07-08,North,Stapler,Office Supplies,7,15.72,110.04
+570,2024-07-08,South,Notebook,Office Supplies,9,4.71,42.39
+1024,2024-07-08,South,Chair,Furniture,4,174.37,697.48
+1771,2024-07-08,South,Desk,Furniture,6,343.18,2059.08
+144,2024-07-09,West,Notebook,Office Supplies,1,4.7,4.7
+629,2024-07-09,North,Stapler,Office Supplies,3,16.46,49.38
+1588,2024-07-09,West,Lamp,Furniture,6,46.6,279.6
+1893,2024-07-09,West,Headphones,Electronics,6,162.34,974.04
+67,2024-07-10,East,Headphones,Electronics,1,138.56,138.56
+285,2024-07-10,South,Pen Pack,Office Supplies,5,10.51,52.55
+303,2024-07-10,North,Stapler,Office Supplies,6,16.27,97.62
+706,2024-07-10,East,Headphones,Electronics,9,160.96,1448.64
+1259,2024-07-10,North,Headphones,Electronics,4,156.23,624.92
+1265,2024-07-11,North,Phone,Electronics,2,843.51,1687.02
+1417,2024-07-11,South,Lamp,Furniture,3,48.0,144.0
+1864,2024-07-11,South,Desk,Furniture,1,378.4,378.4
+1077,2024-07-12,North,Phone,Electronics,1,848.04,848.04
+1879,2024-07-12,North,Phone,Electronics,8,799.51,6396.08
+490,2024-07-13,South,Headphones,Electronics,5,164.0,820.0
+1383,2024-07-13,South,Notebook,Office Supplies,8,4.88,39.04
+1462,2024-07-14,North,Notebook,Office Supplies,7,4.84,33.88
+1869,2024-07-14,West,Stapler,Office Supplies,1,15.84,15.84
+58,2024-07-15,East,Headphones,Electronics,4,139.55,558.2
+353,2024-07-15,North,Lamp,Furniture,2,42.44,84.88
+836,2024-07-15,South,Desk,Furniture,8,328.14,2625.12
+1202,2024-07-15,East,Stapler,Office Supplies,6,15.17,91.02
+1290,2024-07-15,North,Notebook,Office Supplies,2,4.23,8.46
+1724,2024-07-15,East,Laptop,Electronics,2,1210.88,2421.76
+1797,2024-07-15,North,Laptop,Electronics,5,1142.59,5712.95
+354,2024-07-16,East,Headphones,Electronics,3,148.26,444.78
+979,2024-07-16,North,Lamp,Furniture,7,43.77,306.39
+1213,2024-07-16,East,Headphones,Electronics,2,136.44,272.88
+17,2024-07-17,South,Phone,Electronics,8,878.02,7024.16
+244,2024-07-17,North,Stapler,Office Supplies,9,14.4,129.6
+1126,2024-07-17,South,Notebook,Office Supplies,3,4.7,14.1
+1293,2024-07-17,North,Lamp,Furniture,5,46.91,234.55
+1317,2024-07-17,East,Desk,Furniture,8,339.29,2714.32
+1522,2024-07-17,South,Stapler,Office Supplies,6,15.57,93.42
+1739,2024-07-17,North,Pen Pack,Office Supplies,9,10.37,93.33
+672,2024-07-18,East,Laptop,Electronics,5,1211.58,6057.9
+818,2024-07-18,East,Stapler,Office Supplies,7,15.48,108.36
+924,2024-07-18,East,Notebook,Office Supplies,1,4.41,4.41
+960,2024-07-18,South,Notebook,Office Supplies,4,4.38,17.52
+228,2024-07-19,North,Pen Pack,Office Supplies,3,10.16,30.48
+537,2024-07-19,North,Phone,Electronics,3,824.97,2474.91
+961,2024-07-19,East,Phone,Electronics,10,816.43,8164.3
+611,2024-07-20,East,Chair,Furniture,5,176.89,884.45
+920,2024-07-20,North,Stapler,Office Supplies,5,16.3,81.5
+1168,2024-07-20,North,Chair,Furniture,7,184.54,1291.78
+1573,2024-07-20,West,Notebook,Office Supplies,5,4.61,23.05
+114,2024-07-21,North,Laptop,Electronics,4,1096.59,4386.36
+1397,2024-07-22,East,Lamp,Furniture,8,48.06,384.48
+1823,2024-07-22,North,Phone,Electronics,1,845.01,845.01
+489,2024-07-23,West,Notebook,Office Supplies,1,4.61,4.61
+690,2024-07-23,West,Notebook,Office Supplies,9,4.21,37.89
+1816,2024-07-23,East,Lamp,Furniture,8,43.82,350.56
+832,2024-07-24,South,Laptop,Electronics,1,1165.82,1165.82
+1059,2024-07-24,North,Phone,Electronics,9,750.74,6756.66
+1333,2024-07-24,West,Lamp,Furniture,10,48.25,482.5
+1399,2024-07-24,South,Laptop,Electronics,2,1269.17,2538.34
+582,2024-07-25,North,Chair,Furniture,1,187.81,187.81
+717,2024-07-25,South,Desk,Furniture,1,332.5,332.5
+772,2024-07-25,North,Pen Pack,Office Supplies,3,10.23,30.69
+1302,2024-07-25,South,Pen Pack,Office Supplies,9,10.75,96.75
+1533,2024-07-25,South,Headphones,Electronics,9,137.8,1240.2
+1680,2024-07-25,West,Notebook,Office Supplies,3,4.88,14.64
+1880,2024-07-25,East,Stapler,Office Supplies,6,14.62,87.72
+1963,2024-07-25,North,Headphones,Electronics,4,156.18,624.72
+328,2024-07-26,North,Headphones,Electronics,8,153.19,1225.52
+1031,2024-07-26,West,Desk,Furniture,1,339.06,339.06
+1618,2024-07-26,East,Desk,Furniture,6,343.54,2061.24
+154,2024-07-27,West,Chair,Furniture,10,186.45,1864.5
+1446,2024-07-27,South,Desk,Furniture,3,338.59,1015.77
+1957,2024-07-27,East,Lamp,Furniture,7,40.8,285.6
+79,2024-07-28,West,Notebook,Office Supplies,5,4.17,20.85
+696,2024-07-28,East,Stapler,Office Supplies,3,15.35,46.05
+1799,2024-07-28,West,Pen Pack,Office Supplies,10,9.77,97.7
+1842,2024-07-30,North,Phone,Electronics,3,756.83,2270.49
+324,2024-07-31,South,Phone,Electronics,3,824.13,2472.39
+1201,2024-07-31,North,Chair,Furniture,5,194.3,971.5
+1448,2024-07-31,West,Stapler,Office Supplies,1,14.86,14.86
+120,2024-08-01,West,Chair,Furniture,9,167.4,1506.6
+360,2024-08-01,East,Lamp,Furniture,1,42.91,42.91
+483,2024-08-01,West,Notebook,Office Supplies,7,4.35,30.45
+1254,2024-08-01,North,Laptop,Electronics,7,1298.61,9090.27
+1585,2024-08-01,West,Notebook,Office Supplies,6,4.44,26.64
+1562,2024-08-02,North,Pen Pack,Office Supplies,6,9.7,58.2
+1960,2024-08-02,West,Notebook,Office Supplies,1,4.9,4.9
+880,2024-08-03,North,Notebook,Office Supplies,2,4.25,8.5
+1247,2024-08-03,South,Stapler,Office Supplies,2,15.66,31.32
+1718,2024-08-03,West,Notebook,Office Supplies,1,4.57,4.57
+274,2024-08-04,South,Stapler,Office Supplies,8,15.54,124.32
+393,2024-08-04,South,Pen Pack,Office Supplies,8,9.0,72.0
+594,2024-08-04,North,Stapler,Office Supplies,7,16.01,112.07
+1961,2024-08-04,North,Headphones,Electronics,5,144.88,724.4
+450,2024-08-05,West,Lamp,Furniture,9,44.03,396.27
+1861,2024-08-05,West,Headphones,Electronics,7,139.81,978.67
+425,2024-08-06,East,Lamp,Furniture,7,46.84,327.88
+478,2024-08-06,West,Lamp,Furniture,10,42.73,427.3
+770,2024-08-06,West,Desk,Furniture,8,358.92,2871.36
+976,2024-08-06,North,Desk,Furniture,9,348.95,3140.55
+197,2024-08-07,South,Chair,Furniture,1,189.64,189.64
+245,2024-08-07,South,Chair,Furniture,1,171.79,171.79
+351,2024-08-07,North,Pen Pack,Office Supplies,5,10.29,51.45
+524,2024-08-07,West,Headphones,Electronics,2,139.21,278.42
+578,2024-08-07,East,Stapler,Office Supplies,5,15.24,76.2
+822,2024-08-07,North,Stapler,Office Supplies,7,13.95,97.65
+247,2024-08-08,East,Notebook,Office Supplies,1,4.13,4.13
+645,2024-08-08,North,Chair,Furniture,8,179.9,1439.2
+1062,2024-08-08,North,Notebook,Office Supplies,4,4.83,19.32
+1483,2024-08-08,South,Notebook,Office Supplies,6,4.67,28.02
+130,2024-08-09,East,Laptop,Electronics,4,1097.25,4389.0
+1824,2024-08-09,North,Lamp,Furniture,4,47.83,191.32
+1985,2024-08-09,North,Pen Pack,Office Supplies,1,10.66,10.66
+1064,2024-08-10,East,Lamp,Furniture,8,46.63,373.04
+1274,2024-08-10,East,Desk,Furniture,6,374.19,2245.14
+814,2024-08-11,North,Headphones,Electronics,5,144.44,722.2
+819,2024-08-11,South,Chair,Furniture,3,167.36,502.08
+1113,2024-08-11,East,Notebook,Office Supplies,8,4.8,38.4
+777,2024-08-12,West,Pen Pack,Office Supplies,3,9.19,27.57
+1346,2024-08-12,West,Pen Pack,Office Supplies,5,9.56,47.8
+1689,2024-08-12,West,Desk,Furniture,2,365.38,730.76
+336,2024-08-13,East,Notebook,Office Supplies,7,4.15,29.05
+349,2024-08-13,West,Notebook,Office Supplies,3,4.46,13.38
+675,2024-08-13,West,Headphones,Electronics,5,158.89,794.45
+929,2024-08-13,West,Stapler,Office Supplies,10,14.46,144.6
+1449,2024-08-13,East,Headphones,Electronics,9,163.64,1472.76
+1452,2024-08-13,South,Desk,Furniture,8,349.99,2799.92
+1672,2024-08-13,North,Notebook,Office Supplies,8,4.92,39.36
+773,2024-08-14,West,Stapler,Office Supplies,9,16.06,144.54
+784,2024-08-14,North,Pen Pack,Office Supplies,6,9.13,54.78
+882,2024-08-14,South,Laptop,Electronics,4,1318.75,5275.0
+1513,2024-08-15,East,Phone,Electronics,10,800.9,8009.0
+600,2024-08-16,South,Pen Pack,Office Supplies,7,9.54,66.78
+212,2024-08-17,East,Lamp,Furniture,7,44.36,310.52
+923,2024-08-17,East,Lamp,Furniture,1,42.43,42.43
+1232,2024-08-17,East,Pen Pack,Office Supplies,2,9.57,19.14
+1363,2024-08-17,North,Chair,Furniture,2,174.55,349.1
+121,2024-08-18,North,Pen Pack,Office Supplies,10,9.95,99.5
+260,2024-08-18,South,Chair,Furniture,2,166.87,333.74
+659,2024-08-18,North,Laptop,Electronics,7,1093.15,7652.05
+991,2024-08-18,North,Lamp,Furniture,9,43.35,390.15
+344,2024-08-20,West,Desk,Furniture,5,319.51,1597.55
+1820,2024-08-20,North,Pen Pack,Office Supplies,9,10.3,92.7
+827,2024-08-21,West,Pen Pack,Office Supplies,5,9.91,49.55
+1800,2024-08-21,West,Headphones,Electronics,7,158.08,1106.56
+135,2024-08-22,West,Notebook,Office Supplies,5,4.78,23.9
+879,2024-08-22,North,Lamp,Furniture,10,43.56,435.6
+448,2024-08-23,North,Pen Pack,Office Supplies,4,9.2,36.8
+1846,2024-08-23,East,Stapler,Office Supplies,7,15.97,111.79
+1905,2024-08-23,North,Desk,Furniture,3,334.16,1002.48
+698,2024-08-24,West,Notebook,Office Supplies,6,4.22,25.32
+804,2024-08-24,South,Phone,Electronics,5,728.37,3641.85
+1072,2024-08-24,South,Stapler,Office Supplies,4,14.85,59.4
+1802,2024-08-24,East,Chair,Furniture,3,162.49,487.47
+790,2024-08-25,North,Lamp,Furniture,5,44.39,221.95
+1012,2024-08-25,East,Chair,Furniture,4,169.13,676.52
+1307,2024-08-25,South,Pen Pack,Office Supplies,3,9.92,29.76
+1932,2024-08-25,East,Desk,Furniture,9,366.47,3298.23
+1938,2024-08-27,East,Lamp,Furniture,7,42.76,299.32
+1280,2024-08-28,South,Chair,Furniture,9,169.14,1522.26
+559,2024-08-29,West,Pen Pack,Office Supplies,8,9.63,77.04
+1919,2024-08-29,West,Desk,Furniture,1,323.43,323.43
+234,2024-08-30,East,Pen Pack,Office Supplies,9,10.06,90.54
+1432,2024-08-30,North,Stapler,Office Supplies,7,15.89,111.23
+1801,2024-08-30,South,Chair,Furniture,4,173.57,694.28
+1901,2024-08-30,East,Phone,Electronics,1,808.41,808.41
+133,2024-08-31,North,Headphones,Electronics,4,138.72,554.88
+498,2024-08-31,West,Laptop,Electronics,10,1226.41,12264.1
+831,2024-08-31,West,Chair,Furniture,9,197.86,1780.74
+1095,2024-08-31,South,Stapler,Office Supplies,2,14.1,28.2
+1207,2024-08-31,North,Lamp,Furniture,10,44.49,444.9
+1338,2024-08-31,North,Notebook,Office Supplies,10,4.61,46.1
+61,2024-09-01,West,Pen Pack,Office Supplies,5,10.67,53.35
+156,2024-09-01,West,Notebook,Office Supplies,9,4.58,41.22
+421,2024-09-01,East,Laptop,Electronics,2,1097.23,2194.46
+1917,2024-09-01,West,Headphones,Electronics,6,160.71,964.26
+906,2024-09-02,South,Phone,Electronics,9,814.46,7330.14
+1051,2024-09-02,North,Lamp,Furniture,2,44.77,89.54
+1466,2024-09-02,West,Notebook,Office Supplies,5,4.19,20.95
+122,2024-09-03,East,Pen Pack,Office Supplies,2,10.36,20.72
+467,2024-09-03,East,Notebook,Office Supplies,5,4.11,20.55
+834,2024-09-03,North,Notebook,Office Supplies,5,4.46,22.3
+1005,2024-09-03,East,Phone,Electronics,10,751.51,7515.1
+1361,2024-09-03,North,Phone,Electronics,2,811.63,1623.26
+1596,2024-09-03,South,Chair,Furniture,1,187.89,187.89
+1011,2024-09-04,West,Laptop,Electronics,9,1091.14,9820.26
+1140,2024-09-04,North,Stapler,Office Supplies,5,14.56,72.8
+699,2024-09-05,South,Phone,Electronics,3,814.57,2443.71
+712,2024-09-05,East,Chair,Furniture,2,162.73,325.46
+329,2024-09-06,North,Laptop,Electronics,8,1094.57,8756.56
+365,2024-09-06,West,Pen Pack,Office Supplies,4,9.92,39.68
+411,2024-09-06,North,Desk,Furniture,3,351.28,1053.84
+685,2024-09-06,South,Chair,Furniture,5,191.82,959.1
+848,2024-09-06,West,Laptop,Electronics,5,1198.43,5992.15
+368,2024-09-07,West,Phone,Electronics,1,841.73,841.73
+653,2024-09-07,West,Stapler,Office Supplies,2,13.82,27.64
+997,2024-09-07,North,Stapler,Office Supplies,3,13.52,40.56
+1025,2024-09-07,East,Chair,Furniture,10,197.44,1974.4
+1036,2024-09-07,North,Chair,Furniture,9,172.37,1551.33
+40,2024-09-08,North,Laptop,Electronics,10,1137.66,11376.6
+534,2024-09-08,South,Desk,Furniture,7,324.1,2268.7
+1042,2024-09-08,East,Chair,Furniture,8,163.51,1308.08
+1500,2024-09-08,South,Chair,Furniture,2,183.11,366.22
+20,2024-09-09,North,Chair,Furniture,1,163.86,163.86
+391,2024-09-09,East,Stapler,Office Supplies,7,15.63,109.41
+1129,2024-09-09,West,Headphones,Electronics,1,137.58,137.58
+1379,2024-09-09,North,Headphones,Electronics,9,163.71,1473.39
+1056,2024-09-10,South,Notebook,Office Supplies,6,4.72,28.32
+412,2024-09-11,North,Laptop,Electronics,6,1111.81,6670.86
+564,2024-09-11,North,Desk,Furniture,7,357.02,2499.14
+1931,2024-09-11,East,Notebook,Office Supplies,1,4.21,4.21
+65,2024-09-12,North,Notebook,Office Supplies,3,4.59,13.77
+223,2024-09-12,North,Stapler,Office Supplies,7,15.22,106.54
+586,2024-09-12,South,Desk,Furniture,5,334.47,1672.35
+1219,2024-09-12,North,Headphones,Electronics,10,162.36,1623.6
+1662,2024-09-12,South,Notebook,Office Supplies,10,4.62,46.2
+1695,2024-09-12,North,Pen Pack,Office Supplies,9,10.25,92.25
+1806,2024-09-12,North,Pen Pack,Office Supplies,5,10.74,53.7
+30,2024-09-13,East,Desk,Furniture,4,347.66,1390.64
+300,2024-09-13,East,Phone,Electronics,9,787.21,7084.89
+326,2024-09-13,East,Pen Pack,Office Supplies,2,10.41,20.82
+1121,2024-09-13,North,Lamp,Furniture,1,41.78,41.78
+755,2024-09-14,West,Headphones,Electronics,6,155.58,933.48
+1704,2024-09-14,West,Phone,Electronics,10,813.5,8135.0
+81,2024-09-15,North,Headphones,Electronics,9,146.07,1314.63
+492,2024-09-15,East,Desk,Furniture,4,345.26,1381.04
+1292,2024-09-15,North,Phone,Electronics,1,796.45,796.45
+1316,2024-09-15,North,Headphones,Electronics,2,155.02,310.04
+1775,2024-09-15,West,Desk,Furniture,10,366.15,3661.5
+637,2024-09-16,West,Chair,Furniture,7,180.41,1262.87
+1044,2024-09-16,South,Stapler,Office Supplies,2,14.03,28.06
+186,2024-09-17,North,Notebook,Office Supplies,10,4.29,42.9
+308,2024-09-17,North,Laptop,Electronics,9,1241.79,11176.11
+612,2024-09-17,South,Chair,Furniture,3,177.83,533.49
+78,2024-09-18,North,Lamp,Furniture,5,49.05,245.25
+1234,2024-09-18,West,Laptop,Electronics,4,1103.33,4413.32
+1746,2024-09-18,South,Pen Pack,Office Supplies,10,10.24,102.4
+275,2024-09-19,West,Laptop,Electronics,9,1315.38,11838.42
+565,2024-09-19,East,Laptop,Electronics,8,1260.47,10083.76
+1198,2024-09-19,East,Pen Pack,Office Supplies,3,9.01,27.03
+1751,2024-09-19,East,Chair,Furniture,6,192.72,1156.32
+1882,2024-09-19,East,Notebook,Office Supplies,8,4.28,34.24
+229,2024-09-20,East,Headphones,Electronics,8,142.16,1137.28
+460,2024-09-20,South,Stapler,Office Supplies,6,16.36,98.16
+1043,2024-09-20,North,Desk,Furniture,2,379.17,758.34
+1498,2024-09-20,West,Lamp,Furniture,4,41.94,167.76
+1559,2024-09-20,North,Notebook,Office Supplies,1,4.44,4.44
+1848,2024-09-20,East,Desk,Furniture,3,383.33,1149.99
+1897,2024-09-20,South,Desk,Furniture,5,317.22,1586.1
+96,2024-09-21,West,Laptop,Electronics,5,1263.41,6317.05
+598,2024-09-21,North,Headphones,Electronics,1,139.61,139.61
+1068,2024-09-21,North,Phone,Electronics,9,793.47,7141.23
+1224,2024-09-21,East,Pen Pack,Office Supplies,10,10.73,107.3
+1501,2024-09-21,South,Stapler,Office Supplies,1,15.24,15.24
+719,2024-09-22,North,Lamp,Furniture,1,48.67,48.67
+1308,2024-09-22,East,Laptop,Electronics,2,1152.56,2305.12
+1805,2024-09-22,East,Laptop,Electronics,2,1237.97,2475.94
+1992,2024-09-22,West,Laptop,Electronics,3,1295.89,3887.67
+49,2024-09-23,West,Headphones,Electronics,1,137.83,137.83
+479,2024-09-23,East,Laptop,Electronics,2,1158.91,2317.82
+1079,2024-09-23,East,Notebook,Office Supplies,6,4.22,25.32
+1496,2024-09-23,South,Pen Pack,Office Supplies,10,10.31,103.1
+1603,2024-09-23,West,Chair,Furniture,1,177.28,177.28
+493,2024-09-25,West,Pen Pack,Office Supplies,5,10.85,54.25
+649,2024-09-25,West,Phone,Electronics,3,753.56,2260.68
+1633,2024-09-25,North,Stapler,Office Supplies,6,15.31,91.86
+13,2024-09-26,North,Stapler,Office Supplies,4,15.3,61.2
+54,2024-09-26,South,Laptop,Electronics,7,1143.65,8005.55
+158,2024-09-26,East,Pen Pack,Office Supplies,1,10.03,10.03
+1092,2024-09-26,South,Pen Pack,Office Supplies,5,10.5,52.5
+1773,2024-09-26,West,Pen Pack,Office Supplies,1,9.91,9.91
+440,2024-09-27,North,Laptop,Electronics,1,1154.69,1154.69
+824,2024-09-27,West,Headphones,Electronics,1,143.36,143.36
+1190,2024-09-27,North,Phone,Electronics,8,860.68,6885.44
+208,2024-09-28,North,Stapler,Office Supplies,4,16.3,65.2
+1485,2024-09-28,South,Chair,Furniture,5,186.02,930.1
+1493,2024-09-28,South,Pen Pack,Office Supplies,3,9.48,28.44
+1719,2024-09-28,East,Pen Pack,Office Supplies,2,10.7,21.4
+1865,2024-09-28,West,Pen Pack,Office Supplies,1,10.22,10.22
+251,2024-09-29,East,Headphones,Electronics,1,160.12,160.12
+890,2024-09-29,West,Desk,Furniture,4,334.16,1336.64
+1162,2024-09-29,West,Desk,Furniture,1,378.88,378.88
+1284,2024-09-29,West,Pen Pack,Office Supplies,7,10.72,75.04
+1377,2024-09-29,North,Chair,Furniture,1,172.35,172.35
+566,2024-09-30,South,Desk,Furniture,3,318.32,954.96
+1017,2024-09-30,West,Phone,Electronics,7,756.08,5292.56
+1465,2024-09-30,North,Headphones,Electronics,2,153.03,306.06
+621,2024-10-01,North,Chair,Furniture,9,186.33,1676.97
+638,2024-10-01,West,Chair,Furniture,9,175.91,1583.19
+779,2024-10-01,North,Pen Pack,Office Supplies,7,9.03,63.21
+383,2024-10-02,East,Notebook,Office Supplies,1,4.82,4.82
+394,2024-10-02,West,Chair,Furniture,7,171.26,1198.82
+799,2024-10-02,South,Desk,Furniture,6,327.62,1965.72
+983,2024-10-02,West,Lamp,Furniture,5,46.4,232.0
+1048,2024-10-02,South,Lamp,Furniture,6,48.86,293.16
+1147,2024-10-02,North,Stapler,Office Supplies,8,13.89,111.12
+1200,2024-10-02,East,Desk,Furniture,2,348.25,696.5
+1640,2024-10-02,South,Lamp,Furniture,1,45.85,45.85
+1933,2024-10-02,West,Headphones,Electronics,9,146.39,1317.51
+117,2024-10-03,North,Laptop,Electronics,4,1093.51,4374.04
+318,2024-10-03,North,Notebook,Office Supplies,2,4.87,9.74
+1134,2024-10-03,East,Laptop,Electronics,6,1128.29,6769.74
+1160,2024-10-03,East,Chair,Furniture,6,197.96,1187.76
+1181,2024-10-03,East,Stapler,Office Supplies,7,15.3,107.1
+1421,2024-10-03,North,Pen Pack,Office Supplies,5,9.1,45.5
+1534,2024-10-03,North,Desk,Furniture,6,323.01,1938.06
+25,2024-10-04,West,Headphones,Electronics,5,146.7,733.5
+185,2024-10-04,West,Lamp,Furniture,8,43.07,344.56
+301,2024-10-04,West,Desk,Furniture,5,325.45,1627.25
+1359,2024-10-04,East,Pen Pack,Office Supplies,2,10.24,20.48
+1681,2024-10-04,North,Lamp,Furniture,1,41.27,41.27
+106,2024-10-05,North,Headphones,Electronics,3,157.92,473.76
+180,2024-10-05,North,Desk,Furniture,4,350.68,1402.72
+357,2024-10-05,South,Notebook,Office Supplies,1,4.06,4.06
+697,2024-10-05,North,Laptop,Electronics,7,1104.23,7729.61
+871,2024-10-05,South,Pen Pack,Office Supplies,5,10.34,51.7
+911,2024-10-05,West,Headphones,Electronics,5,145.3,726.5
+1106,2024-10-05,North,Desk,Furniture,6,379.26,2275.56
+1410,2024-10-05,South,Headphones,Electronics,3,148.01,444.03
+1469,2024-10-05,East,Phone,Electronics,2,873.95,1747.9
+1683,2024-10-05,South,Desk,Furniture,4,350.7,1402.8
+1777,2024-10-05,South,Headphones,Electronics,7,141.35,989.45
+4,2024-10-06,North,Notebook,Office Supplies,2,4.31,8.62
+56,2024-10-06,West,Headphones,Electronics,9,147.78,1330.02
+64,2024-10-06,North,Stapler,Office Supplies,10,15.19,151.9
+446,2024-10-06,East,Desk,Furniture,4,376.82,1507.28
+689,2024-10-07,West,Phone,Electronics,2,765.01,1530.02
+957,2024-10-07,East,Desk,Furniture,10,345.34,3453.4
+1928,2024-10-07,East,Headphones,Electronics,5,141.69,708.45
+102,2024-10-08,South,Chair,Furniture,9,173.69,1563.21
+604,2024-10-08,East,Pen Pack,Office Supplies,10,9.27,92.7
+666,2024-10-08,North,Laptop,Electronics,7,1188.77,8321.39
+1211,2024-10-08,North,Desk,Furniture,8,344.45,2755.6
+1854,2024-10-08,West,Stapler,Office Supplies,9,14.38,129.42
+1979,2024-10-08,South,Lamp,Furniture,1,42.43,42.43
+159,2024-10-09,North,Desk,Furniture,4,325.01,1300.04
+371,2024-10-09,South,Headphones,Electronics,7,156.33,1094.31
+807,2024-10-09,East,Laptop,Electronics,7,1153.19,8072.33
+1387,2024-10-09,West,Laptop,Electronics,4,1245.44,4981.76
+1510,2024-10-09,East,Laptop,Electronics,1,1100.07,1100.07
+1613,2024-10-09,East,Laptop,Electronics,3,1316.01,3948.03
+1694,2024-10-09,West,Stapler,Office Supplies,8,16.02,128.16
+1700,2024-10-09,North,Desk,Furniture,1,315.72,315.72
+1850,2024-10-09,North,Laptop,Electronics,3,1081.72,3245.16
+1988,2024-10-09,East,Headphones,Electronics,3,156.3,468.9
+1,2024-10-10,South,Pen Pack,Office Supplies,1,10.9,10.9
+338,2024-10-10,West,Stapler,Office Supplies,5,15.59,77.95
+1204,2024-10-10,North,Notebook,Office Supplies,7,4.69,32.83
+1953,2024-10-10,North,Phone,Electronics,3,854.65,2563.95
+87,2024-10-11,South,Laptop,Electronics,8,1247.6,9980.8
+674,2024-10-11,North,Notebook,Office Supplies,9,4.22,37.98
+895,2024-10-11,East,Notebook,Office Supplies,4,4.95,19.8
+1009,2024-10-11,East,Lamp,Furniture,4,44.41,177.64
+1088,2024-10-11,North,Lamp,Furniture,5,48.47,242.35
+1723,2024-10-11,North,Notebook,Office Supplies,7,4.53,31.71
+160,2024-10-12,South,Phone,Electronics,2,871.06,1742.12
+433,2024-10-12,South,Notebook,Office Supplies,10,4.48,44.8
+837,2024-10-12,South,Notebook,Office Supplies,2,4.58,9.16
+1825,2024-10-12,South,Desk,Furniture,9,342.11,3078.99
+105,2024-10-13,North,Desk,Furniture,1,339.65,339.65
+529,2024-10-13,West,Stapler,Office Supplies,9,14.67,132.03
+1538,2024-10-13,East,Headphones,Electronics,5,138.35,691.75
+1794,2024-10-13,South,Desk,Furniture,6,341.53,2049.18
+201,2024-10-14,East,Desk,Furniture,9,346.97,3122.73
+439,2024-10-14,North,Headphones,Electronics,5,157.12,785.6
+531,2024-10-14,South,Pen Pack,Office Supplies,1,10.6,10.6
+549,2024-10-14,West,Laptop,Electronics,7,1164.01,8148.07
+800,2024-10-14,North,Notebook,Office Supplies,4,4.75,19.0
+935,2024-10-14,South,Laptop,Electronics,4,1275.55,5102.2
+1022,2024-10-14,West,Phone,Electronics,3,802.07,2406.21
+1032,2024-10-14,West,Desk,Furniture,2,353.89,707.78
+1626,2024-10-14,North,Chair,Furniture,10,173.82,1738.2
+1965,2024-10-14,North,Laptop,Electronics,7,1172.03,8204.21
+532,2024-10-15,North,Laptop,Electronics,3,1319.44,3958.32
+567,2024-10-15,South,Laptop,Electronics,1,1292.0,1292.0
+1839,2024-10-15,East,Notebook,Office Supplies,8,4.83,38.64
+1840,2024-10-15,South,Notebook,Office Supplies,10,4.07,40.7
+418,2024-10-16,South,Chair,Furniture,5,179.6,898.0
+602,2024-10-16,North,Phone,Electronics,3,745.19,2235.57
+617,2024-10-16,South,Headphones,Electronics,1,147.72,147.72
+641,2024-10-16,West,Phone,Electronics,9,775.36,6978.24
+1461,2024-10-16,West,Notebook,Office Supplies,2,4.64,9.28
+1673,2024-10-16,North,Desk,Furniture,6,316.89,1901.34
+1791,2024-10-16,West,Headphones,Electronics,1,151.09,151.09
+118,2024-10-17,North,Pen Pack,Office Supplies,8,10.09,80.72
+299,2024-10-17,North,Stapler,Office Supplies,8,16.42,131.36
+432,2024-10-17,South,Chair,Furniture,3,196.79,590.37
+609,2024-10-17,East,Notebook,Office Supplies,4,4.29,17.16
+749,2024-10-17,South,Notebook,Office Supplies,5,4.82,24.1
+1299,2024-10-17,West,Laptop,Electronics,7,1107.98,7755.86
+1319,2024-10-17,East,Desk,Furniture,3,353.22,1059.66
+1634,2024-10-17,South,Stapler,Office Supplies,5,15.08,75.4
+1804,2024-10-17,West,Phone,Electronics,9,837.96,7541.64
+380,2024-10-18,West,Laptop,Electronics,1,1170.37,1170.37
+453,2024-10-18,South,Lamp,Furniture,10,46.6,466.0
+639,2024-10-18,South,Desk,Furniture,2,351.31,702.62
+934,2024-10-18,South,Notebook,Office Supplies,6,4.24,25.44
+1303,2024-10-18,East,Lamp,Furniture,2,43.13,86.26
+1716,2024-10-18,South,Notebook,Office Supplies,2,4.74,9.48
+92,2024-10-19,West,Pen Pack,Office Supplies,6,9.06,54.36
+256,2024-10-19,South,Stapler,Office Supplies,6,15.53,93.18
+331,2024-10-19,West,Pen Pack,Office Supplies,10,9.61,96.1
+574,2024-10-19,East,Chair,Furniture,2,180.54,361.08
+1060,2024-10-19,East,Laptop,Electronics,1,1206.8,1206.8
+1086,2024-10-19,East,Pen Pack,Office Supplies,10,9.84,98.4
+1641,2024-10-19,West,Notebook,Office Supplies,2,4.43,8.86
+1817,2024-10-19,South,Chair,Furniture,4,170.64,682.56
+1892,2024-10-19,South,Desk,Furniture,4,352.0,1408.0
+367,2024-10-20,North,Headphones,Electronics,2,163.6,327.2
+857,2024-10-20,East,Chair,Furniture,10,172.92,1729.2
+1174,2024-10-20,South,Lamp,Furniture,7,42.75,299.25
+1257,2024-10-20,East,Desk,Furniture,9,371.09,3339.81
+1733,2024-10-20,West,Phone,Electronics,5,832.77,4163.85
+31,2024-10-21,West,Desk,Furniture,2,355.04,710.08
+189,2024-10-21,South,Lamp,Furniture,4,40.87,163.48
+518,2024-10-21,South,Chair,Furniture,3,180.69,542.07
+1331,2024-10-21,East,Laptop,Electronics,5,1311.21,6556.05
+1677,2024-10-21,West,Lamp,Furniture,10,40.51,405.1
+7,2024-10-22,South,Lamp,Furniture,4,46.36,185.44
+801,2024-10-22,East,Pen Pack,Office Supplies,8,9.03,72.24
+861,2024-10-22,West,Notebook,Office Supplies,7,4.81,33.67
+992,2024-10-22,East,Pen Pack,Office Supplies,10,9.81,98.1
+1548,2024-10-22,North,Pen Pack,Office Supplies,6,9.67,58.02
+21,2024-10-23,South,Stapler,Office Supplies,10,15.01,150.1
+930,2024-10-23,North,Notebook,Office Supplies,4,4.67,18.68
+1172,2024-10-23,North,Headphones,Electronics,4,164.43,657.72
+1556,2024-10-23,West,Notebook,Office Supplies,8,4.48,35.84
+1772,2024-10-23,South,Lamp,Furniture,4,42.05,168.2
+1788,2024-10-23,West,Notebook,Office Supplies,8,4.79,38.32
+1973,2024-10-23,North,Pen Pack,Office Supplies,6,10.85,65.1
+835,2024-10-24,South,Lamp,Furniture,8,41.68,333.44
+862,2024-10-24,East,Stapler,Office Supplies,7,15.81,110.67
+875,2024-10-24,West,Lamp,Furniture,10,41.48,414.8
+1507,2024-10-24,South,Phone,Electronics,4,875.04,3500.16
+1524,2024-10-24,East,Stapler,Office Supplies,3,15.1,45.3
+1745,2024-10-24,South,Phone,Electronics,7,816.94,5718.58
+1967,2024-10-24,South,Stapler,Office Supplies,9,14.58,131.22
+1996,2024-10-24,West,Phone,Electronics,9,871.54,7843.86
+387,2024-10-25,South,Stapler,Office Supplies,5,16.45,82.25
+1612,2024-10-25,South,Stapler,Office Supplies,3,13.99,41.97
+1918,2024-10-25,West,Headphones,Electronics,2,160.46,320.92
+216,2024-10-26,East,Pen Pack,Office Supplies,4,10.59,42.36
+333,2024-10-26,North,Lamp,Furniture,2,49.31,98.62
+491,2024-10-26,South,Desk,Furniture,6,353.66,2121.96
+947,2024-10-26,North,Phone,Electronics,9,860.63,7745.67
+1087,2024-10-26,North,Desk,Furniture,6,360.56,2163.36
+1128,2024-10-26,West,Notebook,Office Supplies,10,4.22,42.2
+1675,2024-10-26,South,Desk,Furniture,10,322.03,3220.3
+1747,2024-10-26,West,Chair,Furniture,4,182.49,729.96
+466,2024-10-27,North,Stapler,Office Supplies,9,13.83,124.47
+1029,2024-10-27,South,Stapler,Office Supplies,1,15.85,15.85
+1176,2024-10-27,South,Stapler,Office Supplies,10,14.09,140.9
+501,2024-10-28,East,Desk,Furniture,10,315.04,3150.4
+616,2024-10-28,East,Chair,Furniture,4,187.4,749.6
+1525,2024-10-28,East,Lamp,Furniture,3,44.4,133.2
+1740,2024-10-28,South,Notebook,Office Supplies,10,4.23,42.3
+1935,2024-10-28,South,Desk,Furniture,7,330.6,2314.2
+443,2024-10-29,West,Desk,Furniture,1,350.45,350.45
+597,2024-10-29,East,Desk,Furniture,7,330.51,2313.57
+736,2024-10-29,North,Notebook,Office Supplies,3,4.11,12.33
+1514,2024-10-29,West,Notebook,Office Supplies,3,4.27,12.81
+761,2024-10-30,South,Laptop,Electronics,10,1227.72,12277.2
+43,2024-10-31,South,Desk,Furniture,4,321.28,1285.12
+55,2024-10-31,South,Desk,Furniture,9,376.56,3389.04
+211,2024-10-31,South,Laptop,Electronics,6,1293.06,7758.36
+215,2024-10-31,West,Lamp,Furniture,3,43.12,129.36
+1429,2024-10-31,East,Pen Pack,Office Supplies,2,10.0,20.0
+1736,2024-10-31,East,Desk,Furniture,7,317.84,2224.88
+1813,2024-10-31,South,Laptop,Electronics,5,1133.7,5668.5
+1884,2024-10-31,West,Notebook,Office Supplies,7,4.25,29.75
+116,2024-11-01,West,Laptop,Electronics,10,1280.53,12805.3
+236,2024-11-01,West,Chair,Furniture,6,170.28,1021.68
+452,2024-11-01,South,Headphones,Electronics,3,145.69,437.07
+512,2024-11-01,East,Phone,Electronics,7,847.25,5930.75
+825,2024-11-01,North,Lamp,Furniture,1,44.96,44.96
+990,2024-11-01,North,Headphones,Electronics,6,153.64,921.84
+1142,2024-11-01,West,Laptop,Electronics,10,1235.04,12350.4
+257,2024-11-02,West,Pen Pack,Office Supplies,9,9.31,83.79
+390,2024-11-02,North,Phone,Electronics,6,816.66,4899.96
+993,2024-11-02,North,Chair,Furniture,6,191.23,1147.38
+1103,2024-11-02,South,Stapler,Office Supplies,6,14.05,84.3
+238,2024-11-03,North,Headphones,Electronics,4,139.18,556.72
+403,2024-11-03,North,Laptop,Electronics,3,1106.28,3318.84
+495,2024-11-03,East,Pen Pack,Office Supplies,10,10.39,103.9
+630,2024-11-03,West,Pen Pack,Office Supplies,9,9.5,85.5
+646,2024-11-03,South,Headphones,Electronics,5,154.47,772.35
+858,2024-11-03,North,Pen Pack,Office Supplies,9,9.72,87.48
+863,2024-11-03,West,Chair,Furniture,5,185.18,925.9
+1203,2024-11-03,East,Laptop,Electronics,5,1183.0,5915.0
+1320,2024-11-03,East,Laptop,Electronics,5,1154.13,5770.65
+1615,2024-11-03,South,Notebook,Office Supplies,2,4.59,9.18
+1691,2024-11-03,North,Lamp,Furniture,8,43.23,345.84
+1934,2024-11-03,North,Headphones,Electronics,10,159.13,1591.3
+252,2024-11-04,West,Laptop,Electronics,6,1271.4,7628.4
+346,2024-11-04,East,Notebook,Office Supplies,8,4.05,32.4
+434,2024-11-04,West,Laptop,Electronics,2,1156.6,2313.2
+655,2024-11-04,South,Notebook,Office Supplies,10,4.36,43.6
+713,2024-11-04,West,Chair,Furniture,1,187.53,187.53
+1193,2024-11-04,East,Stapler,Office Supplies,6,16.05,96.3
+1266,2024-11-04,East,Lamp,Furniture,7,48.67,340.69
+1670,2024-11-04,North,Laptop,Electronics,3,1206.79,3620.37
+1855,2024-11-04,South,Phone,Electronics,1,767.32,767.32
+194,2024-11-05,North,Stapler,Office Supplies,4,16.01,64.04
+397,2024-11-05,South,Phone,Electronics,6,751.2,4507.2
+430,2024-11-05,North,Desk,Furniture,1,345.34,345.34
+607,2024-11-05,West,Notebook,Office Supplies,9,4.74,42.66
+627,2024-11-05,South,Laptop,Electronics,9,1252.19,11269.71
+1144,2024-11-05,South,Lamp,Furniture,1,44.49,44.49
+1212,2024-11-05,North,Laptop,Electronics,9,1240.49,11164.41
+1258,2024-11-05,North,Pen Pack,Office Supplies,9,10.04,90.36
+1336,2024-11-05,East,Chair,Furniture,7,192.75,1349.25
+1577,2024-11-05,East,Notebook,Office Supplies,1,4.78,4.78
+1599,2024-11-05,East,Lamp,Furniture,2,47.45,94.9
+1666,2024-11-05,East,Pen Pack,Office Supplies,9,9.77,87.93
+1870,2024-11-05,South,Laptop,Electronics,4,1295.17,5180.68
+657,2024-11-06,North,Desk,Furniture,1,381.77,381.77
+1539,2024-11-06,North,Stapler,Office Supplies,8,14.74,117.92
+1565,2024-11-06,West,Stapler,Office Supplies,9,14.87,133.83
+1663,2024-11-06,North,Lamp,Furniture,9,40.55,364.95
+1903,2024-11-06,South,Phone,Electronics,7,779.68,5457.76
+262,2024-11-07,North,Desk,Furniture,4,363.43,1453.72
+327,2024-11-07,West,Notebook,Office Supplies,7,4.6,32.2
+1167,2024-11-07,South,Laptop,Electronics,6,1121.09,6726.54
+1709,2024-11-07,West,Headphones,Electronics,10,144.51,1445.1
+14,2024-11-08,South,Notebook,Office Supplies,10,4.76,47.6
+325,2024-11-08,West,Phone,Electronics,3,800.92,2402.76
+1049,2024-11-08,West,Headphones,Electronics,4,161.88,647.52
+1123,2024-11-08,West,Desk,Furniture,4,372.98,1491.92
+1782,2024-11-08,South,Laptop,Electronics,4,1208.84,4835.36
+42,2024-11-09,South,Phone,Electronics,10,781.63,7816.3
+642,2024-11-09,North,Stapler,Office Supplies,1,15.18,15.18
+817,2024-11-09,North,Chair,Furniture,8,192.32,1538.56
+949,2024-11-09,South,Desk,Furniture,1,324.65,324.65
+1186,2024-11-09,South,Pen Pack,Office Supplies,9,9.66,86.94
+1355,2024-11-09,South,Phone,Electronics,10,773.19,7731.9
+1623,2024-11-09,North,Chair,Furniture,7,185.35,1297.45
+295,2024-11-10,South,Chair,Furniture,4,181.74,726.96
+441,2024-11-10,South,Laptop,Electronics,10,1249.84,12498.4
+606,2024-11-10,South,Desk,Furniture,10,334.59,3345.9
+750,2024-11-10,North,Laptop,Electronics,10,1272.05,12720.5
+896,2024-11-10,South,Desk,Furniture,1,346.72,346.72
+1120,2024-11-10,South,Desk,Furniture,7,372.34,2606.38
+1378,2024-11-10,East,Lamp,Furniture,4,42.87,171.48
+53,2024-11-11,South,Laptop,Electronics,8,1179.4,9435.2
+151,2024-11-11,East,Lamp,Furniture,7,46.27,323.89
+459,2024-11-11,South,Chair,Furniture,8,162.36,1298.88
+540,2024-11-11,South,Phone,Electronics,9,874.29,7868.61
+868,2024-11-11,West,Stapler,Office Supplies,7,15.46,108.22
+1166,2024-11-11,West,Headphones,Electronics,10,144.19,1441.9
+1169,2024-11-11,South,Pen Pack,Office Supplies,6,9.33,55.98
+1453,2024-11-11,West,Headphones,Electronics,5,150.24,751.2
+1574,2024-11-11,South,Chair,Furniture,9,175.65,1580.85
+1754,2024-11-11,West,Laptop,Electronics,8,1278.4,10227.2
+1876,2024-11-11,West,Laptop,Electronics,2,1296.45,2592.9
+1945,2024-11-11,East,Laptop,Electronics,5,1224.87,6124.35
+214,2024-11-12,East,Phone,Electronics,8,841.6,6732.8
+343,2024-11-12,West,Headphones,Electronics,9,153.07,1377.63
+345,2024-11-12,North,Headphones,Electronics,4,164.56,658.24
+829,2024-11-12,South,Pen Pack,Office Supplies,7,10.54,73.78
+942,2024-11-12,South,Notebook,Office Supplies,10,4.41,44.1
+1148,2024-11-12,West,Pen Pack,Office Supplies,2,10.47,20.94
+1395,2024-11-12,East,Pen Pack,Office Supplies,7,9.39,65.73
+1118,2024-11-13,East,Notebook,Office Supplies,6,4.64,27.84
+1494,2024-11-13,West,Desk,Furniture,7,347.57,2432.99
+1789,2024-11-13,North,Phone,Electronics,2,747.11,1494.22
+948,2024-11-14,South,Desk,Furniture,7,345.04,2415.28
+1374,2024-11-14,North,Laptop,Electronics,3,1167.45,3502.35
+1411,2024-11-14,South,Stapler,Office Supplies,10,15.96,159.6
+1497,2024-11-14,West,Laptop,Electronics,3,1142.64,3427.92
+1682,2024-11-14,West,Headphones,Electronics,1,163.87,163.87
+1959,2024-11-14,North,Chair,Furniture,10,185.34,1853.4
+280,2024-11-15,South,Headphones,Electronics,6,136.37,818.22
+428,2024-11-15,South,Laptop,Electronics,1,1102.62,1102.62
+704,2024-11-15,South,Chair,Furniture,4,191.8,767.2
+1889,2024-11-15,South,Phone,Electronics,7,843.46,5904.22
+19,2024-11-16,South,Headphones,Electronics,1,164.34,164.34
+241,2024-11-16,West,Chair,Furniture,10,174.79,1747.9
+305,2024-11-16,East,Chair,Furniture,2,178.42,356.84
+358,2024-11-16,West,Stapler,Office Supplies,1,15.67,15.67
+521,2024-11-16,East,Notebook,Office Supplies,7,4.86,34.02
+1416,2024-11-16,West,Laptop,Electronics,3,1311.25,3933.75
+1679,2024-11-16,East,Phone,Electronics,6,736.43,4418.58
+1999,2024-11-16,South,Laptop,Electronics,2,1112.48,2224.96
+408,2024-11-17,West,Pen Pack,Office Supplies,1,10.38,10.38
+426,2024-11-17,South,Pen Pack,Office Supplies,2,10.06,20.12
+520,2024-11-17,East,Stapler,Office Supplies,6,15.04,90.24
+708,2024-11-17,West,Pen Pack,Office Supplies,6,9.76,58.56
+1305,2024-11-17,South,Chair,Furniture,6,171.51,1029.06
+1339,2024-11-17,North,Phone,Electronics,8,745.03,5960.24
+1409,2024-11-17,North,Chair,Furniture,7,179.48,1256.36
+1537,2024-11-17,North,Laptop,Electronics,4,1251.65,5006.6
+1578,2024-11-17,West,Chair,Furniture,8,190.66,1525.28
+45,2024-11-18,West,Stapler,Office Supplies,4,15.01,60.04
+246,2024-11-18,North,Chair,Furniture,8,181.07,1448.56
+563,2024-11-18,West,Desk,Furniture,4,358.06,1432.24
+572,2024-11-18,West,Notebook,Office Supplies,9,4.8,43.2
+1195,2024-11-18,East,Headphones,Electronics,10,156.5,1565.0
+1541,2024-11-18,South,Pen Pack,Office Supplies,4,9.0,36.0
+1595,2024-11-18,North,Lamp,Furniture,3,46.4,139.2
+168,2024-11-19,West,Notebook,Office Supplies,8,4.8,38.4
+508,2024-11-19,North,Pen Pack,Office Supplies,9,9.75,87.75
+982,2024-11-19,East,Stapler,Office Supplies,10,15.9,159.0
+1279,2024-11-19,North,Chair,Furniture,3,193.46,580.38
+1324,2024-11-19,South,Pen Pack,Office Supplies,3,9.08,27.24
+1413,2024-11-19,East,Desk,Furniture,9,373.67,3363.03
+198,2024-11-20,East,Stapler,Office Supplies,8,13.87,110.96
+912,2024-11-20,West,Headphones,Electronics,9,157.38,1416.42
+928,2024-11-20,West,Stapler,Office Supplies,10,15.26,152.6
+1098,2024-11-20,West,Chair,Furniture,6,186.05,1116.3
+1342,2024-11-20,West,Pen Pack,Office Supplies,2,10.73,21.46
+3,2024-11-21,North,Chair,Furniture,3,167.5,502.5
+83,2024-11-21,East,Headphones,Electronics,4,146.64,586.56
+242,2024-11-21,North,Desk,Furniture,5,366.86,1834.3
+575,2024-11-21,South,Pen Pack,Office Supplies,2,10.63,21.26
+787,2024-11-21,East,Chair,Furniture,7,170.74,1195.18
+1084,2024-11-21,South,Pen Pack,Office Supplies,1,9.12,9.12
+1256,2024-11-21,South,Desk,Furniture,10,358.14,3581.4
+1326,2024-11-21,West,Phone,Electronics,7,775.19,5426.33
+1492,2024-11-21,North,Lamp,Furniture,6,40.91,245.46
+1774,2024-11-21,North,Headphones,Electronics,3,136.11,408.33
+632,2024-11-22,West,Chair,Furniture,9,184.32,1658.88
+667,2024-11-22,North,Desk,Furniture,2,365.13,730.26
+743,2024-11-22,North,Lamp,Furniture,9,45.51,409.59
+1351,2024-11-22,East,Desk,Furniture,2,374.43,748.86
+1523,2024-11-22,East,Lamp,Furniture,8,46.05,368.4
+1698,2024-11-22,West,Lamp,Furniture,6,47.42,284.52
+1968,2024-11-22,West,Lamp,Furniture,8,46.46,371.68
+8,2024-11-23,North,Laptop,Electronics,5,1139.59,5697.95
+167,2024-11-23,South,Pen Pack,Office Supplies,7,9.06,63.42
+279,2024-11-23,East,Notebook,Office Supplies,4,4.63,18.52
+291,2024-11-23,South,Lamp,Furniture,9,40.68,366.12
+334,2024-11-23,West,Laptop,Electronics,7,1222.58,8558.06
+774,2024-11-23,West,Desk,Furniture,6,353.56,2121.36
+1241,2024-11-23,North,Notebook,Office Supplies,4,4.11,16.44
+1632,2024-11-23,North,Phone,Electronics,3,739.82,2219.46
+1983,2024-11-23,South,Stapler,Office Supplies,1,14.36,14.36
+46,2024-11-24,South,Chair,Furniture,10,189.86,1898.6
+543,2024-11-24,East,Pen Pack,Office Supplies,3,10.28,30.84
+715,2024-11-24,South,Laptop,Electronics,1,1193.86,1193.86
+1163,2024-11-24,North,Pen Pack,Office Supplies,9,9.81,88.29
+1352,2024-11-24,North,Headphones,Electronics,3,136.15,408.45
+1392,2024-11-24,South,Desk,Furniture,8,384.34,3074.72
+1505,2024-11-24,West,Phone,Electronics,3,743.92,2231.76
+1909,2024-11-24,South,Pen Pack,Office Supplies,10,9.23,92.3
+922,2024-11-25,South,Chair,Furniture,2,171.81,343.62
+1714,2024-11-25,South,Phone,Electronics,7,834.06,5838.42
+1770,2024-11-25,North,Pen Pack,Office Supplies,8,9.78,78.24
+80,2024-11-26,South,Headphones,Electronics,10,151.12,1511.2
+406,2024-11-26,South,Notebook,Office Supplies,3,4.06,12.18
+853,2024-11-26,East,Notebook,Office Supplies,6,4.07,24.42
+1604,2024-11-26,North,Pen Pack,Office Supplies,8,9.56,76.48
+1720,2024-11-26,North,Stapler,Office Supplies,5,14.0,70.0
+1728,2024-11-26,East,Desk,Furniture,4,339.98,1359.92
+1815,2024-11-26,North,Notebook,Office Supplies,8,4.09,32.72
+73,2024-11-27,West,Phone,Electronics,6,871.6,5229.6
+298,2024-11-27,East,Stapler,Office Supplies,6,15.33,91.98
+506,2024-11-27,East,Notebook,Office Supplies,10,4.2,42.0
+776,2024-11-27,North,Chair,Furniture,4,188.69,754.76
+1018,2024-11-27,East,Desk,Furniture,5,323.42,1617.1
+1071,2024-11-27,North,Chair,Furniture,9,196.66,1769.94
+1075,2024-11-27,North,Laptop,Electronics,5,1195.32,5976.6
+1152,2024-11-27,West,Phone,Electronics,10,804.86,8048.6
+1658,2024-11-27,North,Desk,Furniture,8,381.59,3052.72
+1667,2024-11-27,East,Pen Pack,Office Supplies,6,10.48,62.88
+1735,2024-11-27,West,Laptop,Electronics,6,1225.56,7353.36
+1737,2024-11-27,East,Phone,Electronics,4,802.28,3209.12
+1786,2024-11-27,East,Desk,Furniture,9,324.89,2924.01
+139,2024-11-28,North,Chair,Furniture,4,170.52,682.08
+579,2024-11-28,West,Phone,Electronics,8,760.8,6086.4
+640,2024-11-28,East,Chair,Furniture,4,177.5,710.0
+842,2024-11-28,East,Pen Pack,Office Supplies,5,10.11,50.55
+867,2024-11-28,South,Headphones,Electronics,1,153.69,153.69
+1143,2024-11-28,West,Stapler,Office Supplies,3,16.28,48.84
+1451,2024-11-28,West,Notebook,Office Supplies,7,4.74,33.18
+1580,2024-11-28,West,Lamp,Furniture,3,43.49,130.47
+1650,2024-11-28,East,Notebook,Office Supplies,10,4.85,48.5
+707,2024-11-29,South,Headphones,Electronics,6,163.53,981.18
+780,2024-11-29,East,Laptop,Electronics,8,1274.78,10198.24
+1099,2024-11-29,East,Notebook,Office Supplies,10,4.94,49.4
+1104,2024-11-29,South,Headphones,Electronics,4,142.53,570.12
+1648,2024-11-29,East,Chair,Furniture,6,183.48,1100.88
+1866,2024-11-29,South,Pen Pack,Office Supplies,7,10.4,72.8
+789,2024-11-30,North,Notebook,Office Supplies,6,4.48,26.88
+1560,2024-11-30,North,Stapler,Office Supplies,7,14.87,104.09
+1711,2024-11-30,East,Chair,Furniture,5,166.7,833.5
+1981,2024-11-30,South,Phone,Electronics,8,830.06,6640.48
+235,2024-12-01,West,Desk,Furniture,8,364.67,2917.36
+1563,2024-12-01,West,Stapler,Office Supplies,9,15.17,136.53
+1863,2024-12-01,West,Phone,Electronics,7,818.88,5732.16
+179,2024-12-02,East,Stapler,Office Supplies,10,15.84,158.4
+720,2024-12-02,South,Laptop,Electronics,7,1129.77,7908.39
+1083,2024-12-02,North,Chair,Furniture,5,165.71,828.55
+1489,2024-12-02,West,Lamp,Furniture,5,42.75,213.75
+1954,2024-12-02,East,Notebook,Office Supplies,8,4.09,32.72
+219,2024-12-03,West,Chair,Furniture,10,176.2,1762.0
+382,2024-12-03,West,Laptop,Electronics,3,1233.48,3700.44
+782,2024-12-03,East,Headphones,Electronics,6,163.49,980.94
+1074,2024-12-03,North,Phone,Electronics,5,809.74,4048.7
+1557,2024-12-03,West,Phone,Electronics,9,778.8,7009.2
+1832,2024-12-03,West,Laptop,Electronics,1,1258.51,1258.51
+1978,2024-12-03,North,Lamp,Furniture,8,42.04,336.32
+110,2024-12-04,East,Phone,Electronics,2,799.68,1599.36
+143,2024-12-04,East,Laptop,Electronics,1,1231.59,1231.59
+293,2024-12-04,South,Headphones,Electronics,2,150.87,301.74
+342,2024-12-04,South,Lamp,Furniture,2,41.77,83.54
+388,2024-12-04,North,Stapler,Office Supplies,10,15.64,156.4
+599,2024-12-04,East,Lamp,Furniture,2,46.34,92.68
+846,2024-12-04,East,Laptop,Electronics,1,1287.76,1287.76
+974,2024-12-04,South,Desk,Furniture,10,326.27,3262.7
+1027,2024-12-04,East,Desk,Furniture,10,327.21,3272.1
+1066,2024-12-04,South,Stapler,Office Supplies,7,14.53,101.71
+1285,2024-12-04,South,Laptop,Electronics,10,1090.4,10904.0
+1607,2024-12-04,West,Phone,Electronics,1,825.32,825.32
+321,2024-12-05,West,Pen Pack,Office Supplies,7,9.19,64.33
+544,2024-12-05,North,Phone,Electronics,3,874.42,2623.26
+866,2024-12-05,South,Stapler,Office Supplies,9,14.05,126.45
+1375,2024-12-05,South,Notebook,Office Supplies,2,4.11,8.22
+1439,2024-12-05,East,Notebook,Office Supplies,1,4.53,4.53
+1515,2024-12-05,East,Stapler,Office Supplies,8,14.28,114.24
+625,2024-12-06,North,Phone,Electronics,9,879.85,7918.65
+714,2024-12-06,South,Pen Pack,Office Supplies,7,10.05,70.35
+662,2024-12-07,South,Headphones,Electronics,1,137.16,137.16
+765,2024-12-07,East,Laptop,Electronics,8,1274.3,10194.4
+850,2024-12-07,East,Headphones,Electronics,2,143.51,287.02
+916,2024-12-07,South,Laptop,Electronics,6,1228.11,7368.66
+1130,2024-12-07,South,Phone,Electronics,5,868.83,4344.15
+1131,2024-12-07,South,Lamp,Furniture,5,49.31,246.55
+1372,2024-12-07,South,Stapler,Office Supplies,6,15.79,94.74
+1385,2024-12-07,South,Desk,Furniture,10,344.58,3445.8
+1398,2024-12-07,North,Phone,Electronics,9,797.76,7179.84
+1676,2024-12-07,East,Chair,Furniture,3,171.04,513.12
+162,2024-12-08,West,Desk,Furniture,1,341.83,341.83
+226,2024-12-08,South,Chair,Furniture,2,191.44,382.88
+340,2024-12-08,South,Laptop,Electronics,6,1136.32,6817.92
+361,2024-12-08,North,Phone,Electronics,3,825.49,2476.47
+1057,2024-12-08,South,Phone,Electronics,9,834.63,7511.67
+1114,2024-12-08,South,Headphones,Electronics,9,136.27,1226.43
+1638,2024-12-08,East,Lamp,Furniture,6,47.16,282.96
+1951,2024-12-08,West,Chair,Furniture,7,182.92,1280.44
+32,2024-12-09,West,Phone,Electronics,1,774.82,774.82
+152,2024-12-09,East,Pen Pack,Office Supplies,8,10.06,80.48
+623,2024-12-09,South,Lamp,Furniture,1,46.08,46.08
+668,2024-12-09,West,Desk,Furniture,10,331.87,3318.7
+905,2024-12-09,West,Lamp,Furniture,5,45.6,228.0
+955,2024-12-09,West,Headphones,Electronics,10,154.87,1548.7
+1188,2024-12-09,North,Desk,Furniture,7,327.23,2290.61
+1345,2024-12-09,North,Phone,Electronics,3,879.05,2637.15
+1389,2024-12-09,East,Stapler,Office Supplies,9,15.31,137.79
+1581,2024-12-09,South,Lamp,Furniture,2,41.05,82.1
+181,2024-12-10,South,Chair,Furniture,1,174.23,174.23
+347,2024-12-10,East,Phone,Electronics,6,780.76,4684.56
+695,2024-12-10,South,Notebook,Office Supplies,2,4.54,9.08
+914,2024-12-10,North,Lamp,Furniture,6,42.53,255.18
+1419,2024-12-10,West,Stapler,Office Supplies,6,15.45,92.7
+1753,2024-12-10,West,Chair,Furniture,4,187.62,750.48
+296,2024-12-11,North,Phone,Electronics,5,870.62,4353.1
+1109,2024-12-11,North,Phone,Electronics,6,816.36,4898.16
+1440,2024-12-11,South,Notebook,Office Supplies,9,4.59,41.31
+1619,2024-12-11,South,Phone,Electronics,1,757.34,757.34
+1731,2024-12-11,South,Chair,Furniture,5,181.94,909.7
+1873,2024-12-11,East,Headphones,Electronics,6,156.79,940.74
+191,2024-12-12,East,Laptop,Electronics,7,1260.24,8821.68
+854,2024-12-12,West,Notebook,Office Supplies,7,4.27,29.89
+1249,2024-12-12,North,Notebook,Office Supplies,6,4.21,25.26
+1334,2024-12-12,South,Pen Pack,Office Supplies,6,9.23,55.38
+1407,2024-12-12,South,Phone,Electronics,6,791.14,4746.84
+1518,2024-12-12,West,Headphones,Electronics,1,137.36,137.36
+1760,2024-12-12,East,Lamp,Furniture,6,47.16,282.96
+1829,2024-12-12,West,Headphones,Electronics,1,142.93,142.93
+1910,2024-12-12,East,Headphones,Electronics,10,139.56,1395.6
+224,2024-12-13,East,Chair,Furniture,4,178.1,712.4
+297,2024-12-13,North,Laptop,Electronics,8,1115.17,8921.36
+457,2024-12-13,South,Phone,Electronics,4,862.83,3451.32
+981,2024-12-13,North,Pen Pack,Office Supplies,4,10.18,40.72
+1085,2024-12-13,West,Headphones,Electronics,1,157.55,157.55
+1150,2024-12-13,East,Desk,Furniture,8,346.19,2769.52
+1403,2024-12-13,South,Desk,Furniture,1,317.2,317.2
+1692,2024-12-13,West,Chair,Furniture,3,178.63,535.89
+1948,2024-12-13,North,Headphones,Electronics,8,153.0,1224.0
+614,2024-12-14,East,Headphones,Electronics,4,154.28,617.12
+1061,2024-12-14,South,Lamp,Furniture,6,40.53,243.18
+1471,2024-12-14,West,Laptop,Electronics,4,1184.16,4736.64
+1946,2024-12-14,South,Desk,Furniture,3,365.31,1095.93
+1972,2024-12-14,West,Pen Pack,Office Supplies,10,10.95,109.5
+265,2024-12-15,West,Notebook,Office Supplies,3,4.81,14.43
+386,2024-12-15,North,Headphones,Electronics,1,136.71,136.71
+410,2024-12-15,East,Phone,Electronics,3,797.36,2392.08
+431,2024-12-15,East,Desk,Furniture,7,355.53,2488.71
+603,2024-12-15,East,Lamp,Furniture,8,48.92,391.36
+758,2024-12-15,West,Chair,Furniture,2,193.05,386.1
+915,2024-12-15,South,Pen Pack,Office Supplies,4,9.13,36.52
+937,2024-12-15,East,Desk,Furniture,5,351.23,1756.15
+965,2024-12-15,South,Desk,Furniture,6,363.44,2180.64
+1447,2024-12-15,East,Phone,Electronics,6,859.68,5158.08
+1564,2024-12-15,South,Chair,Furniture,6,164.12,984.72
+1579,2024-12-15,West,Laptop,Electronics,7,1083.54,7584.78
+1875,2024-12-15,North,Laptop,Electronics,7,1180.16,8261.12
+541,2024-12-16,South,Lamp,Furniture,3,44.56,133.68
+631,2024-12-16,East,Phone,Electronics,9,802.54,7222.86
+1007,2024-12-16,South,Lamp,Furniture,10,48.78,487.8
+1414,2024-12-16,East,Lamp,Furniture,10,42.1,421.0
+1431,2024-12-16,West,Notebook,Office Supplies,10,4.87,48.7
+1601,2024-12-16,East,Desk,Furniture,4,349.52,1398.08
+1867,2024-12-16,East,Desk,Furniture,5,384.87,1924.35
+1989,2024-12-16,West,Phone,Electronics,2,801.65,1603.3
+6,2024-12-17,South,Chair,Furniture,3,163.15,489.45
+320,2024-12-17,North,Laptop,Electronics,4,1299.36,5197.44
+468,2024-12-17,East,Pen Pack,Office Supplies,5,10.8,54.0
+554,2024-12-17,North,Laptop,Electronics,3,1298.0,3894.0
+1502,2024-12-17,West,Pen Pack,Office Supplies,10,9.07,90.7
+1821,2024-12-17,East,Chair,Furniture,2,163.38,326.76
+1920,2024-12-17,South,Laptop,Electronics,3,1215.7,3647.1
+132,2024-12-18,East,Laptop,Electronics,4,1317.9,5271.6
+577,2024-12-18,West,Notebook,Office Supplies,2,4.89,9.78
+803,2024-12-18,South,Stapler,Office Supplies,5,16.13,80.65
+810,2024-12-18,North,Phone,Electronics,2,724.77,1449.54
+1021,2024-12-18,North,Phone,Electronics,8,768.33,6146.64
+1306,2024-12-18,West,Lamp,Furniture,7,47.49,332.43
+1713,2024-12-18,North,Phone,Electronics,5,833.82,4169.1
+1913,2024-12-18,South,Notebook,Office Supplies,1,4.13,4.13
+502,2024-12-19,East,Lamp,Furniture,10,45.6,456.0
+677,2024-12-19,West,Chair,Furniture,7,180.39,1262.73
+873,2024-12-19,East,Phone,Electronics,5,791.46,3957.3
+1312,2024-12-19,South,Headphones,Electronics,1,151.58,151.58
+1335,2024-12-19,North,Lamp,Furniture,6,41.05,246.3
+1478,2024-12-19,North,Desk,Furniture,4,379.17,1516.68
+1561,2024-12-19,West,Lamp,Furniture,2,45.84,91.68
+1706,2024-12-19,South,Stapler,Office Supplies,6,15.57,93.42
+1758,2024-12-19,North,Stapler,Office Supplies,4,14.22,56.88
+100,2024-12-20,North,Laptop,Electronics,9,1255.08,11295.72
+104,2024-12-20,West,Stapler,Office Supplies,7,13.74,96.18
+178,2024-12-20,East,Lamp,Furniture,6,40.65,243.9
+377,2024-12-20,West,Notebook,Office Supplies,8,4.43,35.44
+528,2024-12-20,South,Pen Pack,Office Supplies,7,10.43,73.01
+711,2024-12-20,East,Notebook,Office Supplies,8,4.43,35.44
+724,2024-12-20,West,Chair,Furniture,9,187.45,1687.05
+876,2024-12-20,West,Lamp,Furniture,3,43.48,130.44
+967,2024-12-20,West,Pen Pack,Office Supplies,8,9.99,79.92
+1115,2024-12-20,East,Pen Pack,Office Supplies,8,9.59,76.72
+1135,2024-12-20,North,Desk,Furniture,8,353.69,2829.52
+1226,2024-12-20,North,Stapler,Office Supplies,6,15.23,91.38
+1286,2024-12-20,East,Pen Pack,Office Supplies,9,10.02,90.18
+1767,2024-12-20,East,Stapler,Office Supplies,4,14.87,59.48
+1795,2024-12-20,North,Stapler,Office Supplies,3,13.86,41.58
+1852,2024-12-20,East,Phone,Electronics,7,867.13,6069.91
+170,2024-12-21,East,Stapler,Office Supplies,1,15.43,15.43
+591,2024-12-21,West,Stapler,Office Supplies,4,15.54,62.16
+673,2024-12-21,South,Headphones,Electronics,9,137.63,1238.67
+939,2024-12-21,North,Desk,Furniture,1,331.55,331.55
+995,2024-12-21,North,Headphones,Electronics,8,144.22,1153.76
+999,2024-12-21,North,Lamp,Furniture,4,42.02,168.08
+1260,2024-12-21,East,Chair,Furniture,4,165.15,660.6
+1391,2024-12-21,South,Stapler,Office Supplies,4,14.68,58.72
+202,2024-12-22,North,Notebook,Office Supplies,5,4.18,20.9
+785,2024-12-22,North,Lamp,Furniture,6,48.53,291.18
+883,2024-12-22,North,Stapler,Office Supplies,2,14.43,28.86
+1955,2024-12-22,South,Phone,Electronics,9,839.41,7554.69
+23,2024-12-23,West,Chair,Furniture,10,171.32,1713.2
+370,2024-12-23,North,Lamp,Furniture,5,48.94,244.7
+402,2024-12-23,West,Lamp,Furniture,6,44.25,265.5
+414,2024-12-23,West,Headphones,Electronics,7,151.89,1063.23
+527,2024-12-23,North,Notebook,Office Supplies,2,4.74,9.48
+613,2024-12-23,North,Notebook,Office Supplies,10,4.77,47.7
+688,2024-12-23,North,Notebook,Office Supplies,8,4.58,36.64
+1194,2024-12-23,East,Notebook,Office Supplies,5,4.4,22.0
+1310,2024-12-23,West,Pen Pack,Office Supplies,7,9.08,63.56
+1635,2024-12-23,South,Notebook,Office Supplies,9,4.48,40.32
+503,2024-12-24,West,Chair,Furniture,5,186.53,932.65
+585,2024-12-24,West,Chair,Furniture,2,178.73,357.46
+652,2024-12-24,North,Notebook,Office Supplies,2,4.58,9.16
+913,2024-12-24,North,Notebook,Office Supplies,2,4.17,8.34
+1665,2024-12-24,East,Stapler,Office Supplies,3,15.89,47.67
+1956,2024-12-24,North,Chair,Furniture,4,168.63,674.52
+233,2024-12-25,North,Pen Pack,Office Supplies,6,9.78,58.68
+813,2024-12-25,North,Pen Pack,Office Supplies,4,9.58,38.32
+838,2024-12-25,West,Chair,Furniture,9,166.39,1497.51
+1268,2024-12-25,West,Lamp,Furniture,7,45.58,319.06
+1655,2024-12-25,South,Lamp,Furniture,5,41.36,206.8
+1744,2024-12-25,South,Stapler,Office Supplies,10,14.17,141.7
+182,2024-12-26,East,Headphones,Electronics,2,146.26,292.52
+420,2024-12-26,East,Headphones,Electronics,3,136.29,408.87
+447,2024-12-26,East,Headphones,Electronics,10,145.2,1452.0
+1271,2024-12-26,North,Chair,Furniture,8,186.44,1491.52
+1384,2024-12-26,West,Notebook,Office Supplies,8,4.7,37.6
+1412,2024-12-26,South,Headphones,Electronics,5,137.25,686.25
+1420,2024-12-26,South,Laptop,Electronics,10,1138.88,11388.8
+1454,2024-12-26,South,Chair,Furniture,6,185.02,1110.12
+1487,2024-12-26,East,Chair,Furniture,1,170.1,170.1
+1593,2024-12-26,East,Desk,Furniture,1,339.84,339.84
+1701,2024-12-26,South,Desk,Furniture,9,355.03,3195.27
+1986,2024-12-26,South,Notebook,Office Supplies,4,4.28,17.12
+12,2024-12-27,North,Desk,Furniture,8,369.8,2958.4
+892,2024-12-27,East,Headphones,Electronics,1,139.27,139.27
+1229,2024-12-27,North,Desk,Furniture,9,319.89,2879.01
+1436,2024-12-27,East,Laptop,Electronics,1,1283.67,1283.67
+1459,2024-12-27,North,Headphones,Electronics,7,143.88,1007.16
+1586,2024-12-27,West,Laptop,Electronics,4,1292.44,5169.76
+1702,2024-12-27,South,Laptop,Electronics,8,1090.74,8725.92
+1759,2024-12-27,West,Notebook,Office Supplies,3,4.4,13.2
+24,2024-12-28,West,Chair,Furniture,8,178.14,1425.12
+137,2024-12-28,West,Headphones,Electronics,6,155.46,932.76
+605,2024-12-28,North,Lamp,Furniture,3,44.38,133.14
+1082,2024-12-28,South,Headphones,Electronics,10,154.59,1545.9
+1844,2024-12-28,North,Phone,Electronics,7,733.94,5137.58
+1862,2024-12-28,East,Pen Pack,Office Supplies,5,9.75,48.75
+816,2024-12-29,South,Chair,Furniture,7,179.62,1257.34
+956,2024-12-29,South,Phone,Electronics,6,758.06,4548.36
+1250,2024-12-29,West,Stapler,Office Supplies,5,16.4,82.0
+1699,2024-12-29,South,Notebook,Office Supplies,1,4.48,4.48
+1950,2024-12-29,North,Headphones,Electronics,5,156.1,780.5
+463,2024-12-30,West,Chair,Furniture,10,177.81,1778.1
+986,2024-12-30,West,Headphones,Electronics,5,142.29,711.45
+1014,2024-12-30,North,Notebook,Office Supplies,2,4.19,8.38
+1223,2024-12-30,West,Headphones,Electronics,6,154.72,928.32
+1649,2024-12-30,West,Desk,Furniture,8,365.65,2925.2
+1874,2024-12-30,South,Pen Pack,Office Supplies,6,10.47,62.82
+101,2024-12-31,West,Stapler,Office Supplies,4,14.91,59.64
+174,2024-12-31,North,Phone,Electronics,4,810.13,3240.52
+405,2024-12-31,East,Pen Pack,Office Supplies,10,9.28,92.8
+692,2024-12-31,North,Phone,Electronics,1,785.06,785.06
+1023,2024-12-31,South,Lamp,Furniture,1,42.99,42.99
+1034,2024-12-31,East,Pen Pack,Office Supplies,3,9.58,28.74
+1264,2024-12-31,West,Chair,Furniture,8,186.87,1494.96
+1856,2024-12-31,North,Pen Pack,Office Supplies,10,10.26,102.6

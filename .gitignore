@@ -1,0 +1,8 @@
+# Python virtual environment (local only)
+AnalyticsAI/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

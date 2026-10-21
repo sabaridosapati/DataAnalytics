@@ -1,0 +1,10 @@
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+pythonpath = [".", "tests"]
+addopts = "-m 'not live' --import-mode=importlib -p no:cacheprovider"
+markers = [
+  "live: calls the real OpenAI API (costs money; excluded by default)",
+]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::jwt.warnings.InsecureKeyLengthWarning"]

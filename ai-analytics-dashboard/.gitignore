@@ -1,0 +1,32 @@
+# secrets
+.env
+.env.example
+*.env.local
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# node
+node_modules/
+dist/
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# runtime
+*.log
+uploads/
+test_reports/
+
+# superpowers execution workspace
+.superpowers/
+
+.local/
+backend/.venv/

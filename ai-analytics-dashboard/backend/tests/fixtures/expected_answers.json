@@ -1,0 +1,59 @@
+{
+  "sales_rows": 2000,
+  "total_revenue": 3374052.41,
+  "revenue_by_region": {
+    "East": 737896.33,
+    "North": 888756.52,
+    "South": 919190.34,
+    "West": 828209.22
+  },
+  "revenue_by_month": {
+    "1": 304947.94,
+    "2": 221221.7,
+    "3": 331994.52,
+    "4": 330837.98,
+    "5": 315563.01,
+    "6": 329861.35,
+    "7": 143728.96,
+    "8": 91596.08,
+    "9": 208574.87,
+    "10": 279457.16,
+    "11": 424233.02,
+    "12": 392035.82
+  },
+  "electronics_revenue_by_month": {
+    "1": 254564.33,
+    "2": 164619.88,
+    "3": 265049.12,
+    "4": 271579.63,
+    "5": 249196.6,
+    "6": 256517.26,
+    "7": 117857.45,
+    "8": 57762.02,
+    "9": 174917.77,
+    "10": 194707.07,
+    "11": 340844.72,
+    "12": 303604.59
+  },
+  "employee_rows": 200,
+  "avg_salary_by_department": {
+    "Engineering": 129063.16,
+    "Finance": 106615.22,
+    "Marketing": 96182.93,
+    "Operations": 77234.88,
+    "Sales": 85365.62
+  },
+  "headcount_by_department": {
+    "Engineering": 38,
+    "Finance": 46,
+    "Marketing": 41,
+    "Operations": 43,
+    "Sales": 32
+  },
+  "pdf_kpi_rows": 4,
+  "pdf_q3_reason_keywords": [
+    "supply-chain",
+    "laptop",
+    "port strike"
+  ]
+}
