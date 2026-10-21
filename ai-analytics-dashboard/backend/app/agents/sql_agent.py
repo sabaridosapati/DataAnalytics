@@ -9,15 +9,15 @@ SQL_SCHEMA = {
     "properties": {"sql": {"type": "string"}, "explanation": {"type": "string"}},
 }
 
-SYSTEM = """You write ONE PostgreSQL SELECT query that answers an analytics task.
+SYSTEM = """You write ONE DuckDB SQL SELECT query that answers an analytics task.
 Rules:
 - Use ONLY the tables and columns listed in the schema. Never invent tables or columns.
 - Reference tables as data.<table>.
-- Read-only: a single SELECT (CTEs allowed). No INSERT/UPDATE/DELETE/DDL, no system catalogs or admin functions.
+- Read-only: a single SELECT (CTEs allowed). No INSERT/UPDATE/DELETE/DDL, no file or system functions (read_csv, glob, getenv, ...).
 - Give computed columns short snake_case aliases.
 - Prefer compact aggregated results over raw rows; order results meaningfully.
 - For dates use date_trunc(...) or EXTRACT(...) on date/timestamp columns; cast date_trunc results with ::date for dates.
-- Round money/averages with ROUND(x::numeric, 2).
+- Round money/averages with ROUND(x, 2); cast integer sums/averages with ::DOUBLE first when needed.
 If the task cannot be answered with this schema, return sql as an empty string and explain why."""
 
 

@@ -6,7 +6,7 @@ import pytest
 from app.guardrails.safe_eval import UnsafeExpressionError, safe_eval
 from app.guardrails.sql_validator import SQLValidationError, validate_sql
 
-SCHEMA = {"sales": {"region": "text", "revenue": "double precision"}}
+SCHEMA = {"sales": {"region": "VARCHAR", "revenue": "DOUBLE"}}
 
 
 @pytest.mark.parametrize(
@@ -42,11 +42,11 @@ def test_legitimate_ctes_still_allowed(sql):
 @pytest.mark.parametrize(
     "sql",
     [
-        'SELECT "pg_sleep"(5)',
-        "SELECT \"set_config\"('statement_timeout', '0', false)",
-        "SELECT \"query_to_xml\"('select 1', true, true, '')",
-        'SELECT "lo_import"(\'/etc/passwd\')',
-        "SELECT pg_catalog.pg_sleep(1)",
+        'SELECT "getenv"(\'HOME\')',
+        'SELECT "current_setting"(\'threads\')',
+        'SELECT "read_text"(\'/etc/passwd\')',
+        'SELECT "glob"(\'/*\')',
+        "SELECT main.getenv('HOME')",
     ],
 )
 def test_quoted_and_dotted_function_names_are_blocked(sql):
