@@ -3,7 +3,6 @@ import logging
 import os
 from contextlib import asynccontextmanager
 
-import asyncpg
 from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
@@ -39,7 +38,6 @@ async def lifespan(app: FastAPI):
     await recover_interrupted(sessionmaker)
     app.state.engine = engine
     app.state.sessionmaker = sessionmaker
-    app.state.ro_pool = await asyncpg.create_pool(settings.query_ro_url, min_size=1, max_size=5)
     app.state.cache = RedisCache(settings.redis_url)
     app.state.catalog_cache = None
     app.state.ingest_lock = asyncio.Lock()
@@ -49,7 +47,6 @@ async def lifespan(app: FastAPI):
     try:
         yield
     finally:
-        await app.state.ro_pool.close()
         await app.state.cache.close()
         await engine.dispose()
 

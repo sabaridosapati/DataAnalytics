@@ -1,3 +1,4 @@
+import asyncio
 from datetime import datetime
 from pathlib import Path
 from uuid import uuid4
@@ -12,6 +13,7 @@ from app.api.errors import api_error
 from app.api.ratelimit import limiter
 from app.db.models import Dataset, DatasetColumn, User
 from app.db.versions import bump_catalog_version
+from app.duckdb_store import DuckDBError, preview_table, remove_upload_file, upload_db_path
 from app.ingestion.detect import UnsupportedFileError, detect_kind
 from app.ingestion.pipeline import process_upload
 from app.util import to_jsonable
@@ -131,12 +133,12 @@ async def get_dataset(
     ).all()
     preview: dict = {}
     if ds.status == "ready" and ds.kind == "table":
-        async with request.app.state.ro_pool.acquire() as conn:
-            async with conn.transaction(readonly=True):
-                stmt = await conn.prepare(f'SELECT * FROM data."{ds.slug}" LIMIT 20')
-                records = await stmt.fetch()
-                cols = [a.name for a in stmt.get_attributes()]
-        preview = {"columns": cols, "rows": [[to_jsonable(v) for v in r.values()] for r in records]}
+        path = upload_db_path(request.app.state.settings.duckdb_path, ds.parent_upload_id or ds.id)
+        try:
+            cols, rows = await asyncio.to_thread(preview_table, path, ds.slug, 20)
+            preview = {"columns": cols, "rows": [[to_jsonable(v) for v in r] for r in rows]}
+        except DuckDBError:
+            preview = {}  # file missing or unreadable: show the schema without a preview
     elif ds.status == "ready" and ds.kind == "document":
         rows = await session.execute(
             text(
@@ -152,7 +154,7 @@ async def get_dataset(
 
 @router.delete("/{dataset_id}", status_code=204)
 async def delete_dataset(
-    dataset_id: int, admin: User = Depends(admin_user), session: AsyncSession = Depends(get_session)
+    dataset_id: int, request: Request, admin: User = Depends(admin_user), session: AsyncSession = Depends(get_session)
 ):
     ds = await session.get(Dataset, dataset_id)
     if ds is None:
@@ -160,13 +162,23 @@ async def delete_dataset(
     if ds.status in ("pending", "processing"):
         raise api_error(409, "busy", "This dataset is still being processed. Try again shortly.")
     if ds.kind == "table":
-        await session.execute(text(f'DROP TABLE IF EXISTS data."{ds.slug}"'))
+        upload_id = ds.parent_upload_id or ds.id
+        remaining = await session.scalar(
+            select(func.count()).select_from(Dataset).where(
+                Dataset.kind == "table", Dataset.id != ds.id, (Dataset.id == upload_id) | (Dataset.parent_upload_id == upload_id)
+            )
+        )
+        if not remaining:
+            try:
+                remove_upload_file(upload_db_path(request.app.state.settings.duckdb_path, upload_id))
+            except PermissionError:
+                raise api_error(409, "busy", "The data file is in use by a running query. Try again shortly.")
     stored = ds.stored_path
     await session.delete(ds)
     await bump_catalog_version(session)
     await session.commit()
     if stored:
-        remaining = await session.scalar(select(func.count()).select_from(Dataset).where(Dataset.stored_path == stored))
-        if not remaining:
+        remaining_refs = await session.scalar(select(func.count()).select_from(Dataset).where(Dataset.stored_path == stored))
+        if not remaining_refs:
             Path(stored).unlink(missing_ok=True)
     return Response(status_code=204)
