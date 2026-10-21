@@ -10,6 +10,18 @@ from app.llm.fake_provider import Rule
 from helpers import upload_and_wait
 
 
+def duck_count_for(state, catalog, slug):
+    import duckdb
+    from app.duckdb_store import upload_db_path
+
+    info = catalog.get(slug)
+    con = duckdb.connect(str(upload_db_path(state.settings.duckdb_path, info.upload_id)), read_only=True)
+    try:
+        return con.execute(f'SELECT COUNT(*) FROM main."{slug}"').fetchone()[0]
+    finally:
+        con.close()
+
+
 @pytest.fixture
 async def loaded(client, admin_token, fixtures_dir):
     await upload_and_wait(
@@ -59,8 +71,7 @@ async def test_malicious_sql_blocked_and_data_intact(loaded):
     state.llm.rules[:0] = [Rule("sql", "", {"sql": "DELETE FROM data.sales_2024", "explanation": ""})]
     with pytest.raises(StepError, match="Only SELECT"):
         await run_sql_agent(SQL_STEP, [], make_ctx(state, catalog))
-    async with state.ro_pool.acquire() as conn:
-        assert await conn.fetchval("SELECT COUNT(*) FROM data.sales_2024") == 2000
+    assert duck_count_for(state, catalog, "sales_2024") == 2000
 
 
 async def test_sql_agent_zero_rows_returns_columns(loaded):
