@@ -13,10 +13,20 @@ class QueryExecutionError(Exception):
     pass
 
 
+def _query_semaphore(state, limit: int) -> asyncio.Semaphore:
+    """Process-wide cap on concurrent DuckDB queries, created lazily for the running event loop."""
+    loop = asyncio.get_running_loop()
+    current = getattr(state, "duckdb_semaphore", None)
+    if current is None or current[0] is not loop or current[1] != limit:
+        current = (loop, limit, asyncio.Semaphore(max(1, int(limit))))
+        state.duckdb_semaphore = current
+    return current[2]
+
+
 def referenced_tables(sql: str) -> list[str]:
     """Slugs of the data.<table> references in already-validated SQL."""
     tree = sqlglot.parse_one(sql, read="duckdb")
-    return sorted({t.name for t in tree.find_all(exp.Table) if (t.db or "").lower() == "data"})
+    return sorted({t.name.lower() for t in tree.find_all(exp.Table) if (t.db or "").lower() == "data"})
 
 
 async def run_readonly_query(state, sql: str, version: int, settings) -> dict:
@@ -34,11 +44,12 @@ async def run_readonly_query(state, sql: str, version: int, settings) -> dict:
         tables[slug] = info.upload_id
     files = {uid: upload_db_path(settings.duckdb_path, uid) for uid in set(tables.values())}
     try:
-        out = await asyncio.to_thread(
-            run_select, files, tables, sql,
-            max_rows=settings.max_sql_rows, timeout_s=settings.step_timeout_s,
-            memory_limit=settings.duckdb_memory_limit, threads=settings.duckdb_threads,
-        )
+        async with _query_semaphore(state, settings.duckdb_max_concurrent_queries):
+            out = await asyncio.to_thread(
+                run_select, files, tables, sql,
+                max_rows=settings.max_sql_rows, timeout_s=settings.step_timeout_s,
+                memory_limit=settings.duckdb_memory_limit, threads=settings.duckdb_threads,
+            )
     except DuckDBError as exc:
         raise QueryExecutionError(str(exc)) from exc
     rows = [[to_jsonable(v) for v in r] for r in out["rows"]]

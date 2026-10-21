@@ -186,3 +186,69 @@ def test_remove_upload_file_and_cleanup_stale_tmp(tmp_path):
     assert cleanup_stale_tmp(tmp_path) == 2
     assert [f.name for f in tmp_path.iterdir()] == ["upload_2.duckdb"]
     assert cleanup_stale_tmp(tmp_path / "does_not_exist") == 0
+
+
+def _one_table(tmp_path):
+    p = upload_db_path(tmp_path, 1)
+    write_upload_file(p, [("n", pd.DataFrame({"x": [1, 2]}), {"x": "BIGINT"})])
+    return p
+
+
+@pytest.mark.parametrize(
+    "sql",
+    ["SELECT 1; SELECT 2", "SELECT 1; DETACH up_1", "SELECT 1; SELECT 2;", "PRAGMA version", "PRAGMA database_list", "DETACH up_1"],
+)
+def test_only_a_single_select_statement_runs(tmp_path, sql):
+    p = _one_table(tmp_path)
+    with pytest.raises(DuckDBError, match="Exactly one SELECT"):
+        run_select({1: p}, {"n": 1}, sql, max_rows=5, timeout_s=5)
+
+
+def test_leading_comment_select_and_trailing_semicolon_still_work(tmp_path):
+    p = _one_table(tmp_path)
+    assert run_select({1: p}, {"n": 1}, "/* x */ SELECT COUNT(*) FROM data.n;", max_rows=5, timeout_s=5)["rows"] == [[2]]
+    assert run_select({1: p}, {"n": 1}, "-- c\nWITH a AS (SELECT 1 AS v) SELECT v FROM a", max_rows=5, timeout_s=5)["rows"] == [[1]]
+
+
+def test_detach_does_not_run_after_a_select(tmp_path):
+    p = _one_table(tmp_path)
+    with pytest.raises(DuckDBError):
+        run_select({1: p}, {"n": 1}, "SELECT 1; DETACH up_1; SELECT 42", max_rows=5, timeout_s=5)
+
+
+def test_os_errors_become_duckdb_errors(tmp_path, monkeypatch):
+    import app.duckdb_store as store
+
+    p = _one_table(tmp_path)
+    real_connect = duckdb.connect
+
+    class Flaky:
+        def __init__(self, con):
+            self._con = con
+
+        def execute(self, sql, *a, **k):
+            if sql.startswith("ATTACH"):
+                raise OSError("disk exploded")
+            return self._con.execute(sql, *a, **k)
+
+        def __getattr__(self, name):
+            return getattr(self._con, name)
+
+    monkeypatch.setattr(store.duckdb, "connect", lambda *a, **k: Flaky(real_connect(*a, **k)))
+    with pytest.raises(DuckDBError, match="disk exploded"):
+        run_select({1: p}, {"n": 1}, "SELECT 1", max_rows=5, timeout_s=5)
+
+
+def test_file_that_is_not_a_database_or_is_a_directory_gives_duckdb_error(tmp_path):
+    junk = tmp_path / "upload_1.duckdb"
+    junk.write_text("garbage" * 100)
+    with pytest.raises(DuckDBError):
+        run_select({1: junk}, {}, "SELECT 1", max_rows=5, timeout_s=5)
+    with pytest.raises(DuckDBError):
+        run_select({2: tmp_path}, {}, "SELECT 1", max_rows=5, timeout_s=5)
+
+
+def test_python_variables_are_not_visible_as_tables():
+    my_df = pd.DataFrame({"a": [1]})  # noqa: F841
+    with pytest.raises(DuckDBError):
+        run_select({}, {}, "SELECT * FROM my_df", max_rows=5, timeout_s=5)

@@ -48,6 +48,7 @@ class Settings(BaseSettings):
     duckdb_dir: str = ""  # default: <upload_dir>/duckdb
     duckdb_memory_limit: str = "512MB"
     duckdb_threads: int = 2
+    duckdb_max_concurrent_queries: int = 4  # process-wide cap; DuckDB runs inside the API process
     max_upload_mb: int = 50
     max_sql_rows: int = 5000
     step_timeout_s: int = 30

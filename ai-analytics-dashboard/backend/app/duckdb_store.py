@@ -5,6 +5,7 @@ Everything here is synchronous and meant to run in a worker thread (``asyncio.to
 """
 import logging
 import os
+import re
 import threading
 from pathlib import Path
 
@@ -38,6 +39,23 @@ def _ident(name: str) -> str:
 
 def _lit(value) -> str:
     return "'" + str(value).replace("'", "''") + "'"
+
+
+_LEADING_NOISE = re.compile(r"\A(?:\s+|--[^\n]*(?:\n|\Z)|/\*.*?\*/|\()+", re.S)
+_SELECT_START = re.compile(r"(?:select|with|from)\b", re.I)
+
+
+def _require_single_select(con, sql: str) -> None:
+    """Refuse anything but exactly one real SELECT (DuckDB runs multi-statement strings, and rewrites PRAGMAs to SELECTs)."""
+    msg = "Exactly one SELECT statement is allowed."
+    try:
+        stmts = con.extract_statements(sql)
+    except duckdb.Error as exc:
+        raise DuckDBError(f"{type(exc).__name__}: {exc}") from exc
+    if len(stmts) != 1 or stmts[0].type != duckdb.StatementType.SELECT:
+        raise DuckDBError(msg)
+    if not _SELECT_START.match(_LEADING_NOISE.sub("", sql, count=1)):
+        raise DuckDBError(msg)
 
 
 def _tmp(path: Path) -> Path:
@@ -121,6 +139,7 @@ def run_select(
     con = duckdb.connect(":memory:")
     try:
         try:
+            _require_single_select(con, sql)
             for upload_id, p in files.items():
                 con.execute(f"ATTACH {_lit(Path(p))} AS up_{int(upload_id)} (READ_ONLY)")
             con.execute("CREATE SCHEMA data")
@@ -128,6 +147,7 @@ def run_select(
                 con.execute(f"CREATE VIEW data.{_ident(slug)} AS SELECT * FROM up_{int(upload_id)}.main.{_ident(slug)}")
             con.execute(f"SET memory_limit = {_lit(memory_limit)}")
             con.execute(f"SET threads = {int(threads)}")
+            con.execute("SET python_enable_replacements = false")
             con.execute("SET enable_external_access = false")
             con.execute("SET lock_configuration = true")
 
@@ -142,7 +162,7 @@ def run_select(
             columns = [d[0] for d in cur.description]
             rows = cur.fetchmany(int(max_rows))
             return {"columns": columns, "rows": [list(r) for r in rows], "truncated": len(rows) >= int(max_rows)}
-        except duckdb.Error as exc:
+        except (duckdb.Error, OSError) as exc:
             if timed_out.is_set() or isinstance(exc, duckdb.InterruptException):
                 raise DuckDBTimeout(f"The query took longer than {timeout_s:g}s and was stopped.") from exc
             raise DuckDBError(f"{type(exc).__name__}: {exc}") from exc

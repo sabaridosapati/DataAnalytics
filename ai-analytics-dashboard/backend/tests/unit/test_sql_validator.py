@@ -61,6 +61,16 @@ def test_allowed(sql):
         ("SELECT * FROM duckdb_settings()", "not allowed"),
         ("SELECT * FROM range(10)", "not allowed"),
         ("SELECT getenv('HOME')", "not allowed"),
+        ("SELECT * FROM (SELECT * FROM read_csv('x')) t", "not allowed"),
+        ("SELECT * FROM db.data.sales", "Cross-database"),
+        ('SELECT * FROM "x.csv"', "not allowed"),
+        ("SELECT * FROM 'x.parquet'", "not allowed"),
+        ("SELECT * FROM 'http://a/b.csv'", "not allowed"),
+        ("SELECT length(repeat('x', 300000000))", "not allowed"),
+        ("SELECT lpad('x', 300000000, 'y')", "not allowed"),
+        ("SELECT rpad('x', 300000000, 'y')", "not allowed"),
+        ("SELECT list_resize([1], 300000000)", "not allowed"),
+        ("SELECT array_resize([1], 300000000)", "not allowed"),
         ("SELECT current_setting('threads')", "not allowed"),
         ("SELECT version()", "not allowed"),
         ("SELECT secret_col FROM sales", "could not be resolved"),
@@ -84,3 +94,29 @@ def test_limit_added_kept_and_clamped():
 def test_tables_are_schema_qualified():
     out = validate_sql("SELECT region FROM sales", SCHEMA, 100)
     assert out == "SELECT region FROM data.sales LIMIT 100"
+
+
+COMMENT_TRICK = "SELECT region -- */ , getenv('X') AS g /*\nFROM sales"
+
+
+def test_comment_trick_cannot_smuggle_a_function_call():
+    # sqlglot used to re-emit `-- */ ...` as a block comment that hid the real getenv() call
+    try:
+        out = validate_sql(COMMENT_TRICK, SCHEMA, 5000)
+    except SQLValidationError:
+        return
+    assert "getenv" not in out.lower()
+    assert "/*" not in out and "--" not in out
+
+
+@pytest.mark.parametrize(
+    "sql",
+    [
+        "SELECT region /* hi */ FROM sales -- tail",
+        "SELECT region -- */ \nFROM sales",
+        "/* a */ SELECT region FROM sales /* b */",
+    ],
+)
+def test_validated_output_never_contains_comment_markers(sql):
+    out = validate_sql(sql, SCHEMA, 5000)
+    assert "/*" not in out and "--" not in out and "*/" not in out

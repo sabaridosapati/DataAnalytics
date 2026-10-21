@@ -16,6 +16,8 @@ DENY_FUNCS = {
     "glob", "getenv", "query", "query_table", "load_extension", "install_extension", "which_secret",
     "list_secrets", "current_setting", "set_config", "version", "current_user", "session_user",
     "current_database", "current_schema", "current_schemas", "current_catalog", "range", "generate_series",
+    # large-allocation functions (memory_limit does not cover huge strings/lists)
+    "repeat", "lpad", "rpad", "pad", "list_resize", "array_resize",
 }
 _FORBIDDEN_NAMES = (
     "Insert", "Update", "Delete", "Drop", "Create", "Alter", "AlterTable", "Command", "Merge",
@@ -93,7 +95,7 @@ def validate_sql(sql: str, schema: dict[str, dict[str, str]], max_rows: int) -> 
             # FROM '/path.csv' parses as a quoted identifier (DuckDB replacement scan), not a function
             raise SQLValidationError("Table functions and file paths are not allowed; use the listed tables only.")
         name = (table.name or "").lower()
-        db =(table.db or "").lower()
+        db = (table.db or "").lower()
         if table.args.get("catalog"):
             raise SQLValidationError("Cross-database references are not allowed.")
         if id(table) in cte_refs:
@@ -129,4 +131,7 @@ def validate_sql(sql: str, schema: dict[str, dict[str, str]], max_rows: int) -> 
         if int(value.this) > max_rows:
             tree.set("limit", exp.Limit(expression=exp.Literal.number(max_rows)))
 
-    return tree.sql(dialect=DIALECT)
+    # Comments are dropped: sqlglot can turn a `-- */` line comment into a block comment that hides code.
+    for node in tree.walk():
+        node.comments = None
+    return tree.sql(dialect=DIALECT, comments=False)

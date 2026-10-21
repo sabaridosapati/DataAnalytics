@@ -1,7 +1,11 @@
+import asyncio
 import json
+import threading
+import time
 
 import pytest
 
+import app.agents.sql_exec as sql_exec
 import app.api.datasets as datasets_api
 from app.agents.sql_exec import QueryExecutionError, referenced_tables, run_readonly_query
 from app.catalog import load_catalog
@@ -22,6 +26,7 @@ def test_referenced_tables():
     assert referenced_tables("SELECT * FROM data.a JOIN data.b ON a.k = b.k") == ["a", "b"]
     assert referenced_tables("WITH t AS (SELECT * FROM data.a) SELECT * FROM t") == ["a"]
     assert referenced_tables("SELECT 1") == []
+    assert referenced_tables("SELECT * FROM data.Sales s JOIN DATA.Other o ON 1=1") == ["other", "sales"]
 
 
 async def test_query_matches_ground_truth_and_is_cached(loaded):
@@ -95,3 +100,37 @@ async def test_delete_is_refused_with_409_when_the_file_is_in_use(client, admin_
 
 async def test_app_no_longer_keeps_a_postgres_query_pool(client):
     assert not hasattr(client.app.state, "ro_pool")
+
+async def _max_concurrency(state, settings, monkeypatch, tag, n=4):
+    active, peak, lock = 0, 0, threading.Lock()
+
+    def slow(files, tables, sql, **kw):
+        nonlocal active, peak
+        with lock:
+            active += 1
+            peak = max(peak, active)
+        time.sleep(0.15)
+        with lock:
+            active -= 1
+        return {"columns": ["x"], "rows": [[1]], "truncated": False}
+
+    monkeypatch.setattr(sql_exec, "run_select", slow)
+    catalog = await load_catalog(state)
+    sqls = [f"SELECT {i + tag} AS x, COUNT(*) FROM data.sales_2024 LIMIT 5000" for i in range(n)]
+    await asyncio.gather(*(run_readonly_query(state, s, catalog.version, settings) for s in sqls))
+    return peak
+
+
+async def test_concurrent_duckdb_queries_are_limited(loaded, monkeypatch):
+    state, _, _, _ = loaded
+    one = state.settings.model_copy(update={"duckdb_max_concurrent_queries": 1})
+    assert await _max_concurrency(state, one, monkeypatch, 100) == 1
+    two = state.settings.model_copy(update={"duckdb_max_concurrent_queries": 2})
+    peak = await _max_concurrency(state, two, monkeypatch, 200)
+    assert peak == 2
+
+
+async def test_mixed_case_table_name_resolves(loaded):
+    state, catalog, _, _ = loaded
+    out = await run_readonly_query(state, "SELECT COUNT(*) FROM data.Sales_2024 LIMIT 5", catalog.version, state.settings)
+    assert out["rows"] == [[2000]]
