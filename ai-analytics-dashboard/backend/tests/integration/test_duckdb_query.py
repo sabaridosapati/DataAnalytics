@@ -9,6 +9,8 @@ import app.agents.sql_exec as sql_exec
 import app.api.datasets as datasets_api
 from app.agents.sql_exec import QueryExecutionError, referenced_tables, run_readonly_query
 from app.catalog import load_catalog
+from app.db.models import Dataset
+from app.db.versions import bump_catalog_version
 from app.duckdb_store import upload_db_path
 from helpers import auth, upload_and_wait
 
@@ -134,3 +136,14 @@ async def test_mixed_case_table_name_resolves(loaded):
     state, catalog, _, _ = loaded
     out = await run_readonly_query(state, "SELECT COUNT(*) FROM data.Sales_2024 LIMIT 5", catalog.version, state.settings)
     assert out["rows"] == [[2000]]
+
+
+async def test_legacy_table_datasets_without_a_file_are_not_in_the_catalog(loaded):
+    state, _, _, _ = loaded
+    async with state.sessionmaker() as s:
+        s.add(Dataset(name="old.csv", slug="old_sales", kind="table", source_filename="old.csv", file_type="csv", status="ready"))
+        await bump_catalog_version(s)
+        await s.commit()
+    catalog = await load_catalog(state)
+    slugs = [d.slug for d in catalog.datasets]
+    assert "old_sales" not in slugs and "sales_2024" in slugs and "employees" in slugs

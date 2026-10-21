@@ -94,18 +94,35 @@ CSV, TSV, Excel and JSON tables (and tables found inside PDFs) are converted to 
 run the backend with `run-backend.bat` or `start-local.ps1`, `UPLOAD_DIR` is `backend\uploads`, so the files are in
 `backend\uploads\duckdb\`. Questions about these tables run in DuckDB (read-only, sandboxed). Postgres keeps users,
 email codes, chats, the dataset registry, the audit log, pins and document embeddings. Deleting a dataset removes its
-DuckDB file.
+DuckDB file once its last table is gone. A query that is running at that moment finishes safely because it holds its
+own handle on the file; the API only answers 409 `busy` on platforms that refuse to delete an open file.
 
 #### Upgrading from the Postgres-tables version
 
-Earlier versions stored tables in Postgres (`data.*`). To clean those up, run from the `backend` folder:
+Earlier versions stored tables in Postgres (`data.*`). Those datasets have no DuckDB file, so they no longer appear in
+the question catalog. The purge script drops the old `data.*` tables and deletes only the legacy `table` dataset rows
+that have **no** DuckDB file; datasets uploaded with the current version are kept. It is a dry run unless you pass
+`--yes`, and the dry run lists the dataset slugs it would delete and how many it keeps.
+
+The script reads `DATABASE_URL` from the environment (the `Settings` class does not read `.env`, and the default host
+is `postgres`, which only resolves inside Docker).
+
+Docker (uses the container's own settings):
 
 ```powershell
-python scripts/purge_postgres_data.py          # dry run: shows what would be removed
-python scripts/purge_postgres_data.py --yes    # drops data.* tables and 'table' dataset rows
+docker compose exec backend python scripts/purge_postgres_data.py          # dry run
+docker compose exec backend python scripts/purge_postgres_data.py --yes    # apply
 ```
 
-Then re-upload your files.
+Local backend: from the `backend` folder, set `DATABASE_URL` in that shell first (values from your `.env`):
+
+```powershell
+$env:DATABASE_URL = "postgresql+asyncpg://<user>:<password>@127.0.0.1:5432/<db>"
+.venv\Scripts\python.exe scripts\purge_postgres_data.py          # dry run
+.venv\Scripts\python.exe scripts\purge_postgres_data.py --yes    # apply
+```
+
+Then re-upload the legacy files.
 
 ## Configuration (`.env`)
 

@@ -101,8 +101,9 @@ The row/column serialisation reuses `to_jsonable`; `Decimal`, `date`, `datetime`
 - `api/datasets.py` preview: reads the first 20 rows from the dataset's DuckDB file through the same helper
   (read-only attach, no view layer needed).
 - `api/datasets.py` delete: deletes the dataset row; when the **last** table dataset of an upload is removed, deletes
-  the `.duckdb` file. If the file is locked (Windows, in use by a running query) the API returns 409 `busy`
-  and nothing is deleted.
+  the `.duckdb` file. A running query finishes safely because it holds its own handle on the file (DuckDB opens files
+  with share-delete on Windows). If the platform refuses to delete an open file the API returns 409 `busy` and nothing
+  is deleted; this branch is rarely or never hit on Windows.
 - `api/dashboard.py` pin refresh: unchanged call to `run_readonly_query`.
 - `main.py`: remove the asyncpg `ro_pool` creation/close. `QUERY_RO_URL` / the `query_ro` role stay in config and
   the DB init script (unused by the app; `test_db.py` still verifies the role is locked down).
@@ -115,9 +116,13 @@ The row/column serialisation reuses `to_jsonable`; `Decimal`, `date`, `datetime`
 `backend/scripts/purge_postgres_data.py` (run as `python scripts/purge_postgres_data.py`; **dry-run by default**,
 `--yes` to apply). It:
 1. lists and drops every table in Postgres schema `data`;
-2. deletes `app.datasets` rows with `kind = 'table'` (their `app.dataset_columns` rows cascade);
+2. deletes only `app.datasets` rows with `kind = 'table'` that have **no** DuckDB file
+   (`upload_<parent_upload_id or id>.duckdb` under `settings.duckdb_path`); rows of datasets uploaded with this version
+   are kept (their `app.dataset_columns` rows cascade for the deleted ones);
 3. bumps `catalog_version`;
-4. prints what it removed. Documents, chunks, users, chats, audit rows and pins are not touched.
+4. prints what it removed (dry run: the slugs it would delete and how many rows it keeps).
+
+Until the purge runs, `load_catalog` skips `table` datasets whose file is missing, so the planner cannot pick them. Documents, chunks, users, chats, audit rows and pins are not touched.
 
 It is deliberately **not** run automatically: it destroys uploaded data. Users then re-upload; old dashboard pins keep
 their stored SQL and work again once a table with the same slug exists.
@@ -130,7 +135,7 @@ their stored SQL and work again once a table with the same slug exists.
 | Upload file missing at query time (e.g. deleted by hand) | `QueryExecutionError("Dataset file is missing; re-upload it")` → SQL step error, answer says it couldn't answer |
 | Query exceeds `step_timeout_s` | interrupted → `QueryExecutionError("timed out")` |
 | Query exceeds memory limit | DuckDB error surfaced as `QueryExecutionError` |
-| Delete while a query is reading the file | 409 `busy`, dataset kept |
+| Delete while a query is reading the file | the query finishes (own handle); 409 `busy`, dataset kept, only where the OS refuses to delete an open file |
 | Validator rejects SQL | existing `SQLValidationError` path (retry loop in the SQL agent) unchanged |
 
 ## Security
@@ -154,7 +159,7 @@ connection per query, nothing shared between users' queries. DuckDB files hold o
 - The plan added `tests/unit/test_duckdb_store.py`, including the concurrency spike.
 - The existing integration/unit suite (255 backend tests) is adapted, not deleted: tests that asserted Postgres
   `data` tables or `query_ro` now assert DuckDB files; unrelated tests must pass unchanged.
-- Purge script: dry run changes nothing; `--yes` drops tables and `table` rows only.
+- Purge script: dry run changes nothing; `--yes` drops tables and legacy `table` rows (no DuckDB file) only; rows with a file are kept.
 
 ## Risks / open items
 
@@ -165,5 +170,5 @@ connection per query, nothing shared between users' queries. DuckDB files hold o
 - DuckDB SQL differs from Postgres (casts, `date_trunc` return types, `numeric`, string/regex functions): the LLM
   prompt and demo script change, and answer quality on unusual questions should be spot-checked manually.
 - `app.dataset_columns.pg_type` is a misnomer kept to avoid a migration.
-- Windows cannot delete a `.duckdb` file while it is attached; handled via 409 `busy`.
+- DuckDB opens files with share-delete on Windows, so deleting a file during a running query succeeds and the query finishes; the 409 `busy` branch remains for platforms that refuse to delete an open file.
 - There is no DuckDB schema-evolution story: re-upload replaces a file.

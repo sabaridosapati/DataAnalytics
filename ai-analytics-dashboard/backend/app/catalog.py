@@ -4,6 +4,7 @@ from sqlalchemy import select
 
 from app.db.models import Dataset, DatasetColumn
 from app.db.versions import get_catalog_version
+from app.duckdb_store import upload_db_path
 
 
 @dataclass
@@ -71,6 +72,9 @@ async def load_catalog(state) -> Catalog:
     by_dataset: dict[int, list[ColumnInfo]] = {}
     for c in columns:
         by_dataset.setdefault(c.dataset_id, []).append(ColumnInfo(c.column_name, c.pg_type, c.sample_values or [], c.description or ""))
+    duckdb_dir = state.settings.duckdb_path
+    # Pre-DuckDB 'table' datasets have no .duckdb file; keep them out of the catalog so the planner cannot pick them.
+    datasets = [d for d in datasets if d.kind != "table" or upload_db_path(duckdb_dir, d.parent_upload_id or d.id).exists()]
     catalog = Catalog(
         version=version,
         datasets=[
