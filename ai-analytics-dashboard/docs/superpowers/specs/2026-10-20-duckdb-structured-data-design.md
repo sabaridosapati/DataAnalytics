@@ -104,8 +104,8 @@ The row/column serialisation reuses `to_jsonable`; `Decimal`, `date`, `datetime`
   the `.duckdb` file. If the file is locked (Windows, in use by a running query) the API returns 409 `busy`
   and nothing is deleted.
 - `api/dashboard.py` pin refresh: unchanged call to `run_readonly_query`.
-- `main.py`: remove the asyncpg `ro_pool` creation/close; `QUERY_RO_URL`/`query_ro` are no longer used by the app
-  (settings, `.env.example`, `run-backend.bat`, `start-local.ps1`, `run-tests.bat` drop them; DB role stays).
+- `main.py`: remove the asyncpg `ro_pool` creation/close. `QUERY_RO_URL` / the `query_ro` role stay in config and
+  the DB init script (unused by the app; `test_db.py` still verifies the role is locked down).
 - `catalog.py`: `DatasetInfo` gains `upload_id: int` (parent or self) so the path can be derived; the type labels
   shown to the LLM become DuckDB type names.
 - `requirements.txt`: add `duckdb`. `README.md` documents the new storage and the purge script.
@@ -151,6 +151,7 @@ connection per query, nothing shared between users' queries. DuckDB files hold o
   join; preview; delete removes the file (and 409 when busy); failed upload leaves nothing; dashboard pin refresh;
   a malicious SQL (`read_csv('/etc/passwd')`, `COPY`, `ATTACH`) is rejected and, if the validator is bypassed in a
   test, blocked by the connection lock; query timeout via a deliberately slow query.
+- The plan added `tests/unit/test_duckdb_store.py`, including the concurrency spike.
 - The existing integration/unit suite (255 backend tests) is adapted, not deleted: tests that asserted Postgres
   `data` tables or `query_ro` now assert DuckDB files; unrelated tests must pass unchanged.
 - Purge script: dry run changes nothing; `--yes` drops tables and `table` rows only.
