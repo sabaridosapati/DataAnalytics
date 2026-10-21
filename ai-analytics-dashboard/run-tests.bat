@@ -7,7 +7,7 @@ cd /d "%~dp0backend"
 if not exist .venv\Scripts\python.exe (
   python -m venv .venv || exit /b 1
 )
-.venv\Scripts\python.exe -c "import pytest, asgi_lifespan" 2>nul || .venv\Scripts\python.exe -m pip install -r requirements-dev.txt || exit /b 1
+.venv\Scripts\python.exe -c "import pytest, asgi_lifespan, duckdb" 2>nul || .venv\Scripts\python.exe -m pip install -r requirements-dev.txt || exit /b 1
 
 rem Values from .env.example defaults; override by setting them before calling this script.
 if not defined POSTGRES_USER set "POSTGRES_USER=analytics"

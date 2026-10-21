@@ -1,4 +1,5 @@
 from functools import lru_cache
+from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -44,6 +45,9 @@ class Settings(BaseSettings):
     smtp_starttls: bool = False
 
     upload_dir: str = "/data/uploads"
+    duckdb_dir: str = ""  # default: <upload_dir>/duckdb
+    duckdb_memory_limit: str = "512MB"
+    duckdb_threads: int = 2
     max_upload_mb: int = 50
     max_sql_rows: int = 5000
     step_timeout_s: int = 30
@@ -66,6 +70,10 @@ class Settings(BaseSettings):
     @property
     def cors_origin_list(self) -> list[str]:
         return [o.strip() for o in self.cors_origins.split(",") if o.strip()]
+
+    @property
+    def duckdb_path(self) -> Path:
+        return Path(self.duckdb_dir) if self.duckdb_dir else Path(self.upload_dir) / "duckdb"
 
 
 @lru_cache
