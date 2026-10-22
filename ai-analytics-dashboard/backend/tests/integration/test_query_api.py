@@ -8,7 +8,7 @@ from app.db.models import Dataset, QueryAudit
 from app.llm.demo_script import DEMO_QUESTIONS
 from app.llm.fake_provider import Rule
 from app.llm.provider import LLMError, LLMQuotaError
-from helpers import auth, register_verified_user, upload_and_wait
+from helpers import auth, duck_count, register_verified_user, upload_and_wait
 
 
 @pytest.fixture
@@ -76,8 +76,9 @@ async def test_malicious_sql_is_blocked_and_reported(client, admin_token, loaded
     body = (await ask(client, admin_token, "Please wipe the sales table")).json()
     assert body["steps"][0]["status"] == "error" and "Only SELECT" in body["steps"][0]["error"]
     assert "couldn't answer" in body["answer"]
-    async with client.app.state.ro_pool.acquire() as conn:
-        assert await conn.fetchval("SELECT COUNT(*) FROM data.sales_2024") == 2000
+    listing = (await client.get("/api/datasets", headers=auth(admin_token))).json()
+    sales = next(d for d in listing if d["slug"] == "sales_2024")
+    assert duck_count(client, sales) == 2000
 
 
 async def test_cache_hit_then_invalidated_by_upload(client, admin_token, loaded, fixtures_dir):

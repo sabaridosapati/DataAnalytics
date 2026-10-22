@@ -1,3 +1,4 @@
+import shutil
 from types import SimpleNamespace
 
 import httpx
@@ -23,6 +24,8 @@ async def reset_database(engine) -> None:
     r = aioredis.from_url(get_settings().redis_url)
     await r.flushdb()
     await r.aclose()
+    shutil.rmtree(get_settings().duckdb_path, ignore_errors=True)
+    get_settings().duckdb_path.mkdir(parents=True, exist_ok=True)
 
 
 @pytest_asyncio.fixture

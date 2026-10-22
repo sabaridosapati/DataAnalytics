@@ -24,9 +24,9 @@ def _plan(*steps, intent="analytics"):
     return {"intent": intent, "answerable": True, "reason": None, "steps": list(steps)}
 
 
-SQL_REGION = "SELECT region, ROUND(SUM(revenue)::numeric, 2) AS total_revenue FROM data.sales_2024 GROUP BY region ORDER BY total_revenue DESC"
-SQL_MONTHLY = "SELECT date_trunc('month', order_date)::date AS month, ROUND(SUM(revenue)::numeric, 2) AS revenue FROM data.sales_2024 GROUP BY 1 ORDER BY 1"
-SQL_SALARY = "SELECT department, ROUND(AVG(salary)::numeric, 2) AS avg_salary, COUNT(*) AS headcount FROM data.employees GROUP BY department ORDER BY avg_salary DESC"
+SQL_REGION = "SELECT region, ROUND(SUM(revenue), 2) AS total_revenue FROM data.sales_2024 GROUP BY region ORDER BY total_revenue DESC"
+SQL_MONTHLY = "SELECT date_trunc('month', order_date)::date AS month, ROUND(SUM(revenue), 2) AS revenue FROM data.sales_2024 GROUP BY 1 ORDER BY 1"
+SQL_SALARY = "SELECT department, ROUND(AVG(salary), 2) AS avg_salary, COUNT(*) AS headcount FROM data.employees GROUP BY department ORDER BY avg_salary DESC"
 
 PLAN_REGION = _plan(
     _step("s1", "sql", "Total revenue per region", ["sales_2024"]),

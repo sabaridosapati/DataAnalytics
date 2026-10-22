@@ -24,6 +24,9 @@ rem ---- own venv (not project01's) ----
 if not exist ".venv\Scripts\python.exe" (
   echo Creating backend\.venv ...
   python -m venv .venv || exit /b 1
+)
+.venv\Scripts\python.exe -c "import duckdb, fastapi" 2>nul || (
+  echo Installing backend requirements ...
   .venv\Scripts\python.exe -m pip install -r requirements.txt || exit /b 1
 )
 

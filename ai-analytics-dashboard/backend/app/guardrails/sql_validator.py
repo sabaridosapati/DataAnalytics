@@ -1,7 +1,7 @@
-"""Validate LLM-generated SQL before it can touch the database.
+"""Validate LLM-generated SQL before it can touch DuckDB.
 
-Defense in depth: this parser-level check is backed by the `query_ro` role
-(SELECT on schema `data` only), a read-only transaction and a statement timeout.
+Defense in depth: this parser-level check is backed by a locked-down DuckDB connection
+(read-only attached files, no external access, locked configuration, memory and time limits).
 """
 import sqlglot
 from sqlglot import exp
@@ -9,17 +9,20 @@ from sqlglot.errors import ParseError, SqlglotError
 from sqlglot.optimizer.qualify import qualify
 from sqlglot.optimizer.scope import traverse_scope
 
+DIALECT = "duckdb"
 ALLOWED_SCHEMA = "data"
-DENY_FUNC_PREFIXES = ("pg_", "dblink", "lo_")
+DENY_FUNC_PREFIXES = ("read_", "write_", "pragma_", "duckdb_", "sniff_", "parquet_", "pg_")
 DENY_FUNCS = {
-    "current_setting", "set_config", "query_to_xml", "table_to_xml", "query_to_xml_and_xmlschema",
-    "version", "inet_server_addr", "inet_server_port", "txid_current", "current_user", "session_user",
-    "current_database", "current_schema", "has_table_privilege",
+    "glob", "getenv", "query", "query_table", "load_extension", "install_extension", "which_secret",
+    "list_secrets", "current_setting", "set_config", "version", "current_user", "session_user",
+    "current_database", "current_schema", "current_schemas", "current_catalog", "range", "generate_series",
+    # large-allocation functions (memory_limit does not cover huge strings/lists)
+    "repeat", "lpad", "rpad", "pad", "list_resize", "array_resize",
 }
 _FORBIDDEN_NAMES = (
     "Insert", "Update", "Delete", "Drop", "Create", "Alter", "AlterTable", "Command", "Merge",
     "TruncateTable", "Into", "Lock", "Set", "Transaction", "Commit", "Rollback", "Grant", "Copy",
-    "Use", "Pragma", "Cache", "Uncache", "Refresh", "Analyze",
+    "Use", "Pragma", "Cache", "Uncache", "Refresh", "Analyze", "Attach", "Detach", "Install", "Export",
 )
 FORBIDDEN_NODES = tuple(t for t in (getattr(exp, n, None) for n in _FORBIDDEN_NAMES) if isinstance(t, type))
 _SET_OP_NAMES = ("SetOperation", "Union", "Except", "Intersect")
@@ -32,7 +35,7 @@ class SQLValidationError(ValueError):
 
 def _function_name(func: exp.Func) -> str:
     if isinstance(func, exp.Anonymous):
-        # `.name` is the unquoted text, so "pg_sleep"(1) is caught like pg_sleep(1)
+        # `.name` is the unquoted text, so "getenv"('X') is caught like getenv('X')
         return func.name.strip('"').lower()
     return func.sql_name().lower()
 
@@ -41,7 +44,7 @@ def _cte_references(tree: exp.Expression) -> set[int]:
     """ids of Table nodes that refer to a CTE visible in their *own* scope.
 
     A CTE name only shadows tables inside the scope that defines it; a name match
-    elsewhere must still be treated as a real table (otherwise it resolves to pg_catalog).
+    elsewhere must still be treated as a real table.
     """
     try:
         scopes = traverse_scope(tree)
@@ -56,9 +59,14 @@ def _cte_references(tree: exp.Expression) -> set[int]:
     return refs
 
 
+def _check_function(name: str) -> None:
+    if name.startswith(DENY_FUNC_PREFIXES) or name in DENY_FUNCS:
+        raise SQLValidationError(f"Function '{name}' is not allowed.")
+
+
 def validate_sql(sql: str, schema: dict[str, dict[str, str]], max_rows: int) -> str:
     try:
-        statements = [s for s in sqlglot.parse(sql or "", read="postgres") if s is not None]
+        statements = [s for s in sqlglot.parse(sql or "", read=DIALECT) if s is not None]
     except (ParseError, SqlglotError) as exc:
         raise SQLValidationError(f"SQL could not be parsed: {exc}") from exc
     if len(statements) != 1:
@@ -72,16 +80,20 @@ def validate_sql(sql: str, schema: dict[str, dict[str, str]], max_rows: int) -> 
             raise SQLValidationError(f"Forbidden SQL construct: {type(node).__name__}.")
 
     for func in tree.find_all(exp.Func):
-        name = _function_name(func)
-        if name.startswith(DENY_FUNC_PREFIXES) or name in DENY_FUNCS:
-            raise SQLValidationError(f"Function '{name}' is not allowed.")
+        _check_function(_function_name(func))
 
     for cte in tree.find_all(exp.CTE):
         cte_name = cte.alias_or_name.lower()
-        if cte_name.startswith("pg_") or cte_name == "information_schema":
+        if cte_name.startswith(("pg_", "duckdb_")) or cte_name == "information_schema":
             raise SQLValidationError(f"CTE name '{cte_name}' is not allowed (it shadows a system relation).")
     cte_refs = _cte_references(tree)
     for table in tree.find_all(exp.Table):
+        if not isinstance(table.this, exp.Identifier):
+            # read_csv(...), glob(...), range(...), FROM 'file.csv' (replacement scans) and similar
+            raise SQLValidationError("Table functions and file paths are not allowed; use the listed tables only.")
+        if any(ch in (table.name or "") for ch in "/\\.:*?"):
+            # FROM '/path.csv' parses as a quoted identifier (DuckDB replacement scan), not a function
+            raise SQLValidationError("Table functions and file paths are not allowed; use the listed tables only.")
         name = (table.name or "").lower()
         db = (table.db or "").lower()
         if table.args.get("catalog"):
@@ -101,7 +113,7 @@ def validate_sql(sql: str, schema: dict[str, dict[str, str]], max_rows: int) -> 
             tree.copy(),
             db=ALLOWED_SCHEMA,
             schema={ALLOWED_SCHEMA: {t: dict(cols) for t, cols in schema.items()}},
-            dialect="postgres",
+            dialect=DIALECT,
             validate_qualify_columns=True,
             quote_identifiers=False,
             identify=False,
@@ -119,4 +131,7 @@ def validate_sql(sql: str, schema: dict[str, dict[str, str]], max_rows: int) -> 
         if int(value.this) > max_rows:
             tree.set("limit", exp.Limit(expression=exp.Literal.number(max_rows)))
 
-    return tree.sql(dialect="postgres")
+    # Comments are dropped: sqlglot can turn a `-- */` line comment into a block comment that hides code.
+    for node in tree.walk():
+        node.comments = None
+    return tree.sql(dialect=DIALECT, comments=False)

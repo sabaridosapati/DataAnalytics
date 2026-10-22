@@ -1,4 +1,5 @@
-from helpers import auth, register_verified_user, upload_and_wait
+from app.duckdb_store import upload_db_path
+from helpers import auth, duck_count, register_verified_user, upload_and_wait
 
 
 async def test_upload_three_fixtures(client, admin_token, fixtures_dir):
@@ -16,12 +17,11 @@ async def test_upload_three_fixtures(client, admin_token, fixtures_dir):
     assert kpi["kind"] == "table" and kpi["row_count"] == 4
     assert kpi["parent_upload_id"] == by_slug["annual_report_2024"]["id"] or by_slug["annual_report_2024"]["parent_upload_id"] == kpi["id"]
 
-    async with client.app.state.ro_pool.acquire() as conn:
-        assert await conn.fetchval("SELECT COUNT(*) FROM data.sales_2024") == 2000
+    assert duck_count(client, by_slug["sales_2024"]) == 2000
 
     detail = (await client.get(f"/api/datasets/{by_slug['employees']['id']}", headers=auth(admin_token))).json()
     types = {c["column_name"]: c["pg_type"] for c in detail["columns"]}
-    assert types["salary"] == "bigint" and types["hire_date"] == "date" and types["address_city"] == "text"
+    assert types["salary"] == "BIGINT" and types["hire_date"] == "DATE" and types["address_city"] == "VARCHAR"
     assert len(detail["preview"]["rows"]) == 20 and "salary" in detail["preview"]["columns"]
 
     doc = (await client.get(f"/api/datasets/{by_slug['annual_report_2024']['id']}", headers=auth(admin_token))).json()
@@ -32,8 +32,7 @@ async def test_same_filename_twice_gets_unique_slug(client, admin_token, fixture
     first = await upload_and_wait(client, admin_token, [fixtures_dir / "sales_2024.csv"])
     second = await upload_and_wait(client, admin_token, [fixtures_dir / "sales_2024.csv"])
     assert first[0]["slug"] == "sales_2024" and second[0]["slug"] == "sales_2024_2"
-    async with client.app.state.ro_pool.acquire() as conn:
-        assert await conn.fetchval("SELECT COUNT(*) FROM data.sales_2024_2") == 2000
+    assert duck_count(client, second[0]) == 2000
 
 
 async def test_regular_user_can_upload_text(client):
@@ -74,8 +73,7 @@ async def test_delete_requires_admin_and_drops_table(client, admin_token, fixtur
     assert r.status_code == 403
     r = await client.delete(f"/api/datasets/{ds[0]['id']}", headers=auth(admin_token))
     assert r.status_code == 204
-    async with client.app.state.ro_pool.acquire() as conn:
-        assert await conn.fetchval("SELECT to_regclass('data.sales_2024')") is None
+    assert not upload_db_path(client.app.state.settings.duckdb_path, ds[0]["parent_upload_id"] or ds[0]["id"]).exists()
     assert (await client.get("/api/datasets", headers=auth(admin_token))).json() == []
 
 

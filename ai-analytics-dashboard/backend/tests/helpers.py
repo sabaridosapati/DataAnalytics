@@ -4,7 +4,10 @@ import re
 import uuid
 from pathlib import Path
 
+import duckdb
 import httpx
+
+from app.duckdb_store import upload_db_path
 
 MAILPIT = os.environ.get("MAILPIT_API", "http://mailpit:8025")
 
@@ -62,3 +65,13 @@ async def upload_and_wait(client, token: str, paths: list[Path], timeout_s: floa
         if loop.time() > deadline:
             raise AssertionError(f"Datasets not ready in time: {mine}")
         await asyncio.sleep(0.3)
+
+
+def duck_count(client, dataset: dict, slug: str | None = None) -> int:
+    """Row count of a table in the dataset's per-upload DuckDB file."""
+    path = upload_db_path(client.app.state.settings.duckdb_path, dataset["parent_upload_id"] or dataset["id"])
+    con = duckdb.connect(str(path), read_only=True)
+    try:
+        return con.execute(f'SELECT COUNT(*) FROM main."{slug or dataset["slug"]}"').fetchone()[0]
+    finally:
+        con.close()

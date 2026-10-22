@@ -6,7 +6,6 @@ from asgi_lifespan import LifespanManager
 from sqlalchemy import select
 
 import app.ingestion.pipeline as pipeline
-import app.ingestion.tabular as tabular
 from app.catalog import load_catalog
 from app.db.models import Dataset
 from app.llm.provider import LLMError
@@ -71,18 +70,18 @@ async def test_query_timeout_returns_json_error(client, admin_token, fixtures_di
 
 async def test_dataframe_preparation_runs_off_the_event_loop(client, admin_token, fixtures_dir, monkeypatch):
     threads: dict[str, str] = {}
-    real_infer, real_records = pipeline.infer_types, tabular.to_records
+    real_infer, real_write = pipeline.infer_types, pipeline.write_upload_file
 
     def spy_infer(df):
         threads["infer"] = threading.current_thread().name
         return real_infer(df)
 
-    def spy_records(df, types):
-        threads["records"] = threading.current_thread().name
-        return real_records(df, types)
+    def spy_write(path, tables):
+        threads["write"] = threading.current_thread().name
+        return real_write(path, tables)
 
     monkeypatch.setattr(pipeline, "infer_types", spy_infer)
-    monkeypatch.setattr(tabular, "to_records", spy_records)
+    monkeypatch.setattr(pipeline, "write_upload_file", spy_write)
     datasets = await upload_and_wait(client, admin_token, [fixtures_dir / "sales_2024.csv"])
     assert datasets[0]["status"] == "ready"
-    assert threads["infer"] != "MainThread" and threads["records"] != "MainThread"
+    assert threads["infer"] != "MainThread" and threads["write"] != "MainThread"

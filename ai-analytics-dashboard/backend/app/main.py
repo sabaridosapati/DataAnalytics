@@ -3,7 +3,6 @@ import logging
 import os
 from contextlib import asynccontextmanager
 
-import asyncpg
 from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
@@ -19,6 +18,7 @@ from app.cache.redis_cache import RedisCache
 from app.config import get_settings
 from app.db.seed import seed_admin
 from app.db.session import create_engine_and_sessionmaker, init_db, wait_for_db
+from app.duckdb_store import cleanup_stale_tmp
 from app.ingestion.pipeline import recover_interrupted
 from app.llm.provider import build_provider
 
@@ -38,15 +38,15 @@ async def lifespan(app: FastAPI):
     await recover_interrupted(sessionmaker)
     app.state.engine = engine
     app.state.sessionmaker = sessionmaker
-    app.state.ro_pool = await asyncpg.create_pool(settings.query_ro_url, min_size=1, max_size=5)
     app.state.cache = RedisCache(settings.redis_url)
     app.state.catalog_cache = None
     app.state.ingest_lock = asyncio.Lock()
     os.makedirs(settings.upload_dir, exist_ok=True)
+    os.makedirs(settings.duckdb_path, exist_ok=True)
+    cleanup_stale_tmp(settings.duckdb_path)
     try:
         yield
     finally:
-        await app.state.ro_pool.close()
         await app.state.cache.close()
         await engine.dispose()
 
