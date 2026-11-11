@@ -14,12 +14,14 @@ venv/
 node_modules/
 dist/
 
+/graphify-out/
 # editors / OS
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
-
+graphify-out/*
+graphify-out/
 # runtime
 *.log
 uploads/
